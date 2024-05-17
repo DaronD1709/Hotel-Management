@@ -77,6 +77,12 @@
     <Compile Include="Bookroom.Designer.cs">
       <DependentUpon>Bookroom.cs</DependentUpon>
     </Compile>
+    <Compile Include="Checkinoutwork.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Checkinoutwork.Designer.cs">
+      <DependentUpon>Checkinoutwork.cs</DependentUpon>
+    </Compile>
     <Compile Include="CustomerManagement.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -121,6 +127,12 @@
     <Compile Include="RoomManagement.Designer.cs">
       <DependentUpon>RoomManagement.cs</DependentUpon>
     </Compile>
+    <Compile Include="SalaryEmployee.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SalaryEmployee.Designer.cs">
+      <DependentUpon>SalaryEmployee.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="AdminMenu.resx">
       <DependentUpon>AdminMenu.cs</DependentUpon>
     </EmbeddedResource>
@@ -129,6 +141,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Bookroom.resx">
       <DependentUpon>Bookroom.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Checkinoutwork.resx">
+      <DependentUpon>Checkinoutwork.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="CustomerManagement.resx">
       <DependentUpon>CustomerManagement.cs</DependentUpon>
@@ -160,6 +175,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="RoomManagement.resx">
       <DependentUpon>RoomManagement.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SalaryEmployee.resx">
+      <DependentUpon>SalaryEmployee.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">

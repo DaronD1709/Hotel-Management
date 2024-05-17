@@ -227,9 +227,9 @@
             // 
             this.groupBox3.Controls.Add(this.datagridviewitemlist);
             this.groupBox3.Font = new System.Drawing.Font("Agency FB", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox3.Location = new System.Drawing.Point(535, 94);
+            this.groupBox3.Location = new System.Drawing.Point(535, 35);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(655, 430);
+            this.groupBox3.Size = new System.Drawing.Size(655, 489);
             this.groupBox3.TabIndex = 49;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "List Items";
@@ -272,7 +272,7 @@
             dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.datagridviewitemlist.RowHeadersDefaultCellStyle = dataGridViewCellStyle4;
             this.datagridviewitemlist.RowHeadersVisible = false;
-            this.datagridviewitemlist.Size = new System.Drawing.Size(643, 392);
+            this.datagridviewitemlist.Size = new System.Drawing.Size(643, 451);
             this.datagridviewitemlist.TabIndex = 3;
             this.datagridviewitemlist.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
             this.datagridviewitemlist.ThemeStyle.AlternatingRowsStyle.Font = null;

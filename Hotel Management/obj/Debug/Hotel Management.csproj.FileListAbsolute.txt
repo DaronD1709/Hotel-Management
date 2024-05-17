@@ -20,3 +20,5 @@ D:\WinF\Hotel Management\Hotel Management\obj\Debug\Hotel_Management.InventoryMa
 D:\WinF\Hotel Management\Hotel Management\obj\Debug\Hotel_Management.Resources.ScheduleManagement.resources
 D:\WinF\Hotel Management\Hotel Management\obj\Debug\Hotel_Management.Bill.resources
 D:\WinF\Hotel Management\Hotel Management\obj\Debug\Hotel_Management.PaymentandService.resources
+D:\WinF\Hotel Management\Hotel Management\obj\Debug\Hotel_Management.Checkinoutwork.resources
+D:\WinF\Hotel Management\Hotel Management\obj\Debug\Hotel_Management.SalaryEmployee.resources

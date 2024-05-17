@@ -231,9 +231,9 @@
             // 
             this.groupBox3.Controls.Add(this.datagridviewroomlist);
             this.groupBox3.Font = new System.Drawing.Font("Agency FB", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox3.Location = new System.Drawing.Point(545, 108);
+            this.groupBox3.Location = new System.Drawing.Point(545, 47);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(655, 585);
+            this.groupBox3.Size = new System.Drawing.Size(655, 646);
             this.groupBox3.TabIndex = 38;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "List Room";
@@ -276,7 +276,7 @@
             dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.datagridviewroomlist.RowHeadersDefaultCellStyle = dataGridViewCellStyle4;
             this.datagridviewroomlist.RowHeadersVisible = false;
-            this.datagridviewroomlist.Size = new System.Drawing.Size(643, 547);
+            this.datagridviewroomlist.Size = new System.Drawing.Size(643, 608);
             this.datagridviewroomlist.TabIndex = 3;
             this.datagridviewroomlist.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
             this.datagridviewroomlist.ThemeStyle.AlternatingRowsStyle.Font = null;

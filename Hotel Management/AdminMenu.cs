@@ -103,7 +103,8 @@ namespace Hotel_Management
 
         private void btnstatistical_Click(object sender, EventArgs e)
         {
-
+            SalaryEmployee salaryEmployee   = new SalaryEmployee();
+            salaryEmployee.ShowDialog();    
         }
 
         private void guna2CirclePictureBox11_Click(object sender, EventArgs e)
@@ -113,7 +114,8 @@ namespace Hotel_Management
 
         private void guna2Button1_Click(object sender, EventArgs e)
         {
-
+            Checkinoutwork checkinoutwork   = new Checkinoutwork();
+            checkinoutwork.ShowDialog();
         }
 
         private void btnlogout_Click(object sender, EventArgs e)

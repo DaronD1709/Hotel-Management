@@ -445,9 +445,9 @@
             // 
             this.groupBox5.Controls.Add(this.datagridviewbookinglist);
             this.groupBox5.Font = new System.Drawing.Font("Agency FB", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox5.Location = new System.Drawing.Point(832, 92);
+            this.groupBox5.Location = new System.Drawing.Point(832, 32);
             this.groupBox5.Name = "groupBox5";
-            this.groupBox5.Size = new System.Drawing.Size(476, 664);
+            this.groupBox5.Size = new System.Drawing.Size(476, 724);
             this.groupBox5.TabIndex = 64;
             this.groupBox5.TabStop = false;
             this.groupBox5.Text = "Booking List";
@@ -490,7 +490,7 @@
             dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.datagridviewbookinglist.RowHeadersDefaultCellStyle = dataGridViewCellStyle4;
             this.datagridviewbookinglist.RowHeadersVisible = false;
-            this.datagridviewbookinglist.Size = new System.Drawing.Size(464, 626);
+            this.datagridviewbookinglist.Size = new System.Drawing.Size(464, 686);
             this.datagridviewbookinglist.TabIndex = 3;
             this.datagridviewbookinglist.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
             this.datagridviewbookinglist.ThemeStyle.AlternatingRowsStyle.Font = null;
