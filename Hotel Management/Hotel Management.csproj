@@ -101,12 +101,19 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="Global.cs" />
+    <Compile Include="HotelDataDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>HotelDataDataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="InventoryManagement.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="InventoryManagement.Designer.cs">
       <DependentUpon>InventoryManagement.cs</DependentUpon>
     </Compile>
+    <Compile Include="MY_DB.cs" />
     <Compile Include="PaymentandService.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -179,6 +186,17 @@
     <EmbeddedResource Include="SalaryEmployee.resx">
       <DependentUpon>SalaryEmployee.cs</DependentUpon>
     </EmbeddedResource>
+    <None Include="HotelDataDataSet.xsc">
+      <DependentUpon>HotelDataDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="HotelDataDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>HotelDataDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="HotelDataDataSet.xss">
+      <DependentUpon>HotelDataDataSet.xsd</DependentUpon>
+    </None>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

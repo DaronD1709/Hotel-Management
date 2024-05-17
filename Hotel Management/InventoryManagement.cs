@@ -12,6 +12,7 @@ namespace Hotel_Management
 {
     public partial class InventoryManagement : Form
     {
+        public static int Id = -1;
         public InventoryManagement()
         {
             InitializeComponent();
@@ -93,6 +94,27 @@ namespace Hotel_Management
         {
             this.Close();
 
+        }
+
+        private void datagridviewitemlist_RowDividerDoubleClick(object sender, DataGridViewRowDividerDoubleClickEventArgs e)
+        {
+
+        }
+
+        private void datagridviewitemlist_RowHeaderMouseClick(object sender, DataGridViewCellMouseEventArgs e)
+        {
+            Id = Convert.ToInt32(datagridviewitemlist.Rows[e.RowIndex].Cells[0].Value.ToString());
+            txtiditems.Text = datagridviewitemlist.Rows[e.RowIndex].Cells[1].Value == DBNull.Value ? "" : datagridviewitemlist.Rows[e.RowIndex].Cells[1].Value.ToString();
+            txtnameitems.Text = datagridviewitemlist.Rows[e.RowIndex].Cells[2].Value == DBNull.Value ? "" : datagridviewitemlist.Rows[e.RowIndex].Cells[2].Value.ToString();
+            if (datagridviewitemlist.Rows[e.RowIndex].Cells[3].Value != DBNull.Value)
+            {
+                numberofitems.Value = Convert.ToDecimal(datagridviewitemlist.Rows[e.RowIndex].Cells[3].Value);
+            }
+            else
+            {
+                numberofitems.Value = numberofitems.Minimum; // Hoặc giá trị mặc định khác
+            }
+            txtpriceitems.Text = datagridviewitemlist.Rows[e.RowIndex].Cells[6].Value == DBNull.Value ? "" : datagridviewitemlist.Rows[e.RowIndex].Cells[6].Value.ToString();
         }
     }
 }

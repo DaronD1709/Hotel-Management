@@ -12,6 +12,7 @@ namespace Hotel_Management
 {
     public partial class RoomManagement : Form
     {
+        public static int Id = -1;
         public RoomManagement()
         {
             InitializeComponent();
@@ -52,8 +53,7 @@ namespace Hotel_Management
 
             if (string.IsNullOrWhiteSpace(txtnameroom.Text) ||
                 string.IsNullOrWhiteSpace(txtpriceroom.Text) ||
-                combostateroom.SelectedIndex == -1 ||// Kiểm tra ComboBox đã được chọn
-                comboidroom.SelectedIndex == -1 ||
+                string.IsNullOrWhiteSpace(txtidroom.Text) ||
                 combotyperoom.SelectedIndex == -1 
                ) // Kiểm tra tuổi hợp lệ
             {
@@ -70,6 +70,38 @@ namespace Hotel_Management
         private void btnclose_Click(object sender, EventArgs e)
         {
             this.Close();
+
+        }
+
+        private void datagridviewroomlist_RowHeaderMouseClick(object sender, DataGridViewCellMouseEventArgs e)
+        {
+            txtidroom.Text = datagridviewroomlist.Rows[e.RowIndex].Cells[0].Value == DBNull.Value ? "" : datagridviewroomlist.Rows[e.RowIndex].Cells[0].Value.ToString();
+            txtnameroom.Text = datagridviewroomlist.Rows[e.RowIndex].Cells[1].Value == DBNull.Value ? "" : datagridviewroomlist.Rows[e.RowIndex].Cells[1].Value.ToString();
+           
+            if (datagridviewroomlist.Rows[e.RowIndex].Cells[2].Value.ToString() == "Male")
+            {
+                combostateroom.SelectedIndex = 1; // Sets the selected item to the first item
+            }
+            else
+            {
+                combostateroom.SelectedIndex = 0; // Sets the selected item to the second item
+            }
+
+            if (datagridviewroomlist.Rows[e.RowIndex].Cells[3].Value.ToString() == "Single Room") 
+
+
+            {
+                combotyperoom.SelectedIndex = 1; // Sets the selected item to the first item
+            }
+            else if (datagridviewroomlist.Rows[e.RowIndex].Cells[3].Value.ToString() == "Double Room")
+            {
+                combotyperoom.SelectedIndex = 2; // Sets the selected item to the first item
+            }
+            else
+            {
+                combotyperoom.SelectedIndex = 0; // Sets the selected item to the second item
+            }
+            txtpriceroom.Text = datagridviewroomlist.Rows[e.RowIndex].Cells[4].Value == DBNull.Value ? "" : datagridviewroomlist.Rows[e.RowIndex].Cells[4].Value.ToString();
 
         }
     }

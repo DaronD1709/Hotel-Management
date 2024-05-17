@@ -37,6 +37,7 @@
             this.label2 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.txtsearch = new System.Windows.Forms.TextBox();
+            this.guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
             this.label5 = new System.Windows.Forms.Label();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.txtaddressemployee = new System.Windows.Forms.TextBox();
@@ -60,7 +61,6 @@
             this.btndeletecustomer = new Guna.UI2.WinForms.Guna2Button();
             this.btnupdatecustomer = new Guna.UI2.WinForms.Guna2Button();
             this.btnaddcustomer = new Guna.UI2.WinForms.Guna2Button();
-            this.guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.datagridviewlistemployee)).BeginInit();
             this.groupBox1.SuspendLayout();
@@ -74,7 +74,7 @@
             this.groupBox2.Font = new System.Drawing.Font("Agency FB", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox2.Location = new System.Drawing.Point(611, 22);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(588, 676);
+            this.groupBox2.Size = new System.Drawing.Size(698, 676);
             this.groupBox2.TabIndex = 2;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "List Employee";
@@ -117,7 +117,7 @@
             dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.datagridviewlistemployee.RowHeadersDefaultCellStyle = dataGridViewCellStyle4;
             this.datagridviewlistemployee.RowHeadersVisible = false;
-            this.datagridviewlistemployee.Size = new System.Drawing.Size(576, 638);
+            this.datagridviewlistemployee.Size = new System.Drawing.Size(686, 638);
             this.datagridviewlistemployee.TabIndex = 3;
             this.datagridviewlistemployee.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
             this.datagridviewlistemployee.ThemeStyle.AlternatingRowsStyle.Font = null;
@@ -140,6 +140,7 @@
             this.datagridviewlistemployee.ThemeStyle.RowsStyle.Height = 22;
             this.datagridviewlistemployee.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.datagridviewlistemployee.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            this.datagridviewlistemployee.RowHeaderMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.datagridviewlistemployee_RowHeaderMouseClick);
             // 
             // label2
             // 
@@ -173,6 +174,22 @@
             this.txtsearch.Name = "txtsearch";
             this.txtsearch.Size = new System.Drawing.Size(162, 27);
             this.txtsearch.TabIndex = 36;
+            // 
+            // guna2Button1
+            // 
+            this.guna2Button1.BorderRadius = 15;
+            this.guna2Button1.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.guna2Button1.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.guna2Button1.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.guna2Button1.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.guna2Button1.Font = new System.Drawing.Font("Agency FB", 12F, System.Drawing.FontStyle.Bold);
+            this.guna2Button1.ForeColor = System.Drawing.Color.White;
+            this.guna2Button1.Image = global::Hotel_Management.Properties.Resources._9004762_search_find_zoom_magnifier_icon;
+            this.guna2Button1.Location = new System.Drawing.Point(42, 126);
+            this.guna2Button1.Name = "guna2Button1";
+            this.guna2Button1.Size = new System.Drawing.Size(162, 36);
+            this.guna2Button1.TabIndex = 35;
+            this.guna2Button1.Text = "Search";
             // 
             // label5
             // 
@@ -394,7 +411,7 @@
             this.btnclose.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.btnclose.Font = new System.Drawing.Font("Agency FB", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnclose.ForeColor = System.Drawing.Color.Black;
-            this.btnclose.Location = new System.Drawing.Point(339, 645);
+            this.btnclose.Location = new System.Drawing.Point(357, 645);
             this.btnclose.Name = "btnclose";
             this.btnclose.Size = new System.Drawing.Size(162, 36);
             this.btnclose.TabIndex = 45;
@@ -429,7 +446,7 @@
             this.btnupdatecustomer.Font = new System.Drawing.Font("Agency FB", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnupdatecustomer.ForeColor = System.Drawing.Color.Black;
             this.btnupdatecustomer.Image = global::Hotel_Management.Properties.Resources.save_4223793;
-            this.btnupdatecustomer.Location = new System.Drawing.Point(339, 589);
+            this.btnupdatecustomer.Location = new System.Drawing.Point(357, 589);
             this.btnupdatecustomer.Name = "btnupdatecustomer";
             this.btnupdatecustomer.Size = new System.Drawing.Size(162, 36);
             this.btnupdatecustomer.TabIndex = 42;
@@ -453,27 +470,11 @@
             this.btnaddcustomer.Text = "Add";
             this.btnaddcustomer.Click += new System.EventHandler(this.btnaddcustomer_Click);
             // 
-            // guna2Button1
-            // 
-            this.guna2Button1.BorderRadius = 15;
-            this.guna2Button1.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button1.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button1.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.guna2Button1.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.guna2Button1.Font = new System.Drawing.Font("Agency FB", 12F, System.Drawing.FontStyle.Bold);
-            this.guna2Button1.ForeColor = System.Drawing.Color.White;
-            this.guna2Button1.Image = global::Hotel_Management.Properties.Resources._9004762_search_find_zoom_magnifier_icon;
-            this.guna2Button1.Location = new System.Drawing.Point(42, 126);
-            this.guna2Button1.Name = "guna2Button1";
-            this.guna2Button1.Size = new System.Drawing.Size(162, 36);
-            this.guna2Button1.TabIndex = 35;
-            this.guna2Button1.Text = "Search";
-            // 
             // EmployeeManagement
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1226, 710);
+            this.ClientSize = new System.Drawing.Size(1321, 710);
             this.Controls.Add(this.btnclose);
             this.Controls.Add(this.btndeletecustomer);
             this.Controls.Add(this.btnupdatecustomer);

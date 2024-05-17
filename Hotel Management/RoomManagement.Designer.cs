@@ -35,6 +35,7 @@
             this.label2 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.txtsearch = new System.Windows.Forms.TextBox();
+            this.guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
             this.label5 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.label1 = new System.Windows.Forms.Label();
@@ -45,7 +46,6 @@
             this.txtnameroom = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.comboidroom = new System.Windows.Forms.ComboBox();
             this.label6 = new System.Windows.Forms.Label();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.datagridviewroomlist = new Guna.UI2.WinForms.Guna2DataGridView();
@@ -53,7 +53,7 @@
             this.btndeleteroom = new Guna.UI2.WinForms.Guna2Button();
             this.btnupdateroom = new Guna.UI2.WinForms.Guna2Button();
             this.btnaddroom = new Guna.UI2.WinForms.Guna2Button();
-            this.guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
+            this.txtidroom = new System.Windows.Forms.TextBox();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -93,6 +93,22 @@
             this.txtsearch.Size = new System.Drawing.Size(162, 27);
             this.txtsearch.TabIndex = 36;
             // 
+            // guna2Button1
+            // 
+            this.guna2Button1.BorderRadius = 15;
+            this.guna2Button1.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.guna2Button1.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.guna2Button1.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.guna2Button1.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.guna2Button1.Font = new System.Drawing.Font("Agency FB", 12F, System.Drawing.FontStyle.Bold);
+            this.guna2Button1.ForeColor = System.Drawing.Color.White;
+            this.guna2Button1.Image = global::Hotel_Management.Properties.Resources._9004762_search_find_zoom_magnifier_icon;
+            this.guna2Button1.Location = new System.Drawing.Point(252, 63);
+            this.guna2Button1.Name = "guna2Button1";
+            this.guna2Button1.Size = new System.Drawing.Size(162, 36);
+            this.guna2Button1.TabIndex = 35;
+            this.guna2Button1.Text = "Search";
+            // 
             // label5
             // 
             this.label5.AutoSize = true;
@@ -107,6 +123,7 @@
             // 
             // groupBox2
             // 
+            this.groupBox2.Controls.Add(this.txtidroom);
             this.groupBox2.Controls.Add(this.label1);
             this.groupBox2.Controls.Add(this.combotyperoom);
             this.groupBox2.Controls.Add(this.label9);
@@ -115,7 +132,6 @@
             this.groupBox2.Controls.Add(this.txtnameroom);
             this.groupBox2.Controls.Add(this.label4);
             this.groupBox2.Controls.Add(this.label3);
-            this.groupBox2.Controls.Add(this.comboidroom);
             this.groupBox2.Controls.Add(this.label6);
             this.groupBox2.Font = new System.Drawing.Font("Agency FB", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox2.Location = new System.Drawing.Point(61, 261);
@@ -208,15 +224,6 @@
             this.label3.TabIndex = 45;
             this.label3.Text = "Name Room :";
             // 
-            // comboidroom
-            // 
-            this.comboidroom.Font = new System.Drawing.Font("Agency FB", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboidroom.FormattingEnabled = true;
-            this.comboidroom.Location = new System.Drawing.Point(36, 69);
-            this.comboidroom.Name = "comboidroom";
-            this.comboidroom.Size = new System.Drawing.Size(164, 28);
-            this.comboidroom.TabIndex = 44;
-            // 
             // label6
             // 
             this.label6.AutoSize = true;
@@ -299,6 +306,7 @@
             this.datagridviewroomlist.ThemeStyle.RowsStyle.Height = 22;
             this.datagridviewroomlist.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.datagridviewroomlist.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            this.datagridviewroomlist.RowHeaderMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.datagridviewroomlist_RowHeaderMouseClick);
             // 
             // btnclose
             // 
@@ -369,21 +377,13 @@
             this.btnaddroom.Text = "Add";
             this.btnaddroom.Click += new System.EventHandler(this.btnaddcustomer_Click);
             // 
-            // guna2Button1
+            // txtidroom
             // 
-            this.guna2Button1.BorderRadius = 15;
-            this.guna2Button1.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button1.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button1.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.guna2Button1.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.guna2Button1.Font = new System.Drawing.Font("Agency FB", 12F, System.Drawing.FontStyle.Bold);
-            this.guna2Button1.ForeColor = System.Drawing.Color.White;
-            this.guna2Button1.Image = global::Hotel_Management.Properties.Resources._9004762_search_find_zoom_magnifier_icon;
-            this.guna2Button1.Location = new System.Drawing.Point(252, 63);
-            this.guna2Button1.Name = "guna2Button1";
-            this.guna2Button1.Size = new System.Drawing.Size(162, 36);
-            this.guna2Button1.TabIndex = 35;
-            this.guna2Button1.Text = "Search";
+            this.txtidroom.Font = new System.Drawing.Font("Agency FB", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtidroom.Location = new System.Drawing.Point(36, 70);
+            this.txtidroom.Name = "txtidroom";
+            this.txtidroom.Size = new System.Drawing.Size(162, 27);
+            this.txtidroom.TabIndex = 53;
             // 
             // RoomManagement
             // 
@@ -426,7 +426,6 @@
         private System.Windows.Forms.TextBox txtnameroom;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.ComboBox comboidroom;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.ComboBox combotyperoom;
@@ -436,5 +435,6 @@
         private Guna.UI2.WinForms.Guna2Button btndeleteroom;
         private Guna.UI2.WinForms.Guna2Button btnupdateroom;
         private Guna.UI2.WinForms.Guna2Button btnaddroom;
+        private System.Windows.Forms.TextBox txtidroom;
     }
 }

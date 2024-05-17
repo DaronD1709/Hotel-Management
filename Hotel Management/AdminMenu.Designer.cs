@@ -30,9 +30,18 @@
         {
             this.components = new System.ComponentModel.Container();
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
+            this.guna2CirclePictureBox10 = new Guna.UI2.WinForms.Guna2CirclePictureBox();
             this.labelname = new System.Windows.Forms.Label();
+            this.btnlogout = new FontAwesome.Sharp.IconButton();
+            this.btnshowmenu = new FontAwesome.Sharp.IconButton();
             this.label1 = new System.Windows.Forms.Label();
+            this.guna2CirclePictureBox1 = new Guna.UI2.WinForms.Guna2CirclePictureBox();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.guna2PictureBox4 = new Guna.UI2.WinForms.Guna2PictureBox();
+            this.guna2PictureBox3 = new Guna.UI2.WinForms.Guna2PictureBox();
+            this.guna2PictureBox2 = new Guna.UI2.WinForms.Guna2PictureBox();
+            this.guna2PictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
+            this.guna2CirclePictureBox11 = new Guna.UI2.WinForms.Guna2CirclePictureBox();
             this.label11 = new System.Windows.Forms.Label();
             this.guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
             this.label3 = new System.Windows.Forms.Label();
@@ -44,29 +53,22 @@
             this.btnschedule = new Guna.UI2.WinForms.Guna2Button();
             this.label7 = new System.Windows.Forms.Label();
             this.btnmanainventory = new Guna.UI2.WinForms.Guna2Button();
+            this.guna2CirclePictureBox2 = new Guna.UI2.WinForms.Guna2CirclePictureBox();
+            this.guna2CirclePictureBox5 = new Guna.UI2.WinForms.Guna2CirclePictureBox();
             this.label6 = new System.Windows.Forms.Label();
+            this.guna2CirclePictureBox4 = new Guna.UI2.WinForms.Guna2CirclePictureBox();
             this.btnbookroom = new Guna.UI2.WinForms.Guna2Button();
             this.label5 = new System.Windows.Forms.Label();
             this.btncreateroom = new Guna.UI2.WinForms.Guna2Button();
             this.label4 = new System.Windows.Forms.Label();
+            this.guna2CirclePictureBox3 = new Guna.UI2.WinForms.Guna2CirclePictureBox();
             this.btnmanaemployee = new Guna.UI2.WinForms.Guna2Button();
             this.btnmanacustomer = new Guna.UI2.WinForms.Guna2Button();
             this.label2 = new System.Windows.Forms.Label();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
-            this.guna2PictureBox4 = new Guna.UI2.WinForms.Guna2PictureBox();
-            this.guna2PictureBox3 = new Guna.UI2.WinForms.Guna2PictureBox();
-            this.guna2PictureBox2 = new Guna.UI2.WinForms.Guna2PictureBox();
-            this.guna2PictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
-            this.guna2CirclePictureBox11 = new Guna.UI2.WinForms.Guna2CirclePictureBox();
-            this.guna2CirclePictureBox2 = new Guna.UI2.WinForms.Guna2CirclePictureBox();
-            this.guna2CirclePictureBox5 = new Guna.UI2.WinForms.Guna2CirclePictureBox();
-            this.guna2CirclePictureBox4 = new Guna.UI2.WinForms.Guna2CirclePictureBox();
-            this.guna2CirclePictureBox3 = new Guna.UI2.WinForms.Guna2CirclePictureBox();
-            this.guna2CirclePictureBox10 = new Guna.UI2.WinForms.Guna2CirclePictureBox();
-            this.btnlogout = new FontAwesome.Sharp.IconButton();
-            this.btnshowmenu = new FontAwesome.Sharp.IconButton();
-            this.guna2CirclePictureBox1 = new Guna.UI2.WinForms.Guna2CirclePictureBox();
             this.guna2Panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.guna2CirclePictureBox10)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.guna2CirclePictureBox1)).BeginInit();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox3)).BeginInit();
@@ -77,8 +79,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.guna2CirclePictureBox5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.guna2CirclePictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.guna2CirclePictureBox3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.guna2CirclePictureBox10)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.guna2CirclePictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // guna2Panel1
@@ -99,6 +99,21 @@
             this.guna2Panel1.Size = new System.Drawing.Size(201, 553);
             this.guna2Panel1.TabIndex = 0;
             // 
+            // guna2CirclePictureBox10
+            // 
+            this.guna2CirclePictureBox10.BackColor = System.Drawing.Color.White;
+            this.guna2CirclePictureBox10.FillColor = System.Drawing.Color.IndianRed;
+            this.guna2CirclePictureBox10.Image = global::Hotel_Management.Properties.Resources.information_button;
+            this.guna2CirclePictureBox10.ImageRotate = 0F;
+            this.guna2CirclePictureBox10.Location = new System.Drawing.Point(150, 14);
+            this.guna2CirclePictureBox10.Margin = new System.Windows.Forms.Padding(2);
+            this.guna2CirclePictureBox10.Name = "guna2CirclePictureBox10";
+            this.guna2CirclePictureBox10.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
+            this.guna2CirclePictureBox10.Size = new System.Drawing.Size(29, 26);
+            this.guna2CirclePictureBox10.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.guna2CirclePictureBox10.TabIndex = 52;
+            this.guna2CirclePictureBox10.TabStop = false;
+            // 
             // labelname
             // 
             this.labelname.AutoSize = true;
@@ -111,6 +126,48 @@
             this.labelname.TabIndex = 22;
             this.labelname.Text = "User";
             // 
+            // btnlogout
+            // 
+            this.btnlogout.BackColor = System.Drawing.Color.White;
+            this.btnlogout.FlatAppearance.BorderSize = 0;
+            this.btnlogout.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnlogout.Font = new System.Drawing.Font("Agency FB", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnlogout.IconChar = FontAwesome.Sharp.IconChar.ArrowAltCircleLeft;
+            this.btnlogout.IconColor = System.Drawing.Color.Black;
+            this.btnlogout.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnlogout.IconSize = 35;
+            this.btnlogout.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnlogout.Location = new System.Drawing.Point(-11, 505);
+            this.btnlogout.Margin = new System.Windows.Forms.Padding(2);
+            this.btnlogout.Name = "btnlogout";
+            this.btnlogout.Padding = new System.Windows.Forms.Padding(21, 0, 0, 0);
+            this.btnlogout.Size = new System.Drawing.Size(206, 49);
+            this.btnlogout.TabIndex = 21;
+            this.btnlogout.Text = "Log Out";
+            this.btnlogout.UseVisualStyleBackColor = false;
+            this.btnlogout.Click += new System.EventHandler(this.btnlogout_Click);
+            // 
+            // btnshowmenu
+            // 
+            this.btnshowmenu.BackColor = System.Drawing.Color.White;
+            this.btnshowmenu.FlatAppearance.BorderSize = 0;
+            this.btnshowmenu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnshowmenu.Flip = FontAwesome.Sharp.FlipOrientation.Horizontal;
+            this.btnshowmenu.Font = new System.Drawing.Font("Agency FB", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnshowmenu.IconChar = FontAwesome.Sharp.IconChar.List;
+            this.btnshowmenu.IconColor = System.Drawing.Color.Black;
+            this.btnshowmenu.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnshowmenu.IconSize = 35;
+            this.btnshowmenu.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnshowmenu.Location = new System.Drawing.Point(-12, 9);
+            this.btnshowmenu.Margin = new System.Windows.Forms.Padding(2);
+            this.btnshowmenu.Name = "btnshowmenu";
+            this.btnshowmenu.Padding = new System.Windows.Forms.Padding(21, 0, 0, 0);
+            this.btnshowmenu.Size = new System.Drawing.Size(56, 38);
+            this.btnshowmenu.TabIndex = 17;
+            this.btnshowmenu.UseVisualStyleBackColor = false;
+            this.btnshowmenu.Click += new System.EventHandler(this.btnshowmenu_Click);
+            // 
             // label1
             // 
             this.label1.AutoSize = true;
@@ -122,6 +179,19 @@
             this.label1.Size = new System.Drawing.Size(65, 24);
             this.label1.TabIndex = 16;
             this.label1.Text = "WELCOME";
+            // 
+            // guna2CirclePictureBox1
+            // 
+            this.guna2CirclePictureBox1.Image = global::Hotel_Management.Properties.Resources._403024_avatar_boy_male_user_young_icon;
+            this.guna2CirclePictureBox1.ImageRotate = 0F;
+            this.guna2CirclePictureBox1.Location = new System.Drawing.Point(63, 59);
+            this.guna2CirclePictureBox1.Margin = new System.Windows.Forms.Padding(2);
+            this.guna2CirclePictureBox1.Name = "guna2CirclePictureBox1";
+            this.guna2CirclePictureBox1.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
+            this.guna2CirclePictureBox1.Size = new System.Drawing.Size(78, 82);
+            this.guna2CirclePictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.guna2CirclePictureBox1.TabIndex = 0;
+            this.guna2CirclePictureBox1.TabStop = false;
             // 
             // panel1
             // 
@@ -159,6 +229,75 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1035, 554);
             this.panel1.TabIndex = 1;
+            // 
+            // guna2PictureBox4
+            // 
+            this.guna2PictureBox4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(147)))), ((int)(((byte)(255)))));
+            this.guna2PictureBox4.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(147)))), ((int)(((byte)(255)))));
+            this.guna2PictureBox4.Image = global::Hotel_Management.Properties.Resources.monitor;
+            this.guna2PictureBox4.ImageRotate = 0F;
+            this.guna2PictureBox4.Location = new System.Drawing.Point(874, 213);
+            this.guna2PictureBox4.Name = "guna2PictureBox4";
+            this.guna2PictureBox4.Size = new System.Drawing.Size(86, 77);
+            this.guna2PictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.guna2PictureBox4.TabIndex = 59;
+            this.guna2PictureBox4.TabStop = false;
+            // 
+            // guna2PictureBox3
+            // 
+            this.guna2PictureBox3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(147)))), ((int)(((byte)(255)))));
+            this.guna2PictureBox3.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(147)))), ((int)(((byte)(255)))));
+            this.guna2PictureBox3.Image = global::Hotel_Management.Properties.Resources._5027823_calculator_coin_dollar_money_icon;
+            this.guna2PictureBox3.ImageRotate = 0F;
+            this.guna2PictureBox3.Location = new System.Drawing.Point(678, 171);
+            this.guna2PictureBox3.Name = "guna2PictureBox3";
+            this.guna2PictureBox3.Size = new System.Drawing.Size(86, 77);
+            this.guna2PictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.guna2PictureBox3.TabIndex = 58;
+            this.guna2PictureBox3.TabStop = false;
+            // 
+            // guna2PictureBox2
+            // 
+            this.guna2PictureBox2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(147)))), ((int)(((byte)(255)))));
+            this.guna2PictureBox2.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(147)))), ((int)(((byte)(255)))));
+            this.guna2PictureBox2.Image = global::Hotel_Management.Properties.Resources._285670_calendar_icon;
+            this.guna2PictureBox2.ImageRotate = 0F;
+            this.guna2PictureBox2.Location = new System.Drawing.Point(430, 232);
+            this.guna2PictureBox2.Name = "guna2PictureBox2";
+            this.guna2PictureBox2.Size = new System.Drawing.Size(86, 77);
+            this.guna2PictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.guna2PictureBox2.TabIndex = 57;
+            this.guna2PictureBox2.TabStop = false;
+            // 
+            // guna2PictureBox1
+            // 
+            this.guna2PictureBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(147)))), ((int)(((byte)(255)))));
+            this.guna2PictureBox1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(147)))), ((int)(((byte)(255)))));
+            this.guna2PictureBox1.Image = global::Hotel_Management.Properties.Resources.inventory_management;
+            this.guna2PictureBox1.ImageRotate = 0F;
+            this.guna2PictureBox1.Location = new System.Drawing.Point(430, 111);
+            this.guna2PictureBox1.Name = "guna2PictureBox1";
+            this.guna2PictureBox1.Size = new System.Drawing.Size(86, 77);
+            this.guna2PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.guna2PictureBox1.TabIndex = 56;
+            this.guna2PictureBox1.TabStop = false;
+            // 
+            // guna2CirclePictureBox11
+            // 
+            this.guna2CirclePictureBox11.BackColor = System.Drawing.Color.Transparent;
+            this.guna2CirclePictureBox11.FillColor = System.Drawing.Color.IndianRed;
+            this.guna2CirclePictureBox11.Image = global::Hotel_Management.Properties.Resources.schedule;
+            this.guna2CirclePictureBox11.ImageRotate = 0F;
+            this.guna2CirclePictureBox11.Location = new System.Drawing.Point(658, 360);
+            this.guna2CirclePictureBox11.Margin = new System.Windows.Forms.Padding(2);
+            this.guna2CirclePictureBox11.Name = "guna2CirclePictureBox11";
+            this.guna2CirclePictureBox11.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
+            this.guna2CirclePictureBox11.Size = new System.Drawing.Size(121, 114);
+            this.guna2CirclePictureBox11.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.guna2CirclePictureBox11.TabIndex = 55;
+            this.guna2CirclePictureBox11.TabStop = false;
+            this.guna2CirclePictureBox11.UseTransparentBackground = true;
+            this.guna2CirclePictureBox11.Click += new System.EventHandler(this.guna2CirclePictureBox11_Click);
             // 
             // label11
             // 
@@ -312,6 +451,37 @@
             this.btnmanainventory.TabIndex = 38;
             this.btnmanainventory.Click += new System.EventHandler(this.btnmanainventory_Click);
             // 
+            // guna2CirclePictureBox2
+            // 
+            this.guna2CirclePictureBox2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(147)))), ((int)(((byte)(255)))));
+            this.guna2CirclePictureBox2.FillColor = System.Drawing.Color.IndianRed;
+            this.guna2CirclePictureBox2.Image = global::Hotel_Management.Properties.Resources._11630224_customer_icon;
+            this.guna2CirclePictureBox2.ImageRotate = 0F;
+            this.guna2CirclePictureBox2.Location = new System.Drawing.Point(421, 373);
+            this.guna2CirclePictureBox2.Margin = new System.Windows.Forms.Padding(2);
+            this.guna2CirclePictureBox2.Name = "guna2CirclePictureBox2";
+            this.guna2CirclePictureBox2.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
+            this.guna2CirclePictureBox2.Size = new System.Drawing.Size(97, 102);
+            this.guna2CirclePictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.guna2CirclePictureBox2.TabIndex = 37;
+            this.guna2CirclePictureBox2.TabStop = false;
+            // 
+            // guna2CirclePictureBox5
+            // 
+            this.guna2CirclePictureBox5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(147)))), ((int)(((byte)(255)))));
+            this.guna2CirclePictureBox5.FillColor = System.Drawing.Color.IndianRed;
+            this.guna2CirclePictureBox5.Image = global::Hotel_Management.Properties.Resources._379460_key_icon;
+            this.guna2CirclePictureBox5.ImageRotate = 0F;
+            this.guna2CirclePictureBox5.Location = new System.Drawing.Point(203, 171);
+            this.guna2CirclePictureBox5.Margin = new System.Windows.Forms.Padding(2);
+            this.guna2CirclePictureBox5.Name = "guna2CirclePictureBox5";
+            this.guna2CirclePictureBox5.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
+            this.guna2CirclePictureBox5.Size = new System.Drawing.Size(94, 98);
+            this.guna2CirclePictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.guna2CirclePictureBox5.TabIndex = 36;
+            this.guna2CirclePictureBox5.TabStop = false;
+            this.guna2CirclePictureBox5.Click += new System.EventHandler(this.guna2CirclePictureBox5_Click);
+            // 
             // label6
             // 
             this.label6.AutoSize = true;
@@ -323,6 +493,22 @@
             this.label6.Size = new System.Drawing.Size(90, 26);
             this.label6.TabIndex = 35;
             this.label6.Text = "Book Room";
+            // 
+            // guna2CirclePictureBox4
+            // 
+            this.guna2CirclePictureBox4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(147)))), ((int)(((byte)(255)))));
+            this.guna2CirclePictureBox4.FillColor = System.Drawing.Color.IndianRed;
+            this.guna2CirclePictureBox4.Image = global::Hotel_Management.Properties.Resources.room;
+            this.guna2CirclePictureBox4.ImageRotate = 0F;
+            this.guna2CirclePictureBox4.Location = new System.Drawing.Point(68, 160);
+            this.guna2CirclePictureBox4.Margin = new System.Windows.Forms.Padding(2);
+            this.guna2CirclePictureBox4.Name = "guna2CirclePictureBox4";
+            this.guna2CirclePictureBox4.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
+            this.guna2CirclePictureBox4.Size = new System.Drawing.Size(104, 117);
+            this.guna2CirclePictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.guna2CirclePictureBox4.TabIndex = 34;
+            this.guna2CirclePictureBox4.TabStop = false;
+            this.guna2CirclePictureBox4.Click += new System.EventHandler(this.guna2CirclePictureBox4_Click);
             // 
             // btnbookroom
             // 
@@ -380,6 +566,21 @@
             this.label4.TabIndex = 28;
             this.label4.Text = "Employee Management";
             // 
+            // guna2CirclePictureBox3
+            // 
+            this.guna2CirclePictureBox3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(147)))), ((int)(((byte)(255)))));
+            this.guna2CirclePictureBox3.FillColor = System.Drawing.Color.IndianRed;
+            this.guna2CirclePictureBox3.Image = global::Hotel_Management.Properties.Resources.cus;
+            this.guna2CirclePictureBox3.ImageRotate = 0F;
+            this.guna2CirclePictureBox3.Location = new System.Drawing.Point(140, 373);
+            this.guna2CirclePictureBox3.Margin = new System.Windows.Forms.Padding(2);
+            this.guna2CirclePictureBox3.Name = "guna2CirclePictureBox3";
+            this.guna2CirclePictureBox3.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
+            this.guna2CirclePictureBox3.Size = new System.Drawing.Size(97, 102);
+            this.guna2CirclePictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.guna2CirclePictureBox3.TabIndex = 26;
+            this.guna2CirclePictureBox3.TabStop = false;
+            // 
             // btnmanaemployee
             // 
             this.btnmanaemployee.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
@@ -429,207 +630,6 @@
             this.timer1.Interval = 1;
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
-            // guna2PictureBox4
-            // 
-            this.guna2PictureBox4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(147)))), ((int)(((byte)(255)))));
-            this.guna2PictureBox4.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(147)))), ((int)(((byte)(255)))));
-            this.guna2PictureBox4.Image = global::Hotel_Management.Properties.Resources.monitor;
-            this.guna2PictureBox4.ImageRotate = 0F;
-            this.guna2PictureBox4.Location = new System.Drawing.Point(874, 213);
-            this.guna2PictureBox4.Name = "guna2PictureBox4";
-            this.guna2PictureBox4.Size = new System.Drawing.Size(86, 77);
-            this.guna2PictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.guna2PictureBox4.TabIndex = 59;
-            this.guna2PictureBox4.TabStop = false;
-            // 
-            // guna2PictureBox3
-            // 
-            this.guna2PictureBox3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(147)))), ((int)(((byte)(255)))));
-            this.guna2PictureBox3.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(147)))), ((int)(((byte)(255)))));
-            this.guna2PictureBox3.Image = global::Hotel_Management.Properties.Resources._5027823_calculator_coin_dollar_money_icon;
-            this.guna2PictureBox3.ImageRotate = 0F;
-            this.guna2PictureBox3.Location = new System.Drawing.Point(678, 171);
-            this.guna2PictureBox3.Name = "guna2PictureBox3";
-            this.guna2PictureBox3.Size = new System.Drawing.Size(86, 77);
-            this.guna2PictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.guna2PictureBox3.TabIndex = 58;
-            this.guna2PictureBox3.TabStop = false;
-            // 
-            // guna2PictureBox2
-            // 
-            this.guna2PictureBox2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(147)))), ((int)(((byte)(255)))));
-            this.guna2PictureBox2.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(147)))), ((int)(((byte)(255)))));
-            this.guna2PictureBox2.Image = global::Hotel_Management.Properties.Resources._285670_calendar_icon;
-            this.guna2PictureBox2.ImageRotate = 0F;
-            this.guna2PictureBox2.Location = new System.Drawing.Point(430, 232);
-            this.guna2PictureBox2.Name = "guna2PictureBox2";
-            this.guna2PictureBox2.Size = new System.Drawing.Size(86, 77);
-            this.guna2PictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.guna2PictureBox2.TabIndex = 57;
-            this.guna2PictureBox2.TabStop = false;
-            // 
-            // guna2PictureBox1
-            // 
-            this.guna2PictureBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(147)))), ((int)(((byte)(255)))));
-            this.guna2PictureBox1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(147)))), ((int)(((byte)(255)))));
-            this.guna2PictureBox1.Image = global::Hotel_Management.Properties.Resources.inventory_management;
-            this.guna2PictureBox1.ImageRotate = 0F;
-            this.guna2PictureBox1.Location = new System.Drawing.Point(430, 111);
-            this.guna2PictureBox1.Name = "guna2PictureBox1";
-            this.guna2PictureBox1.Size = new System.Drawing.Size(86, 77);
-            this.guna2PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.guna2PictureBox1.TabIndex = 56;
-            this.guna2PictureBox1.TabStop = false;
-            // 
-            // guna2CirclePictureBox11
-            // 
-            this.guna2CirclePictureBox11.BackColor = System.Drawing.Color.Transparent;
-            this.guna2CirclePictureBox11.FillColor = System.Drawing.Color.IndianRed;
-            this.guna2CirclePictureBox11.Image = global::Hotel_Management.Properties.Resources.schedule;
-            this.guna2CirclePictureBox11.ImageRotate = 0F;
-            this.guna2CirclePictureBox11.Location = new System.Drawing.Point(658, 360);
-            this.guna2CirclePictureBox11.Margin = new System.Windows.Forms.Padding(2);
-            this.guna2CirclePictureBox11.Name = "guna2CirclePictureBox11";
-            this.guna2CirclePictureBox11.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
-            this.guna2CirclePictureBox11.Size = new System.Drawing.Size(121, 114);
-            this.guna2CirclePictureBox11.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.guna2CirclePictureBox11.TabIndex = 55;
-            this.guna2CirclePictureBox11.TabStop = false;
-            this.guna2CirclePictureBox11.UseTransparentBackground = true;
-            this.guna2CirclePictureBox11.Click += new System.EventHandler(this.guna2CirclePictureBox11_Click);
-            // 
-            // guna2CirclePictureBox2
-            // 
-            this.guna2CirclePictureBox2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(147)))), ((int)(((byte)(255)))));
-            this.guna2CirclePictureBox2.FillColor = System.Drawing.Color.IndianRed;
-            this.guna2CirclePictureBox2.Image = global::Hotel_Management.Properties.Resources._11630224_customer_icon;
-            this.guna2CirclePictureBox2.ImageRotate = 0F;
-            this.guna2CirclePictureBox2.Location = new System.Drawing.Point(421, 373);
-            this.guna2CirclePictureBox2.Margin = new System.Windows.Forms.Padding(2);
-            this.guna2CirclePictureBox2.Name = "guna2CirclePictureBox2";
-            this.guna2CirclePictureBox2.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
-            this.guna2CirclePictureBox2.Size = new System.Drawing.Size(97, 102);
-            this.guna2CirclePictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.guna2CirclePictureBox2.TabIndex = 37;
-            this.guna2CirclePictureBox2.TabStop = false;
-            // 
-            // guna2CirclePictureBox5
-            // 
-            this.guna2CirclePictureBox5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(147)))), ((int)(((byte)(255)))));
-            this.guna2CirclePictureBox5.FillColor = System.Drawing.Color.IndianRed;
-            this.guna2CirclePictureBox5.Image = global::Hotel_Management.Properties.Resources._379460_key_icon;
-            this.guna2CirclePictureBox5.ImageRotate = 0F;
-            this.guna2CirclePictureBox5.Location = new System.Drawing.Point(203, 171);
-            this.guna2CirclePictureBox5.Margin = new System.Windows.Forms.Padding(2);
-            this.guna2CirclePictureBox5.Name = "guna2CirclePictureBox5";
-            this.guna2CirclePictureBox5.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
-            this.guna2CirclePictureBox5.Size = new System.Drawing.Size(94, 98);
-            this.guna2CirclePictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.guna2CirclePictureBox5.TabIndex = 36;
-            this.guna2CirclePictureBox5.TabStop = false;
-            this.guna2CirclePictureBox5.Click += new System.EventHandler(this.guna2CirclePictureBox5_Click);
-            // 
-            // guna2CirclePictureBox4
-            // 
-            this.guna2CirclePictureBox4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(147)))), ((int)(((byte)(255)))));
-            this.guna2CirclePictureBox4.FillColor = System.Drawing.Color.IndianRed;
-            this.guna2CirclePictureBox4.Image = global::Hotel_Management.Properties.Resources.room;
-            this.guna2CirclePictureBox4.ImageRotate = 0F;
-            this.guna2CirclePictureBox4.Location = new System.Drawing.Point(68, 160);
-            this.guna2CirclePictureBox4.Margin = new System.Windows.Forms.Padding(2);
-            this.guna2CirclePictureBox4.Name = "guna2CirclePictureBox4";
-            this.guna2CirclePictureBox4.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
-            this.guna2CirclePictureBox4.Size = new System.Drawing.Size(104, 117);
-            this.guna2CirclePictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.guna2CirclePictureBox4.TabIndex = 34;
-            this.guna2CirclePictureBox4.TabStop = false;
-            this.guna2CirclePictureBox4.Click += new System.EventHandler(this.guna2CirclePictureBox4_Click);
-            // 
-            // guna2CirclePictureBox3
-            // 
-            this.guna2CirclePictureBox3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(147)))), ((int)(((byte)(255)))));
-            this.guna2CirclePictureBox3.FillColor = System.Drawing.Color.IndianRed;
-            this.guna2CirclePictureBox3.Image = global::Hotel_Management.Properties.Resources.cus;
-            this.guna2CirclePictureBox3.ImageRotate = 0F;
-            this.guna2CirclePictureBox3.Location = new System.Drawing.Point(140, 373);
-            this.guna2CirclePictureBox3.Margin = new System.Windows.Forms.Padding(2);
-            this.guna2CirclePictureBox3.Name = "guna2CirclePictureBox3";
-            this.guna2CirclePictureBox3.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
-            this.guna2CirclePictureBox3.Size = new System.Drawing.Size(97, 102);
-            this.guna2CirclePictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.guna2CirclePictureBox3.TabIndex = 26;
-            this.guna2CirclePictureBox3.TabStop = false;
-            // 
-            // guna2CirclePictureBox10
-            // 
-            this.guna2CirclePictureBox10.BackColor = System.Drawing.Color.White;
-            this.guna2CirclePictureBox10.FillColor = System.Drawing.Color.IndianRed;
-            this.guna2CirclePictureBox10.Image = global::Hotel_Management.Properties.Resources.information_button;
-            this.guna2CirclePictureBox10.ImageRotate = 0F;
-            this.guna2CirclePictureBox10.Location = new System.Drawing.Point(150, 14);
-            this.guna2CirclePictureBox10.Margin = new System.Windows.Forms.Padding(2);
-            this.guna2CirclePictureBox10.Name = "guna2CirclePictureBox10";
-            this.guna2CirclePictureBox10.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
-            this.guna2CirclePictureBox10.Size = new System.Drawing.Size(29, 26);
-            this.guna2CirclePictureBox10.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.guna2CirclePictureBox10.TabIndex = 52;
-            this.guna2CirclePictureBox10.TabStop = false;
-            // 
-            // btnlogout
-            // 
-            this.btnlogout.BackColor = System.Drawing.Color.White;
-            this.btnlogout.FlatAppearance.BorderSize = 0;
-            this.btnlogout.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnlogout.Font = new System.Drawing.Font("Agency FB", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnlogout.IconChar = FontAwesome.Sharp.IconChar.ArrowAltCircleLeft;
-            this.btnlogout.IconColor = System.Drawing.Color.Black;
-            this.btnlogout.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnlogout.IconSize = 35;
-            this.btnlogout.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnlogout.Location = new System.Drawing.Point(-11, 505);
-            this.btnlogout.Margin = new System.Windows.Forms.Padding(2);
-            this.btnlogout.Name = "btnlogout";
-            this.btnlogout.Padding = new System.Windows.Forms.Padding(21, 0, 0, 0);
-            this.btnlogout.Size = new System.Drawing.Size(206, 49);
-            this.btnlogout.TabIndex = 21;
-            this.btnlogout.Text = "Log Out";
-            this.btnlogout.UseVisualStyleBackColor = false;
-            this.btnlogout.Click += new System.EventHandler(this.btnlogout_Click);
-            // 
-            // btnshowmenu
-            // 
-            this.btnshowmenu.BackColor = System.Drawing.Color.White;
-            this.btnshowmenu.FlatAppearance.BorderSize = 0;
-            this.btnshowmenu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnshowmenu.Flip = FontAwesome.Sharp.FlipOrientation.Horizontal;
-            this.btnshowmenu.Font = new System.Drawing.Font("Agency FB", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnshowmenu.IconChar = FontAwesome.Sharp.IconChar.List;
-            this.btnshowmenu.IconColor = System.Drawing.Color.Black;
-            this.btnshowmenu.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnshowmenu.IconSize = 35;
-            this.btnshowmenu.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnshowmenu.Location = new System.Drawing.Point(-12, 9);
-            this.btnshowmenu.Margin = new System.Windows.Forms.Padding(2);
-            this.btnshowmenu.Name = "btnshowmenu";
-            this.btnshowmenu.Padding = new System.Windows.Forms.Padding(21, 0, 0, 0);
-            this.btnshowmenu.Size = new System.Drawing.Size(56, 38);
-            this.btnshowmenu.TabIndex = 17;
-            this.btnshowmenu.UseVisualStyleBackColor = false;
-            this.btnshowmenu.Click += new System.EventHandler(this.btnshowmenu_Click);
-            // 
-            // guna2CirclePictureBox1
-            // 
-            this.guna2CirclePictureBox1.Image = global::Hotel_Management.Properties.Resources._403024_avatar_boy_male_user_young_icon;
-            this.guna2CirclePictureBox1.ImageRotate = 0F;
-            this.guna2CirclePictureBox1.Location = new System.Drawing.Point(63, 59);
-            this.guna2CirclePictureBox1.Margin = new System.Windows.Forms.Padding(2);
-            this.guna2CirclePictureBox1.Name = "guna2CirclePictureBox1";
-            this.guna2CirclePictureBox1.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
-            this.guna2CirclePictureBox1.Size = new System.Drawing.Size(78, 82);
-            this.guna2CirclePictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.guna2CirclePictureBox1.TabIndex = 0;
-            this.guna2CirclePictureBox1.TabStop = false;
-            // 
             // AdminMenu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -642,6 +642,8 @@
             this.Text = "AdminMenu";
             this.guna2Panel1.ResumeLayout(false);
             this.guna2Panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.guna2CirclePictureBox10)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.guna2CirclePictureBox1)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox4)).EndInit();
@@ -653,8 +655,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.guna2CirclePictureBox5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.guna2CirclePictureBox4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.guna2CirclePictureBox3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.guna2CirclePictureBox10)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.guna2CirclePictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }

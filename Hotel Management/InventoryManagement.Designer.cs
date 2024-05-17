@@ -35,6 +35,7 @@
             this.label2 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.txtsearch = new System.Windows.Forms.TextBox();
+            this.guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
             this.label5 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.label6 = new System.Windows.Forms.Label();
@@ -50,7 +51,6 @@
             this.datagridviewitemlist = new Guna.UI2.WinForms.Guna2DataGridView();
             this.btndeleteitems = new Guna.UI2.WinForms.Guna2Button();
             this.btnadditems = new Guna.UI2.WinForms.Guna2Button();
-            this.guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numberofitems)).BeginInit();
@@ -90,6 +90,22 @@
             this.txtsearch.Name = "txtsearch";
             this.txtsearch.Size = new System.Drawing.Size(162, 27);
             this.txtsearch.TabIndex = 36;
+            // 
+            // guna2Button1
+            // 
+            this.guna2Button1.BorderRadius = 15;
+            this.guna2Button1.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.guna2Button1.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.guna2Button1.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.guna2Button1.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.guna2Button1.Font = new System.Drawing.Font("Agency FB", 12F, System.Drawing.FontStyle.Bold);
+            this.guna2Button1.ForeColor = System.Drawing.Color.White;
+            this.guna2Button1.Image = global::Hotel_Management.Properties.Resources._9004762_search_find_zoom_magnifier_icon;
+            this.guna2Button1.Location = new System.Drawing.Point(252, 63);
+            this.guna2Button1.Name = "guna2Button1";
+            this.guna2Button1.Size = new System.Drawing.Size(162, 36);
+            this.guna2Button1.TabIndex = 35;
+            this.guna2Button1.Text = "Search";
             // 
             // label5
             // 
@@ -295,6 +311,8 @@
             this.datagridviewitemlist.ThemeStyle.RowsStyle.Height = 22;
             this.datagridviewitemlist.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.datagridviewitemlist.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            this.datagridviewitemlist.RowDividerDoubleClick += new System.Windows.Forms.DataGridViewRowDividerDoubleClickEventHandler(this.datagridviewitemlist_RowDividerDoubleClick);
+            this.datagridviewitemlist.RowHeaderMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.datagridviewitemlist_RowHeaderMouseClick);
             // 
             // btndeleteitems
             // 
@@ -330,22 +348,6 @@
             this.btnadditems.TabIndex = 45;
             this.btnadditems.Text = "Add Items";
             this.btnadditems.Click += new System.EventHandler(this.btnaddcustomer_Click);
-            // 
-            // guna2Button1
-            // 
-            this.guna2Button1.BorderRadius = 15;
-            this.guna2Button1.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button1.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button1.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.guna2Button1.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.guna2Button1.Font = new System.Drawing.Font("Agency FB", 12F, System.Drawing.FontStyle.Bold);
-            this.guna2Button1.ForeColor = System.Drawing.Color.White;
-            this.guna2Button1.Image = global::Hotel_Management.Properties.Resources._9004762_search_find_zoom_magnifier_icon;
-            this.guna2Button1.Location = new System.Drawing.Point(252, 63);
-            this.guna2Button1.Name = "guna2Button1";
-            this.guna2Button1.Size = new System.Drawing.Size(162, 36);
-            this.guna2Button1.TabIndex = 35;
-            this.guna2Button1.Text = "Search";
             // 
             // InventoryManagement
             // 

@@ -28,17 +28,14 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            this.components = new System.ComponentModel.Container();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.txtsearch = new System.Windows.Forms.TextBox();
-            this.combosearchbyCusinfo = new System.Windows.Forms.ComboBox();
+            this.guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
             this.label5 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.datagridviewlistcustomer = new Guna.UI2.WinForms.Guna2DataGridView();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.txtidcustomer = new System.Windows.Forms.TextBox();
             this.txtnationcustomer = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
@@ -51,24 +48,34 @@
             this.label6 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.comboidcustomer = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.btnclose = new Guna.UI2.WinForms.Guna2Button();
             this.btndeletecustomer = new Guna.UI2.WinForms.Guna2Button();
             this.btnupdatecustomer = new Guna.UI2.WinForms.Guna2Button();
             this.btnaddcustomer = new Guna.UI2.WinForms.Guna2Button();
-            this.guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
+            this.hotelDataDataSet = new Hotel_Management.HotelDataDataSet();
+            this.customerBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.customerTableAdapter = new Hotel_Management.HotelDataDataSetTableAdapters.CustomerTableAdapter();
+            this.datagridviewlistcustomer = new System.Windows.Forms.DataGridView();
+            this.iDCustomerDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.iDCardDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.genderDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dOBDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.phoneNumberDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nationalityDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.datagridviewlistcustomer)).BeginInit();
             this.groupBox3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.hotelDataDataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.customerBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.datagridviewlistcustomer)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBox1
             // 
             this.groupBox1.Controls.Add(this.txtsearch);
-            this.groupBox1.Controls.Add(this.combosearchbyCusinfo);
             this.groupBox1.Controls.Add(this.guna2Button1);
             this.groupBox1.Controls.Add(this.label5);
             this.groupBox1.Font = new System.Drawing.Font("Agency FB", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -82,25 +89,26 @@
             // txtsearch
             // 
             this.txtsearch.Font = new System.Drawing.Font("Agency FB", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtsearch.Location = new System.Drawing.Point(256, 38);
+            this.txtsearch.Location = new System.Drawing.Point(32, 82);
             this.txtsearch.Name = "txtsearch";
-            this.txtsearch.Size = new System.Drawing.Size(162, 27);
+            this.txtsearch.Size = new System.Drawing.Size(188, 27);
             this.txtsearch.TabIndex = 36;
             // 
-            // combosearchbyCusinfo
+            // guna2Button1
             // 
-            this.combosearchbyCusinfo.Font = new System.Drawing.Font("Agency FB", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.combosearchbyCusinfo.FormattingEnabled = true;
-            this.combosearchbyCusinfo.Items.AddRange(new object[] {
-            "Phone Number ",
-            "Name Customer",
-            "ID Customer",
-            "ID Card",
-            " "});
-            this.combosearchbyCusinfo.Location = new System.Drawing.Point(30, 90);
-            this.combosearchbyCusinfo.Name = "combosearchbyCusinfo";
-            this.combosearchbyCusinfo.Size = new System.Drawing.Size(182, 28);
-            this.combosearchbyCusinfo.TabIndex = 2;
+            this.guna2Button1.BorderRadius = 15;
+            this.guna2Button1.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.guna2Button1.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.guna2Button1.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.guna2Button1.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.guna2Button1.Font = new System.Drawing.Font("Agency FB", 12F, System.Drawing.FontStyle.Bold);
+            this.guna2Button1.ForeColor = System.Drawing.Color.White;
+            this.guna2Button1.Image = global::Hotel_Management.Properties.Resources._9004762_search_find_zoom_magnifier_icon;
+            this.guna2Button1.Location = new System.Drawing.Point(256, 78);
+            this.guna2Button1.Name = "guna2Button1";
+            this.guna2Button1.Size = new System.Drawing.Size(162, 36);
+            this.guna2Button1.TabIndex = 35;
+            this.guna2Button1.Text = "Search";
             // 
             // label5
             // 
@@ -118,77 +126,16 @@
             // 
             this.groupBox2.Controls.Add(this.datagridviewlistcustomer);
             this.groupBox2.Font = new System.Drawing.Font("Agency FB", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox2.Location = new System.Drawing.Point(525, 24);
+            this.groupBox2.Location = new System.Drawing.Point(533, 24);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(616, 694);
+            this.groupBox2.Size = new System.Drawing.Size(931, 694);
             this.groupBox2.TabIndex = 1;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "List Customer";
             // 
-            // datagridviewlistcustomer
-            // 
-            this.datagridviewlistcustomer.AllowUserToAddRows = false;
-            this.datagridviewlistcustomer.AllowUserToDeleteRows = false;
-            this.datagridviewlistcustomer.AllowUserToResizeRows = false;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
-            this.datagridviewlistcustomer.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
-            this.datagridviewlistcustomer.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Raised;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Agency FB", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.datagridviewlistcustomer.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
-            this.datagridviewlistcustomer.ColumnHeadersHeight = 20;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Agency FB", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.datagridviewlistcustomer.DefaultCellStyle = dataGridViewCellStyle3;
-            this.datagridviewlistcustomer.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            this.datagridviewlistcustomer.Location = new System.Drawing.Point(6, 32);
-            this.datagridviewlistcustomer.Name = "datagridviewlistcustomer";
-            this.datagridviewlistcustomer.ReadOnly = true;
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Agency FB", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.datagridviewlistcustomer.RowHeadersDefaultCellStyle = dataGridViewCellStyle4;
-            this.datagridviewlistcustomer.RowHeadersVisible = false;
-            this.datagridviewlistcustomer.Size = new System.Drawing.Size(604, 656);
-            this.datagridviewlistcustomer.TabIndex = 3;
-            this.datagridviewlistcustomer.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
-            this.datagridviewlistcustomer.ThemeStyle.AlternatingRowsStyle.Font = null;
-            this.datagridviewlistcustomer.ThemeStyle.AlternatingRowsStyle.ForeColor = System.Drawing.Color.Empty;
-            this.datagridviewlistcustomer.ThemeStyle.AlternatingRowsStyle.SelectionBackColor = System.Drawing.Color.Empty;
-            this.datagridviewlistcustomer.ThemeStyle.AlternatingRowsStyle.SelectionForeColor = System.Drawing.Color.Empty;
-            this.datagridviewlistcustomer.ThemeStyle.BackColor = System.Drawing.Color.White;
-            this.datagridviewlistcustomer.ThemeStyle.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            this.datagridviewlistcustomer.ThemeStyle.HeaderStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            this.datagridviewlistcustomer.ThemeStyle.HeaderStyle.BorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Raised;
-            this.datagridviewlistcustomer.ThemeStyle.HeaderStyle.Font = new System.Drawing.Font("Agency FB", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.datagridviewlistcustomer.ThemeStyle.HeaderStyle.ForeColor = System.Drawing.Color.White;
-            this.datagridviewlistcustomer.ThemeStyle.HeaderStyle.HeaightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
-            this.datagridviewlistcustomer.ThemeStyle.HeaderStyle.Height = 20;
-            this.datagridviewlistcustomer.ThemeStyle.ReadOnly = true;
-            this.datagridviewlistcustomer.ThemeStyle.RowsStyle.BackColor = System.Drawing.Color.White;
-            this.datagridviewlistcustomer.ThemeStyle.RowsStyle.BorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
-            this.datagridviewlistcustomer.ThemeStyle.RowsStyle.Font = new System.Drawing.Font("Agency FB", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.datagridviewlistcustomer.ThemeStyle.RowsStyle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            this.datagridviewlistcustomer.ThemeStyle.RowsStyle.Height = 22;
-            this.datagridviewlistcustomer.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            this.datagridviewlistcustomer.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            // 
             // groupBox3
             // 
+            this.groupBox3.Controls.Add(this.txtidcustomer);
             this.groupBox3.Controls.Add(this.txtnationcustomer);
             this.groupBox3.Controls.Add(this.label10);
             this.groupBox3.Controls.Add(this.label9);
@@ -201,7 +148,6 @@
             this.groupBox3.Controls.Add(this.label6);
             this.groupBox3.Controls.Add(this.label4);
             this.groupBox3.Controls.Add(this.label3);
-            this.groupBox3.Controls.Add(this.comboidcustomer);
             this.groupBox3.Controls.Add(this.label1);
             this.groupBox3.Font = new System.Drawing.Font("Agency FB", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox3.Location = new System.Drawing.Point(50, 229);
@@ -210,6 +156,14 @@
             this.groupBox3.TabIndex = 1;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Customer Info";
+            // 
+            // txtidcustomer
+            // 
+            this.txtidcustomer.Font = new System.Drawing.Font("Agency FB", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtidcustomer.Location = new System.Drawing.Point(30, 76);
+            this.txtidcustomer.Name = "txtidcustomer";
+            this.txtidcustomer.Size = new System.Drawing.Size(162, 27);
+            this.txtidcustomer.TabIndex = 45;
             // 
             // txtnationcustomer
             // 
@@ -333,15 +287,6 @@
             this.label3.TabIndex = 2;
             this.label3.Text = "Name :";
             // 
-            // comboidcustomer
-            // 
-            this.comboidcustomer.Font = new System.Drawing.Font("Agency FB", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboidcustomer.FormattingEnabled = true;
-            this.comboidcustomer.Location = new System.Drawing.Point(30, 75);
-            this.comboidcustomer.Name = "comboidcustomer";
-            this.comboidcustomer.Size = new System.Drawing.Size(164, 28);
-            this.comboidcustomer.TabIndex = 1;
-            // 
             // label1
             // 
             this.label1.AutoSize = true;
@@ -433,27 +378,87 @@
             this.btnaddcustomer.Text = "Add";
             this.btnaddcustomer.Click += new System.EventHandler(this.btnaddcustomer_Click);
             // 
-            // guna2Button1
+            // hotelDataDataSet
             // 
-            this.guna2Button1.BorderRadius = 15;
-            this.guna2Button1.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button1.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button1.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.guna2Button1.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.guna2Button1.Font = new System.Drawing.Font("Agency FB", 12F, System.Drawing.FontStyle.Bold);
-            this.guna2Button1.ForeColor = System.Drawing.Color.White;
-            this.guna2Button1.Image = global::Hotel_Management.Properties.Resources._9004762_search_find_zoom_magnifier_icon;
-            this.guna2Button1.Location = new System.Drawing.Point(256, 82);
-            this.guna2Button1.Name = "guna2Button1";
-            this.guna2Button1.Size = new System.Drawing.Size(162, 36);
-            this.guna2Button1.TabIndex = 35;
-            this.guna2Button1.Text = "Search";
+            this.hotelDataDataSet.DataSetName = "HotelDataDataSet";
+            this.hotelDataDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // customerBindingSource
+            // 
+            this.customerBindingSource.DataMember = "Customer";
+            this.customerBindingSource.DataSource = this.hotelDataDataSet;
+            // 
+            // customerTableAdapter
+            // 
+            this.customerTableAdapter.ClearBeforeFill = true;
+            // 
+            // datagridviewlistcustomer
+            // 
+            this.datagridviewlistcustomer.AutoGenerateColumns = false;
+            this.datagridviewlistcustomer.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.datagridviewlistcustomer.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.datagridviewlistcustomer.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.iDCustomerDataGridViewTextBoxColumn,
+            this.nameDataGridViewTextBoxColumn,
+            this.iDCardDataGridViewTextBoxColumn,
+            this.genderDataGridViewTextBoxColumn,
+            this.dOBDataGridViewTextBoxColumn,
+            this.phoneNumberDataGridViewTextBoxColumn,
+            this.nationalityDataGridViewTextBoxColumn});
+            this.datagridviewlistcustomer.DataSource = this.customerBindingSource;
+            this.datagridviewlistcustomer.Location = new System.Drawing.Point(8, 29);
+            this.datagridviewlistcustomer.Name = "datagridviewlistcustomer";
+            this.datagridviewlistcustomer.Size = new System.Drawing.Size(917, 659);
+            this.datagridviewlistcustomer.TabIndex = 0;
+            this.datagridviewlistcustomer.RowHeaderMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.datagridviewlistcustomer_RowHeaderMouseClick_1);
+            // 
+            // iDCustomerDataGridViewTextBoxColumn
+            // 
+            this.iDCustomerDataGridViewTextBoxColumn.DataPropertyName = "ID_Customer";
+            this.iDCustomerDataGridViewTextBoxColumn.HeaderText = "ID Customer";
+            this.iDCustomerDataGridViewTextBoxColumn.Name = "iDCustomerDataGridViewTextBoxColumn";
+            // 
+            // nameDataGridViewTextBoxColumn
+            // 
+            this.nameDataGridViewTextBoxColumn.DataPropertyName = "Name";
+            this.nameDataGridViewTextBoxColumn.HeaderText = "Name";
+            this.nameDataGridViewTextBoxColumn.Name = "nameDataGridViewTextBoxColumn";
+            // 
+            // iDCardDataGridViewTextBoxColumn
+            // 
+            this.iDCardDataGridViewTextBoxColumn.DataPropertyName = "ID_Card";
+            this.iDCardDataGridViewTextBoxColumn.HeaderText = "ID Card";
+            this.iDCardDataGridViewTextBoxColumn.Name = "iDCardDataGridViewTextBoxColumn";
+            // 
+            // genderDataGridViewTextBoxColumn
+            // 
+            this.genderDataGridViewTextBoxColumn.DataPropertyName = "Gender";
+            this.genderDataGridViewTextBoxColumn.HeaderText = "Gender";
+            this.genderDataGridViewTextBoxColumn.Name = "genderDataGridViewTextBoxColumn";
+            // 
+            // dOBDataGridViewTextBoxColumn
+            // 
+            this.dOBDataGridViewTextBoxColumn.DataPropertyName = "DOB";
+            this.dOBDataGridViewTextBoxColumn.HeaderText = "BirthDate";
+            this.dOBDataGridViewTextBoxColumn.Name = "dOBDataGridViewTextBoxColumn";
+            // 
+            // phoneNumberDataGridViewTextBoxColumn
+            // 
+            this.phoneNumberDataGridViewTextBoxColumn.DataPropertyName = "PhoneNumber";
+            this.phoneNumberDataGridViewTextBoxColumn.HeaderText = "Phone Number";
+            this.phoneNumberDataGridViewTextBoxColumn.Name = "phoneNumberDataGridViewTextBoxColumn";
+            // 
+            // nationalityDataGridViewTextBoxColumn
+            // 
+            this.nationalityDataGridViewTextBoxColumn.DataPropertyName = "Nationality";
+            this.nationalityDataGridViewTextBoxColumn.HeaderText = "Nationality";
+            this.nationalityDataGridViewTextBoxColumn.Name = "nationalityDataGridViewTextBoxColumn";
             // 
             // CustomerManagement
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1176, 730);
+            this.ClientSize = new System.Drawing.Size(1488, 730);
             this.Controls.Add(this.btnclose);
             this.Controls.Add(this.btndeletecustomer);
             this.Controls.Add(this.btnupdatecustomer);
@@ -464,12 +469,15 @@
             this.Controls.Add(this.groupBox1);
             this.Name = "CustomerManagement";
             this.Text = "CustomerManagement";
+            this.Load += new System.EventHandler(this.CustomerManagement_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.groupBox2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.datagridviewlistcustomer)).EndInit();
             this.groupBox3.ResumeLayout(false);
             this.groupBox3.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.hotelDataDataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.customerBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.datagridviewlistcustomer)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -480,16 +488,13 @@
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.GroupBox groupBox3;
-        private Guna.UI2.WinForms.Guna2DataGridView datagridviewlistcustomer;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label5;
         private Guna.UI2.WinForms.Guna2Button guna2Button1;
-        private System.Windows.Forms.ComboBox combosearchbyCusinfo;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.ComboBox comboidcustomer;
         private System.Windows.Forms.Label label1;
         private Guna.UI2.WinForms.Guna2DateTimePicker dobpicker;
         private System.Windows.Forms.TextBox txtsearch;
@@ -504,5 +509,17 @@
         private Guna.UI2.WinForms.Guna2Button btnupdatecustomer;
         private Guna.UI2.WinForms.Guna2Button btndeletecustomer;
         private Guna.UI2.WinForms.Guna2Button btnclose;
+        private System.Windows.Forms.TextBox txtidcustomer;
+        private HotelDataDataSet hotelDataDataSet;
+        private System.Windows.Forms.BindingSource customerBindingSource;
+        private HotelDataDataSetTableAdapters.CustomerTableAdapter customerTableAdapter;
+        private System.Windows.Forms.DataGridView datagridviewlistcustomer;
+        private System.Windows.Forms.DataGridViewTextBoxColumn iDCustomerDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn nameDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn iDCardDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn genderDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dOBDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn phoneNumberDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn nationalityDataGridViewTextBoxColumn;
     }
 }

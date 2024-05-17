@@ -82,5 +82,10 @@ namespace Hotel_Management
         {
             this.Close();
         }
+
+        private void datagridviewlistemployee_RowHeaderMouseClick(object sender, DataGridViewCellMouseEventArgs e)
+        {
+
+        }
     }
 }

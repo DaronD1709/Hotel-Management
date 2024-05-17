@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -12,6 +13,7 @@ namespace Hotel_Management
 {
     public partial class CustomerManagement : Form
     {
+        public static int Id = -1;
         public CustomerManagement()
         {
             InitializeComponent();
@@ -107,6 +109,48 @@ namespace Hotel_Management
                 return false;
             }
             return true;
+        }
+
+        private void datagridviewlistcustomer_RowHeaderMouseClick(object sender, DataGridViewCellMouseEventArgs e)
+        {
+        }
+
+
+
+        Global global = new Global();
+        private void CustomerManagement_Load(object sender, EventArgs e)
+        {
+            // TODO: This line of code loads data into the 'hotelDataDataSet.Customer' table. You can move, or remove it, as needed.
+            this.customerTableAdapter.Fill(this.hotelDataDataSet.Customer);
+
+        }
+
+        private void datagridviewlistcustomer_RowHeaderMouseClick_1(object sender, DataGridViewCellMouseEventArgs e)
+        {
+
+            txtidcustomer.Text = datagridviewlistcustomer.Rows[e.RowIndex].Cells[0].Value == DBNull.Value ? "" : datagridviewlistcustomer.Rows[e.RowIndex].Cells[0].Value.ToString();
+            txtnamecustomer.Text = datagridviewlistcustomer.Rows[e.RowIndex].Cells[1].Value == DBNull.Value ? "" : datagridviewlistcustomer.Rows[e.RowIndex].Cells[1].Value.ToString();
+            txtcardidcustomer.Text = datagridviewlistcustomer.Rows[e.RowIndex].Cells[2].Value == DBNull.Value ? "" : datagridviewlistcustomer.Rows[e.RowIndex].Cells[2].Value.ToString();
+            if (datagridviewlistcustomer.Rows[e.RowIndex].Cells[3].Value.ToString() == "Male")
+            {
+                combogendercustomer.SelectedIndex = 1; // Sets the selected item to the first item
+            }
+            else
+            {
+                combogendercustomer.SelectedIndex = 0; // Sets the selected item to the second item
+            }
+
+
+            if (datagridviewlistcustomer.Rows[e.RowIndex].Cells[4].Value != DBNull.Value)
+            {
+                dobpicker.Value = Convert.ToDateTime(datagridviewlistcustomer.Rows[e.RowIndex].Cells[4].Value);
+            }
+            else
+            {
+                dobpicker.Value = DateTime.Now; // Hoặc giá trị mặc định khác
+            }
+            txtphonecustomer.Text = datagridviewlistcustomer.Rows[e.RowIndex].Cells[5].Value == DBNull.Value ? "" : datagridviewlistcustomer.Rows[e.RowIndex].Cells[5].Value.ToString();
+            txtnationcustomer.Text = datagridviewlistcustomer.Rows[e.RowIndex].Cells[6].Value == DBNull.Value ? "" : datagridviewlistcustomer.Rows[e.RowIndex].Cells[6].Value.ToString();
         }
     }
 }
