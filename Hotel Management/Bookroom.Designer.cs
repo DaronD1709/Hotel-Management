@@ -46,9 +46,9 @@
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.txtpriceroom = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
-            this.txtnamecustomer = new System.Windows.Forms.TextBox();
+            this.txtnameroom = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtidroom = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
             this.txtnationcustomer = new System.Windows.Forms.TextBox();
@@ -57,7 +57,7 @@
             this.combogendercustomer = new System.Windows.Forms.ComboBox();
             this.txtcardidcustomer = new System.Windows.Forms.TextBox();
             this.txtphonecustomer = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.txtcustomername = new System.Windows.Forms.TextBox();
             this.guna2DateTimePicker2 = new Guna.UI2.WinForms.Guna2DateTimePicker();
             this.label11 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
@@ -66,8 +66,9 @@
             this.btnclose = new Guna.UI2.WinForms.Guna2Button();
             this.groupBox5 = new System.Windows.Forms.GroupBox();
             this.datagridviewbookinglist = new Guna.UI2.WinForms.Guna2DataGridView();
-            this.guna2Button2 = new Guna.UI2.WinForms.Guna2Button();
-            this.btndeletecustomer = new Guna.UI2.WinForms.Guna2Button();
+            this.txtnumberguest = new System.Windows.Forms.TextBox();
+            this.label15 = new System.Windows.Forms.Label();
+            this.btndeleteroom = new Guna.UI2.WinForms.Guna2Button();
             this.btnaddcustomer = new Guna.UI2.WinForms.Guna2Button();
             this.guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
             this.groupBox1.SuspendLayout();
@@ -179,7 +180,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Agency FB", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(44, 62);
+            this.label1.Location = new System.Drawing.Point(44, 63);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(91, 24);
             this.label1.TabIndex = 54;
@@ -193,7 +194,7 @@
             "Single Room",
             "Double Room ",
             "Deluxe Room "});
-            this.combotyperoom.Location = new System.Drawing.Point(40, 89);
+            this.combotyperoom.Location = new System.Drawing.Point(40, 90);
             this.combotyperoom.Name = "combotyperoom";
             this.combotyperoom.Size = new System.Drawing.Size(164, 28);
             this.combotyperoom.TabIndex = 53;
@@ -212,11 +213,13 @@
             // 
             // groupBox3
             // 
+            this.groupBox3.Controls.Add(this.txtnumberguest);
+            this.groupBox3.Controls.Add(this.label15);
             this.groupBox3.Controls.Add(this.txtpriceroom);
             this.groupBox3.Controls.Add(this.label8);
-            this.groupBox3.Controls.Add(this.txtnamecustomer);
+            this.groupBox3.Controls.Add(this.txtnameroom);
             this.groupBox3.Controls.Add(this.label7);
-            this.groupBox3.Controls.Add(this.textBox1);
+            this.groupBox3.Controls.Add(this.txtidroom);
             this.groupBox3.Controls.Add(this.label6);
             this.groupBox3.Font = new System.Drawing.Font("Agency FB", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox3.Location = new System.Drawing.Point(531, 92);
@@ -229,7 +232,7 @@
             // txtpriceroom
             // 
             this.txtpriceroom.Font = new System.Drawing.Font("Agency FB", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtpriceroom.Location = new System.Drawing.Point(45, 237);
+            this.txtpriceroom.Location = new System.Drawing.Point(45, 208);
             this.txtpriceroom.Name = "txtpriceroom";
             this.txtpriceroom.Size = new System.Drawing.Size(182, 27);
             this.txtpriceroom.TabIndex = 60;
@@ -238,43 +241,43 @@
             // 
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Agency FB", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(49, 210);
+            this.label8.Location = new System.Drawing.Point(49, 181);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(49, 24);
             this.label8.TabIndex = 59;
             this.label8.Text = "Price :";
             // 
-            // txtnamecustomer
+            // txtnameroom
             // 
-            this.txtnamecustomer.Font = new System.Drawing.Font("Agency FB", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtnamecustomer.Location = new System.Drawing.Point(45, 168);
-            this.txtnamecustomer.Name = "txtnamecustomer";
-            this.txtnamecustomer.Size = new System.Drawing.Size(182, 27);
-            this.txtnamecustomer.TabIndex = 58;
+            this.txtnameroom.Font = new System.Drawing.Font("Agency FB", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtnameroom.Location = new System.Drawing.Point(45, 139);
+            this.txtnameroom.Name = "txtnameroom";
+            this.txtnameroom.Size = new System.Drawing.Size(182, 27);
+            this.txtnameroom.TabIndex = 58;
             // 
             // label7
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Agency FB", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(49, 141);
+            this.label7.Location = new System.Drawing.Point(49, 112);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(88, 24);
             this.label7.TabIndex = 57;
             this.label7.Text = "Room Name :";
             // 
-            // textBox1
+            // txtidroom
             // 
-            this.textBox1.Font = new System.Drawing.Font("Agency FB", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(45, 103);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(182, 27);
-            this.textBox1.TabIndex = 37;
+            this.txtidroom.Font = new System.Drawing.Font("Agency FB", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtidroom.Location = new System.Drawing.Point(45, 74);
+            this.txtidroom.Name = "txtidroom";
+            this.txtidroom.Size = new System.Drawing.Size(182, 27);
+            this.txtidroom.TabIndex = 37;
             // 
             // label6
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Agency FB", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(52, 75);
+            this.label6.Location = new System.Drawing.Point(52, 46);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(66, 24);
             this.label6.TabIndex = 56;
@@ -288,7 +291,7 @@
             this.groupBox4.Controls.Add(this.combogendercustomer);
             this.groupBox4.Controls.Add(this.txtcardidcustomer);
             this.groupBox4.Controls.Add(this.txtphonecustomer);
-            this.groupBox4.Controls.Add(this.textBox2);
+            this.groupBox4.Controls.Add(this.txtcustomername);
             this.groupBox4.Controls.Add(this.guna2DateTimePicker2);
             this.groupBox4.Controls.Add(this.label11);
             this.groupBox4.Controls.Add(this.label12);
@@ -358,14 +361,14 @@
             this.txtphonecustomer.Size = new System.Drawing.Size(168, 27);
             this.txtphonecustomer.TabIndex = 38;
             // 
-            // textBox2
+            // txtcustomername
             // 
-            this.textBox2.Font = new System.Drawing.Font("Agency FB", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox2.Location = new System.Drawing.Point(34, 76);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(162, 27);
-            this.textBox2.TabIndex = 37;
-            this.textBox2.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
+            this.txtcustomername.Font = new System.Drawing.Font("Agency FB", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtcustomername.Location = new System.Drawing.Point(34, 76);
+            this.txtcustomername.Name = "txtcustomername";
+            this.txtcustomername.Size = new System.Drawing.Size(162, 27);
+            this.txtcustomername.TabIndex = 37;
+            this.txtcustomername.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
             // 
             // guna2DateTimePicker2
             // 
@@ -431,11 +434,12 @@
             this.btnclose.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.btnclose.Font = new System.Drawing.Font("Agency FB", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnclose.ForeColor = System.Drawing.Color.Black;
-            this.btnclose.Location = new System.Drawing.Point(596, 661);
+            this.btnclose.Location = new System.Drawing.Point(596, 653);
             this.btnclose.Name = "btnclose";
             this.btnclose.Size = new System.Drawing.Size(162, 36);
             this.btnclose.TabIndex = 63;
             this.btnclose.Text = "Close";
+            this.btnclose.Click += new System.EventHandler(this.btnclose_Click);
             // 
             // groupBox5
             // 
@@ -510,39 +514,40 @@
             this.datagridviewbookinglist.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.datagridviewbookinglist.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
             // 
-            // guna2Button2
+            // txtnumberguest
             // 
-            this.guna2Button2.BorderRadius = 15;
-            this.guna2Button2.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button2.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button2.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.guna2Button2.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.guna2Button2.FillColor = System.Drawing.Color.BurlyWood;
-            this.guna2Button2.Font = new System.Drawing.Font("Agency FB", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2Button2.ForeColor = System.Drawing.Color.Black;
-            this.guna2Button2.Image = global::Hotel_Management.Properties.Resources._9004773_tick_check_mark_accept_icon;
-            this.guna2Button2.Location = new System.Drawing.Point(596, 535);
-            this.guna2Button2.Name = "guna2Button2";
-            this.guna2Button2.Size = new System.Drawing.Size(162, 36);
-            this.guna2Button2.TabIndex = 65;
-            this.guna2Button2.Text = "Check Out";
+            this.txtnumberguest.Font = new System.Drawing.Font("Agency FB", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtnumberguest.Location = new System.Drawing.Point(45, 284);
+            this.txtnumberguest.Name = "txtnumberguest";
+            this.txtnumberguest.Size = new System.Drawing.Size(182, 27);
+            this.txtnumberguest.TabIndex = 62;
             // 
-            // btndeletecustomer
+            // label15
             // 
-            this.btndeletecustomer.BorderRadius = 15;
-            this.btndeletecustomer.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btndeletecustomer.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btndeletecustomer.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btndeletecustomer.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btndeletecustomer.FillColor = System.Drawing.Color.OrangeRed;
-            this.btndeletecustomer.Font = new System.Drawing.Font("Agency FB", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btndeletecustomer.ForeColor = System.Drawing.Color.Black;
-            this.btndeletecustomer.Image = global::Hotel_Management.Properties.Resources.bin_484611;
-            this.btndeletecustomer.Location = new System.Drawing.Point(596, 600);
-            this.btndeletecustomer.Name = "btndeletecustomer";
-            this.btndeletecustomer.Size = new System.Drawing.Size(162, 36);
-            this.btndeletecustomer.TabIndex = 62;
-            this.btndeletecustomer.Text = "Delete";
+            this.label15.AutoSize = true;
+            this.label15.Font = new System.Drawing.Font("Agency FB", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label15.Location = new System.Drawing.Point(49, 257);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(106, 24);
+            this.label15.TabIndex = 61;
+            this.label15.Text = "Number of Guest";
+            // 
+            // btndeleteroom
+            // 
+            this.btndeleteroom.BorderRadius = 15;
+            this.btndeleteroom.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btndeleteroom.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btndeleteroom.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btndeleteroom.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btndeleteroom.FillColor = System.Drawing.Color.OrangeRed;
+            this.btndeleteroom.Font = new System.Drawing.Font("Agency FB", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btndeleteroom.ForeColor = System.Drawing.Color.Black;
+            this.btndeleteroom.Image = global::Hotel_Management.Properties.Resources.bin_484611;
+            this.btndeleteroom.Location = new System.Drawing.Point(596, 582);
+            this.btndeleteroom.Name = "btndeleteroom";
+            this.btndeleteroom.Size = new System.Drawing.Size(162, 36);
+            this.btndeleteroom.TabIndex = 62;
+            this.btndeleteroom.Text = "Delete";
             // 
             // btnaddcustomer
             // 
@@ -555,7 +560,7 @@
             this.btnaddcustomer.Font = new System.Drawing.Font("Agency FB", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnaddcustomer.ForeColor = System.Drawing.Color.Black;
             this.btnaddcustomer.Image = global::Hotel_Management.Properties.Resources.add_5372888;
-            this.btnaddcustomer.Location = new System.Drawing.Point(596, 475);
+            this.btnaddcustomer.Location = new System.Drawing.Point(596, 517);
             this.btnaddcustomer.Name = "btnaddcustomer";
             this.btnaddcustomer.Size = new System.Drawing.Size(162, 36);
             this.btnaddcustomer.TabIndex = 61;
@@ -583,10 +588,9 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1338, 770);
-            this.Controls.Add(this.guna2Button2);
             this.Controls.Add(this.groupBox5);
             this.Controls.Add(this.btnclose);
-            this.Controls.Add(this.btndeletecustomer);
+            this.Controls.Add(this.btndeleteroom);
             this.Controls.Add(this.btnaddcustomer);
             this.Controls.Add(this.groupBox4);
             this.Controls.Add(this.groupBox3);
@@ -625,9 +629,9 @@
         private System.Windows.Forms.Label label4;
         private Guna.UI2.WinForms.Guna2DateTimePicker dobpicker;
         private System.Windows.Forms.GroupBox groupBox3;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtidroom;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.TextBox txtnamecustomer;
+        private System.Windows.Forms.TextBox txtnameroom;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.TextBox txtpriceroom;
         private System.Windows.Forms.Label label8;
@@ -638,17 +642,18 @@
         private System.Windows.Forms.ComboBox combogendercustomer;
         private System.Windows.Forms.TextBox txtcardidcustomer;
         private System.Windows.Forms.TextBox txtphonecustomer;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox txtcustomername;
         private Guna.UI2.WinForms.Guna2DateTimePicker guna2DateTimePicker2;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.Label label14;
         private Guna.UI2.WinForms.Guna2Button btnclose;
-        private Guna.UI2.WinForms.Guna2Button btndeletecustomer;
+        private Guna.UI2.WinForms.Guna2Button btndeleteroom;
         private Guna.UI2.WinForms.Guna2Button btnaddcustomer;
         private System.Windows.Forms.GroupBox groupBox5;
         private Guna.UI2.WinForms.Guna2DataGridView datagridviewbookinglist;
-        private Guna.UI2.WinForms.Guna2Button guna2Button2;
+        private System.Windows.Forms.TextBox txtnumberguest;
+        private System.Windows.Forms.Label label15;
     }
 }

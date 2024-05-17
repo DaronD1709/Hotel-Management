@@ -10,24 +10,11 @@ using System.Windows.Forms;
 
 namespace Hotel_Management
 {
-    public partial class Accessaccount : Form
+    public partial class PaymentandService : Form
     {
-        private int idStaffType = -1;
-        public Accessaccount()
+        public PaymentandService()
         {
             InitializeComponent();
-      
-        }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        
-        private void Accessaccount_Load(object sender, EventArgs e)
-        {
-
         }
     }
 }

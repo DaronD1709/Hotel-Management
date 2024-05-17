@@ -16,6 +16,7 @@ namespace Hotel_Management
         private bool isCollapsed;
         private bool ismenu;
         private Form currentChildForm;
+
         public AdminMenu()
         {
             InitializeComponent();
@@ -96,7 +97,8 @@ namespace Hotel_Management
 
         private void btnmanaitems_Click(object sender, EventArgs e)
         {
-           
+            PaymentandService paymentandService = new PaymentandService();  
+            paymentandService.ShowDialog(); 
         }
 
         private void btnstatistical_Click(object sender, EventArgs e)

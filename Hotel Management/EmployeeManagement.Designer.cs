@@ -28,10 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.datagridviewlistemployee = new Guna.UI2.WinForms.Guna2DataGridView();
             this.label2 = new System.Windows.Forms.Label();
@@ -56,8 +56,7 @@
             this.label3 = new System.Windows.Forms.Label();
             this.txtusernameemployee = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.guna2Button2 = new Guna.UI2.WinForms.Guna2Button();
-            this.btnaccess = new Guna.UI2.WinForms.Guna2Button();
+            this.btnclose = new Guna.UI2.WinForms.Guna2Button();
             this.btndeletecustomer = new Guna.UI2.WinForms.Guna2Button();
             this.btnupdatecustomer = new Guna.UI2.WinForms.Guna2Button();
             this.btnaddcustomer = new Guna.UI2.WinForms.Guna2Button();
@@ -85,38 +84,38 @@
             this.datagridviewlistemployee.AllowUserToAddRows = false;
             this.datagridviewlistemployee.AllowUserToDeleteRows = false;
             this.datagridviewlistemployee.AllowUserToResizeRows = false;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
-            this.datagridviewlistemployee.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle5.BackColor = System.Drawing.Color.White;
+            this.datagridviewlistemployee.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle5;
             this.datagridviewlistemployee.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Raised;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Agency FB", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.datagridviewlistemployee.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Agency FB", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.datagridviewlistemployee.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle6;
             this.datagridviewlistemployee.ColumnHeadersHeight = 20;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Agency FB", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.datagridviewlistemployee.DefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle7.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle7.Font = new System.Drawing.Font("Agency FB", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.datagridviewlistemployee.DefaultCellStyle = dataGridViewCellStyle7;
             this.datagridviewlistemployee.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.datagridviewlistemployee.Location = new System.Drawing.Point(6, 32);
             this.datagridviewlistemployee.Name = "datagridviewlistemployee";
             this.datagridviewlistemployee.ReadOnly = true;
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Agency FB", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.datagridviewlistemployee.RowHeadersDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle8.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle8.Font = new System.Drawing.Font("Agency FB", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle8.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.datagridviewlistemployee.RowHeadersDefaultCellStyle = dataGridViewCellStyle8;
             this.datagridviewlistemployee.RowHeadersVisible = false;
             this.datagridviewlistemployee.Size = new System.Drawing.Size(576, 575);
             this.datagridviewlistemployee.TabIndex = 3;
@@ -150,9 +149,9 @@
             this.label2.Location = new System.Drawing.Point(40, 22);
             this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(211, 39);
+            this.label2.Size = new System.Drawing.Size(208, 39);
             this.label2.TabIndex = 25;
-            this.label2.Text = "Manager Customer";
+            this.label2.Text = "Manager Employee";
             // 
             // groupBox1
             // 
@@ -385,41 +384,22 @@
             this.label1.TabIndex = 53;
             this.label1.Text = "User Name :";
             // 
-            // guna2Button2
+            // btnclose
             // 
-            this.guna2Button2.BorderRadius = 15;
-            this.guna2Button2.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button2.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button2.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.guna2Button2.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.guna2Button2.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.guna2Button2.Font = new System.Drawing.Font("Agency FB", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2Button2.ForeColor = System.Drawing.Color.Black;
-            this.guna2Button2.Location = new System.Drawing.Point(425, 616);
-            this.guna2Button2.Name = "guna2Button2";
-            this.guna2Button2.Size = new System.Drawing.Size(162, 36);
-            this.guna2Button2.TabIndex = 45;
-            this.guna2Button2.Text = "Close";
-            this.guna2Button2.Click += new System.EventHandler(this.guna2Button2_Click);
-            // 
-            // btnaccess
-            // 
-            this.btnaccess.BorderRadius = 15;
-            this.btnaccess.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnaccess.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnaccess.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnaccess.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnaccess.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
-            this.btnaccess.Font = new System.Drawing.Font("Agency FB", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnaccess.ForeColor = System.Drawing.Color.Black;
-            this.btnaccess.Image = global::Hotel_Management.Properties.Resources._7023954_unlock_computer_granted_access_accepted_icon;
-            this.btnaccess.Location = new System.Drawing.Point(233, 648);
-            this.btnaccess.Name = "btnaccess";
-            this.btnaccess.Size = new System.Drawing.Size(162, 36);
-            this.btnaccess.TabIndex = 44;
-            this.btnaccess.Text = "Access";
-            this.btnaccess.TextRenderingHint = System.Drawing.Text.TextRenderingHint.SystemDefault;
-            this.btnaccess.Click += new System.EventHandler(this.btnaccess_Click);
+            this.btnclose.BorderRadius = 15;
+            this.btnclose.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnclose.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnclose.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnclose.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnclose.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.btnclose.Font = new System.Drawing.Font("Agency FB", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnclose.ForeColor = System.Drawing.Color.Black;
+            this.btnclose.Location = new System.Drawing.Point(339, 645);
+            this.btnclose.Name = "btnclose";
+            this.btnclose.Size = new System.Drawing.Size(162, 36);
+            this.btnclose.TabIndex = 45;
+            this.btnclose.Text = "Close";
+            this.btnclose.Click += new System.EventHandler(this.guna2Button2_Click);
             // 
             // btndeletecustomer
             // 
@@ -432,7 +412,7 @@
             this.btndeletecustomer.Font = new System.Drawing.Font("Agency FB", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btndeletecustomer.ForeColor = System.Drawing.Color.Black;
             this.btndeletecustomer.Image = global::Hotel_Management.Properties.Resources.bin_484611;
-            this.btndeletecustomer.Location = new System.Drawing.Point(47, 648);
+            this.btndeletecustomer.Location = new System.Drawing.Point(108, 645);
             this.btndeletecustomer.Name = "btndeletecustomer";
             this.btndeletecustomer.Size = new System.Drawing.Size(162, 36);
             this.btndeletecustomer.TabIndex = 43;
@@ -449,7 +429,7 @@
             this.btnupdatecustomer.Font = new System.Drawing.Font("Agency FB", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnupdatecustomer.ForeColor = System.Drawing.Color.Black;
             this.btnupdatecustomer.Image = global::Hotel_Management.Properties.Resources.save_4223793;
-            this.btnupdatecustomer.Location = new System.Drawing.Point(233, 592);
+            this.btnupdatecustomer.Location = new System.Drawing.Point(339, 589);
             this.btnupdatecustomer.Name = "btnupdatecustomer";
             this.btnupdatecustomer.Size = new System.Drawing.Size(162, 36);
             this.btnupdatecustomer.TabIndex = 42;
@@ -466,7 +446,7 @@
             this.btnaddcustomer.Font = new System.Drawing.Font("Agency FB", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnaddcustomer.ForeColor = System.Drawing.Color.Black;
             this.btnaddcustomer.Image = global::Hotel_Management.Properties.Resources.add_5372888;
-            this.btnaddcustomer.Location = new System.Drawing.Point(47, 592);
+            this.btnaddcustomer.Location = new System.Drawing.Point(108, 589);
             this.btnaddcustomer.Name = "btnaddcustomer";
             this.btnaddcustomer.Size = new System.Drawing.Size(162, 36);
             this.btnaddcustomer.TabIndex = 41;
@@ -494,8 +474,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1226, 710);
-            this.Controls.Add(this.guna2Button2);
-            this.Controls.Add(this.btnaccess);
+            this.Controls.Add(this.btnclose);
             this.Controls.Add(this.btndeletecustomer);
             this.Controls.Add(this.btnupdatecustomer);
             this.Controls.Add(this.btnaddcustomer);
@@ -546,10 +525,9 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox txtusernameemployee;
         private System.Windows.Forms.Label label1;
-        private Guna.UI2.WinForms.Guna2Button btnaccess;
         private Guna.UI2.WinForms.Guna2Button btndeletecustomer;
         private Guna.UI2.WinForms.Guna2Button btnupdatecustomer;
         private Guna.UI2.WinForms.Guna2Button btnaddcustomer;
-        private Guna.UI2.WinForms.Guna2Button guna2Button2;
+        private Guna.UI2.WinForms.Guna2Button btnclose;
     }
 }

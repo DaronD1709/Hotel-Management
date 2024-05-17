@@ -50,9 +50,9 @@
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.datagridviewroomlist = new Guna.UI2.WinForms.Guna2DataGridView();
             this.btnclose = new Guna.UI2.WinForms.Guna2Button();
-            this.btndeletecustomer = new Guna.UI2.WinForms.Guna2Button();
-            this.btnupdatecustomer = new Guna.UI2.WinForms.Guna2Button();
-            this.btnaddcustomer = new Guna.UI2.WinForms.Guna2Button();
+            this.btndeleteroom = new Guna.UI2.WinForms.Guna2Button();
+            this.btnupdateroom = new Guna.UI2.WinForms.Guna2Button();
+            this.btnaddroom = new Guna.UI2.WinForms.Guna2Button();
             this.guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -315,58 +315,59 @@
             this.btnclose.Size = new System.Drawing.Size(162, 36);
             this.btnclose.TabIndex = 44;
             this.btnclose.Text = "Close";
+            this.btnclose.Click += new System.EventHandler(this.btnclose_Click);
             // 
-            // btndeletecustomer
+            // btndeleteroom
             // 
-            this.btndeletecustomer.BorderRadius = 15;
-            this.btndeletecustomer.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btndeletecustomer.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btndeletecustomer.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btndeletecustomer.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btndeletecustomer.FillColor = System.Drawing.Color.OrangeRed;
-            this.btndeletecustomer.Font = new System.Drawing.Font("Agency FB", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btndeletecustomer.ForeColor = System.Drawing.Color.Black;
-            this.btndeletecustomer.Image = global::Hotel_Management.Properties.Resources.bin_484611;
-            this.btndeletecustomer.Location = new System.Drawing.Point(99, 631);
-            this.btndeletecustomer.Name = "btndeletecustomer";
-            this.btndeletecustomer.Size = new System.Drawing.Size(162, 36);
-            this.btndeletecustomer.TabIndex = 43;
-            this.btndeletecustomer.Text = "Delete";
+            this.btndeleteroom.BorderRadius = 15;
+            this.btndeleteroom.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btndeleteroom.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btndeleteroom.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btndeleteroom.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btndeleteroom.FillColor = System.Drawing.Color.OrangeRed;
+            this.btndeleteroom.Font = new System.Drawing.Font("Agency FB", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btndeleteroom.ForeColor = System.Drawing.Color.Black;
+            this.btndeleteroom.Image = global::Hotel_Management.Properties.Resources.bin_484611;
+            this.btndeleteroom.Location = new System.Drawing.Point(99, 631);
+            this.btndeleteroom.Name = "btndeleteroom";
+            this.btndeleteroom.Size = new System.Drawing.Size(162, 36);
+            this.btndeleteroom.TabIndex = 43;
+            this.btndeleteroom.Text = "Delete";
             // 
-            // btnupdatecustomer
+            // btnupdateroom
             // 
-            this.btnupdatecustomer.BorderRadius = 15;
-            this.btnupdatecustomer.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnupdatecustomer.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnupdatecustomer.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnupdatecustomer.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnupdatecustomer.FillColor = System.Drawing.Color.PaleGoldenrod;
-            this.btnupdatecustomer.Font = new System.Drawing.Font("Agency FB", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnupdatecustomer.ForeColor = System.Drawing.Color.Black;
-            this.btnupdatecustomer.Image = global::Hotel_Management.Properties.Resources.save_4223793;
-            this.btnupdatecustomer.Location = new System.Drawing.Point(313, 575);
-            this.btnupdatecustomer.Name = "btnupdatecustomer";
-            this.btnupdatecustomer.Size = new System.Drawing.Size(162, 36);
-            this.btnupdatecustomer.TabIndex = 42;
-            this.btnupdatecustomer.Text = "Update";
+            this.btnupdateroom.BorderRadius = 15;
+            this.btnupdateroom.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnupdateroom.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnupdateroom.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnupdateroom.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnupdateroom.FillColor = System.Drawing.Color.PaleGoldenrod;
+            this.btnupdateroom.Font = new System.Drawing.Font("Agency FB", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnupdateroom.ForeColor = System.Drawing.Color.Black;
+            this.btnupdateroom.Image = global::Hotel_Management.Properties.Resources.save_4223793;
+            this.btnupdateroom.Location = new System.Drawing.Point(313, 575);
+            this.btnupdateroom.Name = "btnupdateroom";
+            this.btnupdateroom.Size = new System.Drawing.Size(162, 36);
+            this.btnupdateroom.TabIndex = 42;
+            this.btnupdateroom.Text = "Update";
             // 
-            // btnaddcustomer
+            // btnaddroom
             // 
-            this.btnaddcustomer.BorderRadius = 15;
-            this.btnaddcustomer.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnaddcustomer.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnaddcustomer.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnaddcustomer.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnaddcustomer.FillColor = System.Drawing.Color.LightGreen;
-            this.btnaddcustomer.Font = new System.Drawing.Font("Agency FB", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnaddcustomer.ForeColor = System.Drawing.Color.Black;
-            this.btnaddcustomer.Image = global::Hotel_Management.Properties.Resources.add_5372888;
-            this.btnaddcustomer.Location = new System.Drawing.Point(99, 575);
-            this.btnaddcustomer.Name = "btnaddcustomer";
-            this.btnaddcustomer.Size = new System.Drawing.Size(162, 36);
-            this.btnaddcustomer.TabIndex = 41;
-            this.btnaddcustomer.Text = "Add";
-            this.btnaddcustomer.Click += new System.EventHandler(this.btnaddcustomer_Click);
+            this.btnaddroom.BorderRadius = 15;
+            this.btnaddroom.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnaddroom.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnaddroom.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnaddroom.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnaddroom.FillColor = System.Drawing.Color.LightGreen;
+            this.btnaddroom.Font = new System.Drawing.Font("Agency FB", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnaddroom.ForeColor = System.Drawing.Color.Black;
+            this.btnaddroom.Image = global::Hotel_Management.Properties.Resources.add_5372888;
+            this.btnaddroom.Location = new System.Drawing.Point(99, 575);
+            this.btnaddroom.Name = "btnaddroom";
+            this.btnaddroom.Size = new System.Drawing.Size(162, 36);
+            this.btnaddroom.TabIndex = 41;
+            this.btnaddroom.Text = "Add";
+            this.btnaddroom.Click += new System.EventHandler(this.btnaddcustomer_Click);
             // 
             // guna2Button1
             // 
@@ -390,9 +391,9 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1256, 710);
             this.Controls.Add(this.btnclose);
-            this.Controls.Add(this.btndeletecustomer);
-            this.Controls.Add(this.btnupdatecustomer);
-            this.Controls.Add(this.btnaddcustomer);
+            this.Controls.Add(this.btndeleteroom);
+            this.Controls.Add(this.btnupdateroom);
+            this.Controls.Add(this.btnaddroom);
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
@@ -432,8 +433,8 @@
         private System.Windows.Forms.GroupBox groupBox3;
         private Guna.UI2.WinForms.Guna2DataGridView datagridviewroomlist;
         private Guna.UI2.WinForms.Guna2Button btnclose;
-        private Guna.UI2.WinForms.Guna2Button btndeletecustomer;
-        private Guna.UI2.WinForms.Guna2Button btnupdatecustomer;
-        private Guna.UI2.WinForms.Guna2Button btnaddcustomer;
+        private Guna.UI2.WinForms.Guna2Button btndeleteroom;
+        private Guna.UI2.WinForms.Guna2Button btnupdateroom;
+        private Guna.UI2.WinForms.Guna2Button btnaddroom;
     }
 }

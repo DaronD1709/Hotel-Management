@@ -19,8 +19,7 @@ namespace Hotel_Management
 
         private void btnaccess_Click(object sender, EventArgs e)
         {
-            Accessaccount accessaccount = new Accessaccount();
-            accessaccount.ShowDialog();
+
         }
 
         private void txtphonecustomer_TextChanged(object sender, EventArgs e)

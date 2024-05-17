@@ -12,11 +12,11 @@ D:\WinF\Hotel Management\Hotel Management\obj\Debug\Hotel Management.exe
 D:\WinF\Hotel Management\Hotel Management\obj\Debug\Hotel Management.pdb
 D:\WinF\Hotel Management\Hotel Management\bin\Debug\FontAwesome.Sharp.dll
 D:\WinF\Hotel Management\Hotel Management\obj\Debug\Hotel_Management.AdminMenu.resources
-D:\WinF\Hotel Management\Hotel Management\obj\Debug\Hotel_Management.Accessaccount.resources
 D:\WinF\Hotel Management\Hotel Management\obj\Debug\Hotel_Management.CustomerManagement.resources
 D:\WinF\Hotel Management\Hotel Management\obj\Debug\Hotel_Management.EmployeeManagement.resources
 D:\WinF\Hotel Management\Hotel Management\obj\Debug\Hotel_Management.Bookroom.resources
 D:\WinF\Hotel Management\Hotel Management\obj\Debug\Hotel_Management.RoomManagement.resources
 D:\WinF\Hotel Management\Hotel Management\obj\Debug\Hotel_Management.InventoryManagement.resources
-D:\WinF\Hotel Management\Hotel Management\obj\Debug\Hotel_Management.ItemsManagement.resources
 D:\WinF\Hotel Management\Hotel Management\obj\Debug\Hotel_Management.Resources.ScheduleManagement.resources
+D:\WinF\Hotel Management\Hotel Management\obj\Debug\Hotel_Management.Bill.resources
+D:\WinF\Hotel Management\Hotel Management\obj\Debug\Hotel_Management.PaymentandService.resources
