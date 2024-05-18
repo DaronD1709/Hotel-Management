@@ -60,6 +60,11 @@ namespace Hotel_Management
             {
                 MessageBox.Show("New Room Add", "Add Room", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 LoadData();
+                var otherForm = Application.OpenForms["OtherForm"] as Bookroom;
+                if (otherForm != null)
+                {
+                    otherForm.PopulateComboBox();
+                }
             }
             else
             {

@@ -28,28 +28,25 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
+            this.components = new System.ComponentModel.Container();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.txtsearch = new System.Windows.Forms.TextBox();
             this.guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
             this.label5 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.guna2DateTimePicker1 = new Guna.UI2.WinForms.Guna2DateTimePicker();
+            this.dobpicker1 = new Guna.UI2.WinForms.Guna2DateTimePicker();
             this.label4 = new System.Windows.Forms.Label();
             this.dobpicker = new Guna.UI2.WinForms.Guna2DateTimePicker();
             this.label3 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.combotyperoom = new System.Windows.Forms.ComboBox();
+            this.comboroomname = new System.Windows.Forms.ComboBox();
             this.label2 = new System.Windows.Forms.Label();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.txtnumberguest = new System.Windows.Forms.TextBox();
             this.label15 = new System.Windows.Forms.Label();
             this.txtpriceroom = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
-            this.txtnameroom = new System.Windows.Forms.TextBox();
+            this.txtstateroom = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.txtidroom = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
@@ -68,15 +65,34 @@
             this.label14 = new System.Windows.Forms.Label();
             this.btnclose = new Guna.UI2.WinForms.Guna2Button();
             this.groupBox5 = new System.Windows.Forms.GroupBox();
-            this.datagridviewbookinglist = new Guna.UI2.WinForms.Guna2DataGridView();
             this.btndeleteroom = new Guna.UI2.WinForms.Guna2Button();
             this.btnaddcustomer = new Guna.UI2.WinForms.Guna2Button();
+            this.txttyperoom = new System.Windows.Forms.TextBox();
+            this.label16 = new System.Windows.Forms.Label();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.hotelDataDataSet6 = new Hotel_Management.HotelDataDataSet6();
+            this.bookRoomViewBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.bookRoomViewTableAdapter = new Hotel_Management.HotelDataDataSet6TableAdapters.BookRoomViewTableAdapter();
+            this.iDRoomDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.customerNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.iDcardDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.roomKindDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.timecheckinDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.timecheckoutDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.iDCustomerDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.roomNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.roomStateDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.iDBookRoomDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.txtidbookroom = new System.Windows.Forms.TextBox();
+            this.label17 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
             this.groupBox4.SuspendLayout();
             this.groupBox5.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.datagridviewbookinglist)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.hotelDataDataSet6)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bookRoomViewBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBox1
@@ -115,6 +131,7 @@
             this.guna2Button1.Size = new System.Drawing.Size(162, 36);
             this.guna2Button1.TabIndex = 35;
             this.guna2Button1.Text = "Search";
+            this.guna2Button1.Click += new System.EventHandler(this.guna2Button1_Click);
             // 
             // label5
             // 
@@ -130,12 +147,14 @@
             // 
             // groupBox2
             // 
-            this.groupBox2.Controls.Add(this.guna2DateTimePicker1);
+            this.groupBox2.Controls.Add(this.txtidbookroom);
+            this.groupBox2.Controls.Add(this.label17);
+            this.groupBox2.Controls.Add(this.dobpicker1);
             this.groupBox2.Controls.Add(this.label4);
             this.groupBox2.Controls.Add(this.dobpicker);
             this.groupBox2.Controls.Add(this.label3);
             this.groupBox2.Controls.Add(this.label1);
-            this.groupBox2.Controls.Add(this.combotyperoom);
+            this.groupBox2.Controls.Add(this.comboroomname);
             this.groupBox2.Font = new System.Drawing.Font("Agency FB", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox2.Location = new System.Drawing.Point(43, 92);
             this.groupBox2.Name = "groupBox2";
@@ -144,19 +163,19 @@
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Room";
             // 
-            // guna2DateTimePicker1
+            // dobpicker1
             // 
-            this.guna2DateTimePicker1.Checked = true;
-            this.guna2DateTimePicker1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2DateTimePicker1.Font = new System.Drawing.Font("Agency FB", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2DateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Long;
-            this.guna2DateTimePicker1.Location = new System.Drawing.Point(236, 130);
-            this.guna2DateTimePicker1.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
-            this.guna2DateTimePicker1.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
-            this.guna2DateTimePicker1.Name = "guna2DateTimePicker1";
-            this.guna2DateTimePicker1.Size = new System.Drawing.Size(190, 28);
-            this.guna2DateTimePicker1.TabIndex = 58;
-            this.guna2DateTimePicker1.Value = new System.DateTime(2024, 5, 17, 9, 45, 37, 234);
+            this.dobpicker1.Checked = true;
+            this.dobpicker1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.dobpicker1.Font = new System.Drawing.Font("Agency FB", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dobpicker1.Format = System.Windows.Forms.DateTimePickerFormat.Long;
+            this.dobpicker1.Location = new System.Drawing.Point(236, 130);
+            this.dobpicker1.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
+            this.dobpicker1.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
+            this.dobpicker1.Name = "dobpicker1";
+            this.dobpicker1.Size = new System.Drawing.Size(190, 28);
+            this.dobpicker1.TabIndex = 58;
+            this.dobpicker1.Value = new System.DateTime(2024, 5, 17, 9, 45, 37, 234);
             // 
             // label4
             // 
@@ -196,24 +215,25 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Agency FB", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(44, 63);
+            this.label1.Location = new System.Drawing.Point(44, 37);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(91, 24);
+            this.label1.Size = new System.Drawing.Size(88, 24);
             this.label1.TabIndex = 54;
-            this.label1.Text = "Kind of room :";
+            this.label1.Text = "Room Name :";
             // 
-            // combotyperoom
+            // comboroomname
             // 
-            this.combotyperoom.Font = new System.Drawing.Font("Agency FB", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.combotyperoom.FormattingEnabled = true;
-            this.combotyperoom.Items.AddRange(new object[] {
+            this.comboroomname.Font = new System.Drawing.Font("Agency FB", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboroomname.FormattingEnabled = true;
+            this.comboroomname.Items.AddRange(new object[] {
             "Single Room",
             "Double Room ",
             "Deluxe Room "});
-            this.combotyperoom.Location = new System.Drawing.Point(40, 90);
-            this.combotyperoom.Name = "combotyperoom";
-            this.combotyperoom.Size = new System.Drawing.Size(164, 28);
-            this.combotyperoom.TabIndex = 53;
+            this.comboroomname.Location = new System.Drawing.Point(40, 64);
+            this.comboroomname.Name = "comboroomname";
+            this.comboroomname.Size = new System.Drawing.Size(164, 28);
+            this.comboroomname.TabIndex = 53;
+            this.comboroomname.SelectedIndexChanged += new System.EventHandler(this.comboroomname_SelectedIndexChanged);
             // 
             // label2
             // 
@@ -229,18 +249,20 @@
             // 
             // groupBox3
             // 
+            this.groupBox3.Controls.Add(this.txttyperoom);
+            this.groupBox3.Controls.Add(this.label16);
             this.groupBox3.Controls.Add(this.txtnumberguest);
             this.groupBox3.Controls.Add(this.label15);
             this.groupBox3.Controls.Add(this.txtpriceroom);
             this.groupBox3.Controls.Add(this.label8);
-            this.groupBox3.Controls.Add(this.txtnameroom);
+            this.groupBox3.Controls.Add(this.txtstateroom);
             this.groupBox3.Controls.Add(this.label7);
             this.groupBox3.Controls.Add(this.txtidroom);
             this.groupBox3.Controls.Add(this.label6);
             this.groupBox3.Font = new System.Drawing.Font("Agency FB", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox3.Location = new System.Drawing.Point(531, 92);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(273, 346);
+            this.groupBox3.Size = new System.Drawing.Size(273, 421);
             this.groupBox3.TabIndex = 59;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Room Info";
@@ -248,7 +270,7 @@
             // txtnumberguest
             // 
             this.txtnumberguest.Font = new System.Drawing.Font("Agency FB", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtnumberguest.Location = new System.Drawing.Point(45, 284);
+            this.txtnumberguest.Location = new System.Drawing.Point(45, 354);
             this.txtnumberguest.Name = "txtnumberguest";
             this.txtnumberguest.Size = new System.Drawing.Size(182, 27);
             this.txtnumberguest.TabIndex = 62;
@@ -257,7 +279,7 @@
             // 
             this.label15.AutoSize = true;
             this.label15.Font = new System.Drawing.Font("Agency FB", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label15.Location = new System.Drawing.Point(49, 257);
+            this.label15.Location = new System.Drawing.Point(49, 327);
             this.label15.Name = "label15";
             this.label15.Size = new System.Drawing.Size(106, 24);
             this.label15.TabIndex = 61;
@@ -266,7 +288,7 @@
             // txtpriceroom
             // 
             this.txtpriceroom.Font = new System.Drawing.Font("Agency FB", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtpriceroom.Location = new System.Drawing.Point(45, 208);
+            this.txtpriceroom.Location = new System.Drawing.Point(45, 278);
             this.txtpriceroom.Name = "txtpriceroom";
             this.txtpriceroom.Size = new System.Drawing.Size(182, 27);
             this.txtpriceroom.TabIndex = 60;
@@ -275,19 +297,19 @@
             // 
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Agency FB", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(49, 181);
+            this.label8.Location = new System.Drawing.Point(49, 251);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(49, 24);
             this.label8.TabIndex = 59;
             this.label8.Text = "Price :";
             // 
-            // txtnameroom
+            // txtstateroom
             // 
-            this.txtnameroom.Font = new System.Drawing.Font("Agency FB", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtnameroom.Location = new System.Drawing.Point(45, 139);
-            this.txtnameroom.Name = "txtnameroom";
-            this.txtnameroom.Size = new System.Drawing.Size(182, 27);
-            this.txtnameroom.TabIndex = 58;
+            this.txtstateroom.Font = new System.Drawing.Font("Agency FB", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtstateroom.Location = new System.Drawing.Point(45, 139);
+            this.txtstateroom.Name = "txtstateroom";
+            this.txtstateroom.Size = new System.Drawing.Size(182, 27);
+            this.txtstateroom.TabIndex = 58;
             // 
             // label7
             // 
@@ -295,9 +317,9 @@
             this.label7.Font = new System.Drawing.Font("Agency FB", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.Location = new System.Drawing.Point(49, 112);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(88, 24);
+            this.label7.Size = new System.Drawing.Size(46, 24);
             this.label7.TabIndex = 57;
-            this.label7.Text = "Room Name :";
+            this.label7.Text = "State :";
             // 
             // txtidroom
             // 
@@ -371,9 +393,6 @@
             // 
             this.combogendercustomer.Font = new System.Drawing.Font("Agency FB", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.combogendercustomer.FormattingEnabled = true;
-            this.combogendercustomer.Items.AddRange(new object[] {
-            "Male ",
-            "Female"});
             this.combogendercustomer.Location = new System.Drawing.Point(34, 229);
             this.combogendercustomer.Name = "combogendercustomer";
             this.combogendercustomer.Size = new System.Drawing.Size(164, 28);
@@ -468,7 +487,7 @@
             this.btnclose.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.btnclose.Font = new System.Drawing.Font("Agency FB", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnclose.ForeColor = System.Drawing.Color.Black;
-            this.btnclose.Location = new System.Drawing.Point(596, 680);
+            this.btnclose.Location = new System.Drawing.Point(596, 690);
             this.btnclose.Name = "btnclose";
             this.btnclose.Size = new System.Drawing.Size(162, 36);
             this.btnclose.TabIndex = 63;
@@ -477,76 +496,14 @@
             // 
             // groupBox5
             // 
-            this.groupBox5.Controls.Add(this.datagridviewbookinglist);
+            this.groupBox5.Controls.Add(this.dataGridView1);
             this.groupBox5.Font = new System.Drawing.Font("Agency FB", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox5.Location = new System.Drawing.Point(832, 32);
             this.groupBox5.Name = "groupBox5";
-            this.groupBox5.Size = new System.Drawing.Size(686, 724);
+            this.groupBox5.Size = new System.Drawing.Size(912, 724);
             this.groupBox5.TabIndex = 64;
             this.groupBox5.TabStop = false;
             this.groupBox5.Text = "Booking List";
-            // 
-            // datagridviewbookinglist
-            // 
-            this.datagridviewbookinglist.AllowUserToAddRows = false;
-            this.datagridviewbookinglist.AllowUserToDeleteRows = false;
-            this.datagridviewbookinglist.AllowUserToResizeRows = false;
-            dataGridViewCellStyle5.BackColor = System.Drawing.Color.White;
-            this.datagridviewbookinglist.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle5;
-            this.datagridviewbookinglist.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Raised;
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Agency FB", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.datagridviewbookinglist.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle6;
-            this.datagridviewbookinglist.ColumnHeadersHeight = 20;
-            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle7.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle7.Font = new System.Drawing.Font("Agency FB", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.datagridviewbookinglist.DefaultCellStyle = dataGridViewCellStyle7;
-            this.datagridviewbookinglist.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            this.datagridviewbookinglist.Location = new System.Drawing.Point(6, 32);
-            this.datagridviewbookinglist.Name = "datagridviewbookinglist";
-            this.datagridviewbookinglist.ReadOnly = true;
-            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle8.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle8.Font = new System.Drawing.Font("Agency FB", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle8.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.datagridviewbookinglist.RowHeadersDefaultCellStyle = dataGridViewCellStyle8;
-            this.datagridviewbookinglist.RowHeadersVisible = false;
-            this.datagridviewbookinglist.Size = new System.Drawing.Size(674, 686);
-            this.datagridviewbookinglist.TabIndex = 3;
-            this.datagridviewbookinglist.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
-            this.datagridviewbookinglist.ThemeStyle.AlternatingRowsStyle.Font = null;
-            this.datagridviewbookinglist.ThemeStyle.AlternatingRowsStyle.ForeColor = System.Drawing.Color.Empty;
-            this.datagridviewbookinglist.ThemeStyle.AlternatingRowsStyle.SelectionBackColor = System.Drawing.Color.Empty;
-            this.datagridviewbookinglist.ThemeStyle.AlternatingRowsStyle.SelectionForeColor = System.Drawing.Color.Empty;
-            this.datagridviewbookinglist.ThemeStyle.BackColor = System.Drawing.Color.White;
-            this.datagridviewbookinglist.ThemeStyle.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            this.datagridviewbookinglist.ThemeStyle.HeaderStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            this.datagridviewbookinglist.ThemeStyle.HeaderStyle.BorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Raised;
-            this.datagridviewbookinglist.ThemeStyle.HeaderStyle.Font = new System.Drawing.Font("Agency FB", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.datagridviewbookinglist.ThemeStyle.HeaderStyle.ForeColor = System.Drawing.Color.White;
-            this.datagridviewbookinglist.ThemeStyle.HeaderStyle.HeaightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
-            this.datagridviewbookinglist.ThemeStyle.HeaderStyle.Height = 20;
-            this.datagridviewbookinglist.ThemeStyle.ReadOnly = true;
-            this.datagridviewbookinglist.ThemeStyle.RowsStyle.BackColor = System.Drawing.Color.White;
-            this.datagridviewbookinglist.ThemeStyle.RowsStyle.BorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
-            this.datagridviewbookinglist.ThemeStyle.RowsStyle.Font = new System.Drawing.Font("Agency FB", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.datagridviewbookinglist.ThemeStyle.RowsStyle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            this.datagridviewbookinglist.ThemeStyle.RowsStyle.Height = 22;
-            this.datagridviewbookinglist.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            this.datagridviewbookinglist.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
             // 
             // btndeleteroom
             // 
@@ -559,7 +516,7 @@
             this.btndeleteroom.Font = new System.Drawing.Font("Agency FB", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btndeleteroom.ForeColor = System.Drawing.Color.Black;
             this.btndeleteroom.Image = global::Hotel_Management.Properties.Resources.bin_484611;
-            this.btndeleteroom.Location = new System.Drawing.Point(596, 586);
+            this.btndeleteroom.Location = new System.Drawing.Point(596, 613);
             this.btndeleteroom.Name = "btndeleteroom";
             this.btndeleteroom.Size = new System.Drawing.Size(162, 36);
             this.btndeleteroom.TabIndex = 62;
@@ -576,18 +533,152 @@
             this.btnaddcustomer.Font = new System.Drawing.Font("Agency FB", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnaddcustomer.ForeColor = System.Drawing.Color.Black;
             this.btnaddcustomer.Image = global::Hotel_Management.Properties.Resources.add_5372888;
-            this.btnaddcustomer.Location = new System.Drawing.Point(596, 496);
+            this.btnaddcustomer.Location = new System.Drawing.Point(596, 546);
             this.btnaddcustomer.Name = "btnaddcustomer";
             this.btnaddcustomer.Size = new System.Drawing.Size(162, 36);
             this.btnaddcustomer.TabIndex = 61;
             this.btnaddcustomer.Text = "Check In";
             this.btnaddcustomer.Click += new System.EventHandler(this.btnaddcustomer_Click);
             // 
+            // txttyperoom
+            // 
+            this.txttyperoom.Font = new System.Drawing.Font("Agency FB", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txttyperoom.Location = new System.Drawing.Point(45, 210);
+            this.txttyperoom.Name = "txttyperoom";
+            this.txttyperoom.Size = new System.Drawing.Size(182, 27);
+            this.txttyperoom.TabIndex = 64;
+            // 
+            // label16
+            // 
+            this.label16.AutoSize = true;
+            this.label16.Font = new System.Drawing.Font("Agency FB", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label16.Location = new System.Drawing.Point(49, 183);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(93, 24);
+            this.label16.TabIndex = 63;
+            this.label16.Text = "Kind of Room :";
+            // 
+            // dataGridView1
+            // 
+            this.dataGridView1.AutoGenerateColumns = false;
+            this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dataGridView1.ColumnHeadersHeight = 55;
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
+            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.iDRoomDataGridViewTextBoxColumn,
+            this.customerNameDataGridViewTextBoxColumn,
+            this.iDcardDataGridViewTextBoxColumn,
+            this.roomKindDataGridViewTextBoxColumn,
+            this.timecheckinDataGridViewTextBoxColumn,
+            this.timecheckoutDataGridViewTextBoxColumn,
+            this.iDCustomerDataGridViewTextBoxColumn,
+            this.roomNameDataGridViewTextBoxColumn,
+            this.roomStateDataGridViewTextBoxColumn,
+            this.iDBookRoomDataGridViewTextBoxColumn});
+            this.dataGridView1.DataSource = this.bookRoomViewBindingSource;
+            this.dataGridView1.Location = new System.Drawing.Point(9, 29);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.RowHeadersWidth = 55;
+            this.dataGridView1.Size = new System.Drawing.Size(897, 694);
+            this.dataGridView1.TabIndex = 0;
+            // 
+            // hotelDataDataSet6
+            // 
+            this.hotelDataDataSet6.DataSetName = "HotelDataDataSet6";
+            this.hotelDataDataSet6.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // bookRoomViewBindingSource
+            // 
+            this.bookRoomViewBindingSource.DataMember = "BookRoomView";
+            this.bookRoomViewBindingSource.DataSource = this.hotelDataDataSet6;
+            // 
+            // bookRoomViewTableAdapter
+            // 
+            this.bookRoomViewTableAdapter.ClearBeforeFill = true;
+            // 
+            // iDRoomDataGridViewTextBoxColumn
+            // 
+            this.iDRoomDataGridViewTextBoxColumn.DataPropertyName = "ID_Room";
+            this.iDRoomDataGridViewTextBoxColumn.HeaderText = "IDRoom";
+            this.iDRoomDataGridViewTextBoxColumn.Name = "iDRoomDataGridViewTextBoxColumn";
+            // 
+            // customerNameDataGridViewTextBoxColumn
+            // 
+            this.customerNameDataGridViewTextBoxColumn.DataPropertyName = "CustomerName";
+            this.customerNameDataGridViewTextBoxColumn.HeaderText = "CustomerName";
+            this.customerNameDataGridViewTextBoxColumn.Name = "customerNameDataGridViewTextBoxColumn";
+            // 
+            // iDcardDataGridViewTextBoxColumn
+            // 
+            this.iDcardDataGridViewTextBoxColumn.DataPropertyName = "IDcard";
+            this.iDcardDataGridViewTextBoxColumn.HeaderText = "IDcard";
+            this.iDcardDataGridViewTextBoxColumn.Name = "iDcardDataGridViewTextBoxColumn";
+            // 
+            // roomKindDataGridViewTextBoxColumn
+            // 
+            this.roomKindDataGridViewTextBoxColumn.DataPropertyName = "RoomKind";
+            this.roomKindDataGridViewTextBoxColumn.HeaderText = "RoomKind";
+            this.roomKindDataGridViewTextBoxColumn.Name = "roomKindDataGridViewTextBoxColumn";
+            // 
+            // timecheckinDataGridViewTextBoxColumn
+            // 
+            this.timecheckinDataGridViewTextBoxColumn.DataPropertyName = "Timecheckin";
+            this.timecheckinDataGridViewTextBoxColumn.HeaderText = "Timecheckin";
+            this.timecheckinDataGridViewTextBoxColumn.Name = "timecheckinDataGridViewTextBoxColumn";
+            // 
+            // timecheckoutDataGridViewTextBoxColumn
+            // 
+            this.timecheckoutDataGridViewTextBoxColumn.DataPropertyName = "Timecheckout";
+            this.timecheckoutDataGridViewTextBoxColumn.HeaderText = "Timecheckout";
+            this.timecheckoutDataGridViewTextBoxColumn.Name = "timecheckoutDataGridViewTextBoxColumn";
+            // 
+            // iDCustomerDataGridViewTextBoxColumn
+            // 
+            this.iDCustomerDataGridViewTextBoxColumn.DataPropertyName = "ID_Customer";
+            this.iDCustomerDataGridViewTextBoxColumn.HeaderText = "IDCustomer";
+            this.iDCustomerDataGridViewTextBoxColumn.Name = "iDCustomerDataGridViewTextBoxColumn";
+            // 
+            // roomNameDataGridViewTextBoxColumn
+            // 
+            this.roomNameDataGridViewTextBoxColumn.DataPropertyName = "RoomName";
+            this.roomNameDataGridViewTextBoxColumn.HeaderText = "RoomName";
+            this.roomNameDataGridViewTextBoxColumn.Name = "roomNameDataGridViewTextBoxColumn";
+            // 
+            // roomStateDataGridViewTextBoxColumn
+            // 
+            this.roomStateDataGridViewTextBoxColumn.DataPropertyName = "RoomState";
+            this.roomStateDataGridViewTextBoxColumn.HeaderText = "RoomState";
+            this.roomStateDataGridViewTextBoxColumn.Name = "roomStateDataGridViewTextBoxColumn";
+            // 
+            // iDBookRoomDataGridViewTextBoxColumn
+            // 
+            this.iDBookRoomDataGridViewTextBoxColumn.DataPropertyName = "ID_BookRoom";
+            this.iDBookRoomDataGridViewTextBoxColumn.HeaderText = "IDBookRoom";
+            this.iDBookRoomDataGridViewTextBoxColumn.Name = "iDBookRoomDataGridViewTextBoxColumn";
+            // 
+            // txtidbookroom
+            // 
+            this.txtidbookroom.Font = new System.Drawing.Font("Agency FB", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtidbookroom.Location = new System.Drawing.Point(40, 130);
+            this.txtidbookroom.Name = "txtidbookroom";
+            this.txtidbookroom.Size = new System.Drawing.Size(164, 27);
+            this.txtidbookroom.TabIndex = 65;
+            // 
+            // label17
+            // 
+            this.label17.AutoSize = true;
+            this.label17.Font = new System.Drawing.Font("Agency FB", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label17.Location = new System.Drawing.Point(47, 102);
+            this.label17.Name = "label17";
+            this.label17.Size = new System.Drawing.Size(99, 24);
+            this.label17.TabIndex = 66;
+            this.label17.Text = "ID Book Room :";
+            // 
             // Bookroom
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1530, 770);
+            this.ClientSize = new System.Drawing.Size(1756, 770);
             this.Controls.Add(this.groupBox5);
             this.Controls.Add(this.btnclose);
             this.Controls.Add(this.btndeleteroom);
@@ -599,6 +690,7 @@
             this.Controls.Add(this.groupBox1);
             this.Name = "Bookroom";
             this.Text = "Bookroom";
+            this.Load += new System.EventHandler(this.Bookroom_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.groupBox2.ResumeLayout(false);
@@ -608,7 +700,9 @@
             this.groupBox4.ResumeLayout(false);
             this.groupBox4.PerformLayout();
             this.groupBox5.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.datagridviewbookinglist)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.hotelDataDataSet6)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bookRoomViewBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -623,15 +717,15 @@
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.ComboBox combotyperoom;
+        private System.Windows.Forms.ComboBox comboroomname;
         private System.Windows.Forms.Label label3;
-        private Guna.UI2.WinForms.Guna2DateTimePicker guna2DateTimePicker1;
+        private Guna.UI2.WinForms.Guna2DateTimePicker dobpicker1;
         private System.Windows.Forms.Label label4;
         private Guna.UI2.WinForms.Guna2DateTimePicker dobpicker;
         private System.Windows.Forms.GroupBox groupBox3;
         private System.Windows.Forms.TextBox txtidroom;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.TextBox txtnameroom;
+        private System.Windows.Forms.TextBox txtstateroom;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.TextBox txtpriceroom;
         private System.Windows.Forms.Label label8;
@@ -652,8 +746,25 @@
         private Guna.UI2.WinForms.Guna2Button btndeleteroom;
         private Guna.UI2.WinForms.Guna2Button btnaddcustomer;
         private System.Windows.Forms.GroupBox groupBox5;
-        private Guna.UI2.WinForms.Guna2DataGridView datagridviewbookinglist;
         private System.Windows.Forms.TextBox txtnumberguest;
         private System.Windows.Forms.Label label15;
+        private System.Windows.Forms.TextBox txttyperoom;
+        private System.Windows.Forms.Label label16;
+        private System.Windows.Forms.DataGridView dataGridView1;
+        private HotelDataDataSet6 hotelDataDataSet6;
+        private System.Windows.Forms.BindingSource bookRoomViewBindingSource;
+        private HotelDataDataSet6TableAdapters.BookRoomViewTableAdapter bookRoomViewTableAdapter;
+        private System.Windows.Forms.TextBox txtidbookroom;
+        private System.Windows.Forms.Label label17;
+        private System.Windows.Forms.DataGridViewTextBoxColumn iDRoomDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn customerNameDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn iDcardDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn roomKindDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn timecheckinDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn timecheckoutDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn iDCustomerDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn roomNameDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn roomStateDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn iDBookRoomDataGridViewTextBoxColumn;
     }
 }

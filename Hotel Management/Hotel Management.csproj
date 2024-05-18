@@ -77,6 +77,7 @@
     <Compile Include="Bookroom.Designer.cs">
       <DependentUpon>Bookroom.cs</DependentUpon>
     </Compile>
+    <Compile Include="BookRoom0.cs" />
     <Compile Include="Checkinoutwork.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -132,6 +133,11 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>HotelDataDataSet5.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="HotelDataDataSet6.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>HotelDataDataSet6.xsd</DependentUpon>
     </Compile>
     <Compile Include="Inventory.cs" />
     <Compile Include="InventoryManagement.cs">
@@ -279,6 +285,17 @@
     </None>
     <None Include="HotelDataDataSet5.xss">
       <DependentUpon>HotelDataDataSet5.xsd</DependentUpon>
+    </None>
+    <None Include="HotelDataDataSet6.xsc">
+      <DependentUpon>HotelDataDataSet6.xsd</DependentUpon>
+    </None>
+    <None Include="HotelDataDataSet6.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>HotelDataDataSet6.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="HotelDataDataSet6.xss">
+      <DependentUpon>HotelDataDataSet6.xsd</DependentUpon>
     </None>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
