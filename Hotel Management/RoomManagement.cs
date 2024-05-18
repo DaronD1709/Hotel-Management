@@ -43,33 +43,40 @@ namespace Hotel_Management
 
         private void btnaddcustomer_Click(object sender, EventArgs e)
         {
-
-            if (!VerifyFields())
+            try
             {
-                MessageBox.Show("Please fill in all fields.", "Incomplete Information", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                return;
-            }
-
-            int id = Convert.ToInt32(txtidroom.Text);
-            string nameroom = txtnameroom.Text;
-            string state = combostateroom.SelectedItem.ToString();
-            string type = combotyperoom.SelectedItem.ToString();
-            string price = txtpriceroom.Text;
-
-            if (room.inserRoom(id, nameroom, state, type, price))
-            {
-                MessageBox.Show("New Room Add", "Add Room", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                LoadData();
-                var otherForm = Application.OpenForms["OtherForm"] as Bookroom;
-                if (otherForm != null)
+                if (!VerifyFields())
                 {
-                    otherForm.PopulateComboBox();
+                    MessageBox.Show("Please fill in all fields.", "Incomplete Information", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    return;
+                }
+
+                int id = Convert.ToInt32(txtidroom.Text);
+                string nameroom = txtnameroom.Text;
+                string state = combostateroom.SelectedItem.ToString();
+                string type = combotyperoom.SelectedItem.ToString();
+                string price = txtpriceroom.Text;
+
+                if (room.inserRoom(id, nameroom, state, type, price))
+                {
+                    MessageBox.Show("New Room Add", "Add Room", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    LoadData();
+                    var otherForm = Application.OpenForms["OtherForm"] as Bookroom;
+                    if (otherForm != null)
+                    {
+                        otherForm.PopulateComboBox();
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("Failed to add Room.", "Add Room", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
-            else
+            catch (Exception ex)
             {
-                MessageBox.Show("Failed to add Room.", "Add Room", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show(ex.Message);
             }
+           
         }
 
 
@@ -109,17 +116,26 @@ namespace Hotel_Management
 
         private void guna2Button1_Click(object sender, EventArgs e)
         {
-            if (string.IsNullOrWhiteSpace(txtsearch.Text))
+            try
             {
-                MessageBox.Show("Please enter the search query.", "Missing Information", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                return;
+                if (string.IsNullOrWhiteSpace(txtsearch.Text))
+                {
+                    MessageBox.Show("Please enter the search query.", "Missing Information", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    return;
+                }
+
+                // Tạo câu lệnh SQL để tìm kiếm thông tin khách hàng
+                SqlCommand command = new SqlCommand("SELECT * FROM dbo.Room  WHERE CONCAT(ID_Room,Name,State) LIKE '%" + txtsearch.Text + "%'");
+
+                // Gọi hàm fillGrid để hiển thị kết quả
+                fillGrid(command);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
             }
 
-            // Tạo câu lệnh SQL để tìm kiếm thông tin khách hàng
-            SqlCommand command = new SqlCommand("SELECT * FROM dbo.Room  WHERE CONCAT(ID_Room,Name,State) LIKE '%" + txtsearch.Text + "%'");
-
-            // Gọi hàm fillGrid để hiển thị kết quả
-            fillGrid(command);
+           
         }
 
 
@@ -148,58 +164,75 @@ namespace Hotel_Management
 
         private void btnupdateroom_Click(object sender, EventArgs e)
         {
-            if (!VerifyFields())
+
+            try
             {
-                MessageBox.Show("Please fill in all fields.", "Incomplete Information", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                return;
-            }
-
-            int id = Convert.ToInt32(txtidroom.Text);
-            string nameroom = txtnameroom.Text;
-            string price = txtpriceroom.Text;
-            string state = combostateroom.SelectedItem.ToString();
-            string type = combotyperoom.SelectedItem.ToString();
-
-
-
-            // Gọi hàm UpdateCustomer để cập nhật thông tin khách hàng
-            if (room.updateRoom(id, nameroom, state, type, price))
-            {
-                MessageBox.Show("Room Information Updated", "Update Room", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                LoadData();
-            }
-            else
-            {
-                MessageBox.Show("Failed to update Room information.", "Update Room", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-        }
-
-        private void btndeleteroom_Click(object sender, EventArgs e)
-        {
-            if (string.IsNullOrWhiteSpace(txtidroom.Text))
-            {
-                MessageBox.Show("Please enter the Room ID.", "Missing Information", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                return;
-            }
-
-            // Lấy ID Room từ trường nhập liệu
-            int id = Convert.ToInt32(txtidroom.Text);
-
-            // Hiển thị hộp thoại xác nhận xóa
-            DialogResult result = MessageBox.Show("Are you sure you want to delete this Room?", "Delete Room", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
-            if (result == DialogResult.Yes)
-            {
-                // Gọi hàm deleteRoom để xóa khách hàng
-                if (room.deleteRoom(id))
+                if (!VerifyFields())
                 {
-                    MessageBox.Show("Room Deleted", "Delete Room", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    MessageBox.Show("Please fill in all fields.", "Incomplete Information", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    return;
+                }
+
+                int id = Convert.ToInt32(txtidroom.Text);
+                string nameroom = txtnameroom.Text;
+                string price = txtpriceroom.Text;
+                string state = combostateroom.SelectedItem.ToString();
+                string type = combotyperoom.SelectedItem.ToString();
+
+
+
+                // Gọi hàm UpdateCustomer để cập nhật thông tin khách hàng
+                if (room.updateRoom(id, nameroom, state, type, price))
+                {
+                    MessageBox.Show("Room Information Updated", "Update Room", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     LoadData();
                 }
                 else
                 {
-                    MessageBox.Show("Failed to delete Room.", "Delete Room", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show("Failed to update Room information.", "Update Room", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+           
+        }
+
+        private void btndeleteroom_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                if (string.IsNullOrWhiteSpace(txtidroom.Text))
+                {
+                    MessageBox.Show("Please enter the Room ID.", "Missing Information", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    return;
+                }
+
+                // Lấy ID Room từ trường nhập liệu
+                int id = Convert.ToInt32(txtidroom.Text);
+
+                // Hiển thị hộp thoại xác nhận xóa
+                DialogResult result = MessageBox.Show("Are you sure you want to delete this Room?", "Delete Room", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+                if (result == DialogResult.Yes)
+                {
+                    // Gọi hàm deleteRoom để xóa khách hàng
+                    if (room.deleteRoom(id))
+                    {
+                        MessageBox.Show("Room Deleted", "Delete Room", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        LoadData();
+                    }
+                    else
+                    {
+                        MessageBox.Show("Failed to delete Room.", "Delete Room", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+            
         }
 
         private void datagridviewroomlist_RowHeaderMouseClick_1(object sender, DataGridViewCellMouseEventArgs e)

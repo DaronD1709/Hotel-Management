@@ -46,25 +46,25 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.btnclose = new Guna.UI2.WinForms.Guna2Button();
-            this.btndeleteroom = new Guna.UI2.WinForms.Guna2Button();
-            this.btnupdateroom = new Guna.UI2.WinForms.Guna2Button();
-            this.btnaddroom = new Guna.UI2.WinForms.Guna2Button();
             this.datagridviewroomlist = new System.Windows.Forms.DataGridView();
-            this.hotelDataDataSet3 = new Hotel_Management.HotelDataDataSet3();
-            this.roomBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.roomTableAdapter = new Hotel_Management.HotelDataDataSet3TableAdapters.RoomTableAdapter();
             this.iDRoomDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.stateDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.kindDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.priceDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.roomBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.hotelDataDataSet3 = new Hotel_Management.HotelDataDataSet3();
+            this.btnclose = new Guna.UI2.WinForms.Guna2Button();
+            this.btndeleteroom = new Guna.UI2.WinForms.Guna2Button();
+            this.btnupdateroom = new Guna.UI2.WinForms.Guna2Button();
+            this.btnaddroom = new Guna.UI2.WinForms.Guna2Button();
+            this.roomTableAdapter = new Hotel_Management.HotelDataDataSet3TableAdapters.RoomTableAdapter();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.datagridviewroomlist)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.hotelDataDataSet3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.roomBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.hotelDataDataSet3)).BeginInit();
             this.SuspendLayout();
             // 
             // label2
@@ -261,6 +261,65 @@
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "List Room";
             // 
+            // datagridviewroomlist
+            // 
+            this.datagridviewroomlist.AutoGenerateColumns = false;
+            this.datagridviewroomlist.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.datagridviewroomlist.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.datagridviewroomlist.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.iDRoomDataGridViewTextBoxColumn,
+            this.nameDataGridViewTextBoxColumn,
+            this.stateDataGridViewTextBoxColumn,
+            this.kindDataGridViewTextBoxColumn,
+            this.priceDataGridViewTextBoxColumn});
+            this.datagridviewroomlist.DataSource = this.roomBindingSource;
+            this.datagridviewroomlist.Location = new System.Drawing.Point(0, 32);
+            this.datagridviewroomlist.Name = "datagridviewroomlist";
+            this.datagridviewroomlist.RowTemplate.Height = 35;
+            this.datagridviewroomlist.Size = new System.Drawing.Size(654, 615);
+            this.datagridviewroomlist.TabIndex = 0;
+            this.datagridviewroomlist.RowHeaderMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.datagridviewroomlist_RowHeaderMouseClick_1);
+            // 
+            // iDRoomDataGridViewTextBoxColumn
+            // 
+            this.iDRoomDataGridViewTextBoxColumn.DataPropertyName = "ID_Room";
+            this.iDRoomDataGridViewTextBoxColumn.HeaderText = "ID Room";
+            this.iDRoomDataGridViewTextBoxColumn.Name = "iDRoomDataGridViewTextBoxColumn";
+            // 
+            // nameDataGridViewTextBoxColumn
+            // 
+            this.nameDataGridViewTextBoxColumn.DataPropertyName = "Name";
+            this.nameDataGridViewTextBoxColumn.HeaderText = "Name";
+            this.nameDataGridViewTextBoxColumn.Name = "nameDataGridViewTextBoxColumn";
+            // 
+            // stateDataGridViewTextBoxColumn
+            // 
+            this.stateDataGridViewTextBoxColumn.DataPropertyName = "State";
+            this.stateDataGridViewTextBoxColumn.HeaderText = "State";
+            this.stateDataGridViewTextBoxColumn.Name = "stateDataGridViewTextBoxColumn";
+            // 
+            // kindDataGridViewTextBoxColumn
+            // 
+            this.kindDataGridViewTextBoxColumn.DataPropertyName = "Kind";
+            this.kindDataGridViewTextBoxColumn.HeaderText = "Kind";
+            this.kindDataGridViewTextBoxColumn.Name = "kindDataGridViewTextBoxColumn";
+            // 
+            // priceDataGridViewTextBoxColumn
+            // 
+            this.priceDataGridViewTextBoxColumn.DataPropertyName = "Price";
+            this.priceDataGridViewTextBoxColumn.HeaderText = "Price";
+            this.priceDataGridViewTextBoxColumn.Name = "priceDataGridViewTextBoxColumn";
+            // 
+            // roomBindingSource
+            // 
+            this.roomBindingSource.DataMember = "Room";
+            this.roomBindingSource.DataSource = this.hotelDataDataSet3;
+            // 
+            // hotelDataDataSet3
+            // 
+            this.hotelDataDataSet3.DataSetName = "HotelDataDataSet3";
+            this.hotelDataDataSet3.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
             // btnclose
             // 
             this.btnclose.BorderRadius = 15;
@@ -332,67 +391,9 @@
             this.btnaddroom.Text = "Add";
             this.btnaddroom.Click += new System.EventHandler(this.btnaddcustomer_Click);
             // 
-            // datagridviewroomlist
-            // 
-            this.datagridviewroomlist.AutoGenerateColumns = false;
-            this.datagridviewroomlist.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.datagridviewroomlist.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.datagridviewroomlist.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.iDRoomDataGridViewTextBoxColumn,
-            this.nameDataGridViewTextBoxColumn,
-            this.stateDataGridViewTextBoxColumn,
-            this.kindDataGridViewTextBoxColumn,
-            this.priceDataGridViewTextBoxColumn});
-            this.datagridviewroomlist.DataSource = this.roomBindingSource;
-            this.datagridviewroomlist.Location = new System.Drawing.Point(0, 32);
-            this.datagridviewroomlist.Name = "datagridviewroomlist";
-            this.datagridviewroomlist.Size = new System.Drawing.Size(654, 615);
-            this.datagridviewroomlist.TabIndex = 0;
-            this.datagridviewroomlist.RowHeaderMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.datagridviewroomlist_RowHeaderMouseClick_1);
-            // 
-            // hotelDataDataSet3
-            // 
-            this.hotelDataDataSet3.DataSetName = "HotelDataDataSet3";
-            this.hotelDataDataSet3.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // roomBindingSource
-            // 
-            this.roomBindingSource.DataMember = "Room";
-            this.roomBindingSource.DataSource = this.hotelDataDataSet3;
-            // 
             // roomTableAdapter
             // 
             this.roomTableAdapter.ClearBeforeFill = true;
-            // 
-            // iDRoomDataGridViewTextBoxColumn
-            // 
-            this.iDRoomDataGridViewTextBoxColumn.DataPropertyName = "ID_Room";
-            this.iDRoomDataGridViewTextBoxColumn.HeaderText = "ID Room";
-            this.iDRoomDataGridViewTextBoxColumn.Name = "iDRoomDataGridViewTextBoxColumn";
-            // 
-            // nameDataGridViewTextBoxColumn
-            // 
-            this.nameDataGridViewTextBoxColumn.DataPropertyName = "Name";
-            this.nameDataGridViewTextBoxColumn.HeaderText = "Name";
-            this.nameDataGridViewTextBoxColumn.Name = "nameDataGridViewTextBoxColumn";
-            // 
-            // stateDataGridViewTextBoxColumn
-            // 
-            this.stateDataGridViewTextBoxColumn.DataPropertyName = "State";
-            this.stateDataGridViewTextBoxColumn.HeaderText = "State";
-            this.stateDataGridViewTextBoxColumn.Name = "stateDataGridViewTextBoxColumn";
-            // 
-            // kindDataGridViewTextBoxColumn
-            // 
-            this.kindDataGridViewTextBoxColumn.DataPropertyName = "Kind";
-            this.kindDataGridViewTextBoxColumn.HeaderText = "Kind";
-            this.kindDataGridViewTextBoxColumn.Name = "kindDataGridViewTextBoxColumn";
-            // 
-            // priceDataGridViewTextBoxColumn
-            // 
-            this.priceDataGridViewTextBoxColumn.DataPropertyName = "Price";
-            this.priceDataGridViewTextBoxColumn.HeaderText = "Price";
-            this.priceDataGridViewTextBoxColumn.Name = "priceDataGridViewTextBoxColumn";
             // 
             // RoomManagement
             // 
@@ -416,8 +417,8 @@
             this.groupBox2.PerformLayout();
             this.groupBox3.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.datagridviewroomlist)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.hotelDataDataSet3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.roomBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.hotelDataDataSet3)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

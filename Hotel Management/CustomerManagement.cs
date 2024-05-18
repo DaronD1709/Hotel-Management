@@ -88,38 +88,45 @@ namespace Hotel_Management
 
         private void btnaddcustomer_Click(object sender, EventArgs e)
         {
-
-
-            if (!VerifyFields())
+            try
             {
-                MessageBox.Show("Please fill in all fields.", "Incomplete Information", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                return;
+                if (!VerifyFields())
+                {
+                    MessageBox.Show("Please fill in all fields.", "Incomplete Information", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    return;
+                }
+
+                int id = Convert.ToInt32(txtidcustomer.Text);
+                string namecustomer = txtnamecustomer.Text;
+                string card = txtcardidcustomer.Text;
+                string gender = combogendercustomer.SelectedItem.ToString();
+                DateTime bdate = dobpicker.Value;
+                string phone = txtphonecustomer.Text;
+                string nation = txtnationcustomer.Text;
+                int born_year = dobpicker.Value.Year;
+                int this_year = DateTime.Now.Year;
+                //  sv tu 10-100,  co the thay doi
+                if (((this_year - born_year) < 10) || ((this_year - born_year) > 100))
+                {
+                    MessageBox.Show("The Student Age Must Be Between 10 and 100 year", "Invalid Birth Date", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+
+                else if (customer.insertCustomer(id, namecustomer, card, gender, bdate, phone, nation))
+                {
+                    MessageBox.Show("New Customer Add", "Add Customer", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    LoadData();
+                }
+                else
+                {
+                    MessageBox.Show("Failed to add customer.", "Add Customer", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
             }
 
-            int id = Convert.ToInt32(txtidcustomer.Text);
-            string namecustomer = txtnamecustomer.Text;
-            string card = txtcardidcustomer.Text;
-            string gender = combogendercustomer.SelectedItem.ToString();
-            DateTime bdate = dobpicker.Value;
-            string phone = txtphonecustomer.Text;
-            string nation = txtnationcustomer.Text;
-            int born_year = dobpicker.Value.Year;
-            int this_year = DateTime.Now.Year;
-            //  sv tu 10-100,  co the thay doi
-            if (((this_year - born_year) < 10) || ((this_year - born_year) > 100))
-            {
-                MessageBox.Show("The Student Age Must Be Between 10 and 100 year", "Invalid Birth Date", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-
-            else if (customer.insertCustomer(id, namecustomer, card, gender, bdate, phone, nation))
-            {
-                MessageBox.Show("New Customer Add", "Add Customer", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                LoadData();
-            }
-            else
-            {
-                MessageBox.Show("Failed to add customer.", "Add Customer", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
+            
         }
 
         // Check Info 
@@ -186,83 +193,108 @@ namespace Hotel_Management
 
         private void btnupdatecustomer_Click(object sender, EventArgs e)
         {
-            if (!VerifyFields())
+            try
             {
-                MessageBox.Show("Please fill in all fields.", "Incomplete Information", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                return;
-            }
-
-            int id = Convert.ToInt32(txtidcustomer.Text);
-            string namecustomer = txtnamecustomer.Text;
-            string card = txtcardidcustomer.Text;
-            string gender = combogendercustomer.SelectedItem.ToString();
-            DateTime bdate = dobpicker.Value;
-            string phone = txtphonecustomer.Text;
-            string nation = txtnationcustomer.Text;
-            int born_year = dobpicker.Value.Year;
-            int this_year = DateTime.Now.Year;
-
-            // Kiểm tra tuổi hợp lệ
-            if ((this_year - born_year) < 10 || (this_year - born_year) > 100)
-            {
-                MessageBox.Show("The Customer Age Must Be Between 10 and 100 years", "Invalid Birth Date", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                return;
-            }
-
-            // Gọi hàm UpdateCustomer để cập nhật thông tin khách hàng
-            if (customer.UpdateCustomer(id, namecustomer, card, gender, bdate, phone, nation))
-            {
-                MessageBox.Show("Customer Information Updated", "Update Customer", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                LoadData();
-            }
-            else
-            {
-                MessageBox.Show("Failed to update customer information.", "Update Customer", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-        }
-
-        private void btndeletecustomer_Click(object sender, EventArgs e)
-        {
-            // Kiểm tra xem trường ID có được điền hay không
-            if (string.IsNullOrWhiteSpace(txtidcustomer.Text))
-            {
-                MessageBox.Show("Please enter the Customer ID.", "Missing Information", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                return;
-            }
-
-            // Lấy ID khách hàng từ trường nhập liệu
-            int id = Convert.ToInt32(txtidcustomer.Text);
-
-            // Hiển thị hộp thoại xác nhận xóa
-            DialogResult result = MessageBox.Show("Are you sure you want to delete this customer?", "Delete Customer", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
-            if (result == DialogResult.Yes)
-            {
-                // Gọi hàm DeleteCustomer để xóa khách hàng
-                if (customer.DeleteCustomer(id))
+                if (!VerifyFields())
                 {
-                    MessageBox.Show("Customer Deleted", "Delete Customer", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    MessageBox.Show("Please fill in all fields.", "Incomplete Information", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    return;
+                }
+
+                int id = Convert.ToInt32(txtidcustomer.Text);
+                string namecustomer = txtnamecustomer.Text;
+                string card = txtcardidcustomer.Text;
+                string gender = combogendercustomer.SelectedItem.ToString();
+                DateTime bdate = dobpicker.Value;
+                string phone = txtphonecustomer.Text;
+                string nation = txtnationcustomer.Text;
+                int born_year = dobpicker.Value.Year;
+                int this_year = DateTime.Now.Year;
+
+                // Kiểm tra tuổi hợp lệ
+                if ((this_year - born_year) < 10 || (this_year - born_year) > 100)
+                {
+                    MessageBox.Show("The Customer Age Must Be Between 10 and 100 years", "Invalid Birth Date", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
+
+                // Gọi hàm UpdateCustomer để cập nhật thông tin khách hàng
+                if (customer.UpdateCustomer(id, namecustomer, card, gender, bdate, phone, nation))
+                {
+                    MessageBox.Show("Customer Information Updated", "Update Customer", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     LoadData();
                 }
                 else
                 {
-                    MessageBox.Show("Failed to delete customer.", "Delete Customer", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show("Failed to update customer information.", "Update Customer", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+
+           
+        }
+
+        private void btndeletecustomer_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                // Kiểm tra xem trường ID có được điền hay không
+                if (string.IsNullOrWhiteSpace(txtidcustomer.Text))
+                {
+                    MessageBox.Show("Please enter the Customer ID.", "Missing Information", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    return;
+                }
+
+                // Lấy ID khách hàng từ trường nhập liệu
+                int id = Convert.ToInt32(txtidcustomer.Text);
+
+                // Hiển thị hộp thoại xác nhận xóa
+                DialogResult result = MessageBox.Show("Are you sure you want to delete this customer?", "Delete Customer", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+                if (result == DialogResult.Yes)
+                {
+                    // Gọi hàm DeleteCustomer để xóa khách hàng
+                    if (customer.DeleteCustomer(id))
+                    {
+                        MessageBox.Show("Customer Deleted", "Delete Customer", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        LoadData();
+                    }
+                    else
+                    {
+                        MessageBox.Show("Failed to delete customer.", "Delete Customer", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+            
         }
 
         private void guna2Button1_Click(object sender, EventArgs e)
         {
-            if (string.IsNullOrWhiteSpace(txtsearch.Text))
+            try
             {
-                MessageBox.Show("Please enter the search query.", "Missing Information", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                return;
+                if (string.IsNullOrWhiteSpace(txtsearch.Text))
+                {
+                    MessageBox.Show("Please enter the search query.", "Missing Information", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    return;
+                }
+
+                // Tạo câu lệnh SQL để tìm kiếm thông tin khách hàng
+                SqlCommand command = new SqlCommand("SELECT * FROM dbo.Customer WHERE CONCAT(ID_Customer, Name, IDcard) LIKE '%" + txtsearch.Text + "%'");
+
+                // Gọi hàm fillGrid để hiển thị kết quả
+                fillGrid(command);
             }
-
-            // Tạo câu lệnh SQL để tìm kiếm thông tin khách hàng
-            SqlCommand command = new SqlCommand("SELECT * FROM dbo.Customer WHERE CONCAT(ID_Customer, Name, IDcard) LIKE '%" + txtsearch.Text + "%'");
-
-            // Gọi hàm fillGrid để hiển thị kết quả
-            fillGrid(command);
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+            
 
         }
 

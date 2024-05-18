@@ -26,30 +26,38 @@ namespace Hotel_Management
 
         private void btnaddcustomer_Click(object sender, EventArgs e)
         {
-            if (!VerifyFields())
+            try
             {
-                MessageBox.Show("Please fill in all fields.", "Incomplete Information", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                return;
+                if (!VerifyFields())
+                {
+                    MessageBox.Show("Please fill in all fields.", "Incomplete Information", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    return;
+                }
+                //string state = combogendercustomer.SelectedItem.ToString();
+
+                int idbookroom = Convert.ToInt32(txtidbookroom.Text);
+                int idcustomer = Convert.ToInt32(txtidcustomer.Text);
+                int idroom = Convert.ToInt32(txtidroom.Text);
+                DateTime timecheckin = dobpicker.Value;
+                DateTime timecheckout = dobpicker1.Value;
+
+
+
+                if (bookRoom.insertBookroom(idbookroom, idcustomer, idroom, timecheckin, timecheckout))
+                {
+                    MessageBox.Show("New Customer Add", "Add Customer", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    LoadData();
+                }
+                else
+                {
+                    MessageBox.Show("Failed to add customer.", "Add Customer", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
             }
-            //string state = combogendercustomer.SelectedItem.ToString();
-
-            int idbookroom = Convert.ToInt32(txtidbookroom.Text);
-            int idcustomer = Convert.ToInt32(txtidcustomer.Text);
-            int idroom = Convert.ToInt32(txtidroom.Text);
-            DateTime timecheckin = dobpicker.Value;
-            DateTime timecheckout = dobpicker1.Value;
-
-           
-
-            if (bookRoom.insertBookroom(idbookroom, idcustomer, idroom, timecheckin,timecheckout))
+            catch (Exception ex)
             {
-                MessageBox.Show("New Customer Add", "Add Customer", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                LoadData();
+                MessageBox.Show(ex.Message);
             }
-            else
-            {
-                MessageBox.Show("Failed to add customer.", "Add Customer", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
+            
 
 
         }
@@ -199,81 +207,97 @@ namespace Hotel_Management
 
         private void guna2Button1_Click(object sender, EventArgs e)
         {
-            if (string.IsNullOrWhiteSpace(txtsearch.Text))
+            try
             {
-                MessageBox.Show("Please enter the search query.", "Missing Information", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                return;
-            }
-
-            string connectionString =( @"Data Source=DAROND\SQLEXPRESS;Initial Catalog=HotelData;Integrated Security=True");
-            string query = "SELECT * FROM dbo.Customer WHERE CONCAT(IDCard, ID_Customer, Name) LIKE '%" + txtsearch.Text + "%'";
-
-            using (SqlConnection connection = new SqlConnection(connectionString))
-            {
-                SqlCommand command = new SqlCommand(query, connection);
-                connection.Open();
-
-                SqlDataReader reader = command.ExecuteReader();
-
-                if (reader.HasRows)
+                if (string.IsNullOrWhiteSpace(txtsearch.Text))
                 {
-                    while (reader.Read())
+                    MessageBox.Show("Please enter the search query.", "Missing Information", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    return;
+                }
+
+                string connectionString = (@"Data Source=DAROND\SQLEXPRESS;Initial Catalog=HotelData;Integrated Security=True");
+                string query = "SELECT * FROM dbo.Customer WHERE CONCAT(IDCard, ID_Customer, Name) LIKE '%" + txtsearch.Text + "%'";
+
+                using (SqlConnection connection = new SqlConnection(connectionString))
+                {
+                    SqlCommand command = new SqlCommand(query, connection);
+                    connection.Open();
+
+                    SqlDataReader reader = command.ExecuteReader();
+
+                    if (reader.HasRows)
                     {
-                        // Lấy dữ liệu từ cột trong kết quả truy vấn
-                        string customerName = reader["Name"].ToString();
-                        string idcardcustomer = reader["IDcard"].ToString();
-                        string idcustomer = reader["ID_Customer"].ToString();
-                        string phone = reader["PhoneNumber"].ToString();
-                        string nation = reader["Nationality"].ToString();
-                        DateTime dob = Convert.ToDateTime(reader["DOB"]);
+                        while (reader.Read())
+                        {
+                            // Lấy dữ liệu từ cột trong kết quả truy vấn
+                            string customerName = reader["Name"].ToString();
+                            string idcardcustomer = reader["IDcard"].ToString();
+                            string idcustomer = reader["ID_Customer"].ToString();
+                            string phone = reader["PhoneNumber"].ToString();
+                            string nation = reader["Nationality"].ToString();
+                            DateTime dob = Convert.ToDateTime(reader["DOB"]);
 
-                        // Populate dữ liệu vào các điều khiển
-                        txtcustomername.Text = customerName;
-                        txtidcustomer.Text = idcustomer; // Giả sử các giá trị trong combobox đã được đặt trước
-                        dobpicker.Value = dob;
-                        txtcardidcustomer.Text = idcardcustomer;
-                        txtphonecustomer.Text = phone;
-                        txtnationcustomer.Text = nation;
+                            // Populate dữ liệu vào các điều khiển
+                            txtcustomername.Text = customerName;
+                            txtidcustomer.Text = idcustomer; // Giả sử các giá trị trong combobox đã được đặt trước
+                            dobpicker.Value = dob;
+                            txtcardidcustomer.Text = idcardcustomer;
+                            txtphonecustomer.Text = phone;
+                            txtnationcustomer.Text = nation;
+                        }
                     }
-                }
-                else
-                {
-                    MessageBox.Show("No matching records found.", "Search Result", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                }
+                    else
+                    {
+                        MessageBox.Show("No matching records found.", "Search Result", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    }
 
-                reader.Close();
+                    reader.Close();
+                }
             }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+           
 
 
         }
 
         private void btndeleteroom_Click(object sender, EventArgs e)
         {
-            // Kiểm tra xem trường ID có được điền hay không
-            if (string.IsNullOrWhiteSpace(txtidbookroom.Text))
+            try
             {
-                MessageBox.Show("Please enter the ID Book Room.", "Missing Information", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                return;
+                // Kiểm tra xem trường ID có được điền hay không
+                if (string.IsNullOrWhiteSpace(txtidbookroom.Text))
+                {
+                    MessageBox.Show("Please enter the ID Book Room.", "Missing Information", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    return;
+                }
+
+                // Lấy ID khách hàng từ trường nhập liệu
+                int id = Convert.ToInt32(txtidbookroom.Text);
+
+                // Hiển thị hộp thoại xác nhận xóa
+                DialogResult result = MessageBox.Show("Are you sure you want to delete this Room?", "Delete Room", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+                if (result == DialogResult.Yes)
+                {
+                    // Gọi hàm DeleteCustomer để xóa khách hàng
+                    if (bookRoom.DeleteCustomer(id))
+                    {
+                        MessageBox.Show("Room Deleted", "Delete Room", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        LoadData();
+                    }
+                    else
+                    {
+                        MessageBox.Show("Failed to delete Room.", "Delete Room", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+                }
             }
-
-            // Lấy ID khách hàng từ trường nhập liệu
-            int id = Convert.ToInt32(txtidbookroom.Text);
-
-            // Hiển thị hộp thoại xác nhận xóa
-            DialogResult result = MessageBox.Show("Are you sure you want to delete this Room?", "Delete Room", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
-            if (result == DialogResult.Yes)
+            catch (Exception ex)
             {
-                // Gọi hàm DeleteCustomer để xóa khách hàng
-                if (bookRoom.DeleteCustomer(id))
-                {
-                    MessageBox.Show("Room Deleted", "Delete Room", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    LoadData();
-                }
-                else
-                {
-                    MessageBox.Show("Failed to delete Room.", "Delete Room", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                }
+                MessageBox.Show(ex.Message);
             }
+            
         }
 
         //fillData

@@ -34,6 +34,8 @@
             this.guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
             this.label5 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.txtidbookroom = new System.Windows.Forms.TextBox();
+            this.label17 = new System.Windows.Forms.Label();
             this.dobpicker1 = new Guna.UI2.WinForms.Guna2DateTimePicker();
             this.label4 = new System.Windows.Forms.Label();
             this.dobpicker = new Guna.UI2.WinForms.Guna2DateTimePicker();
@@ -42,6 +44,8 @@
             this.comboroomname = new System.Windows.Forms.ComboBox();
             this.label2 = new System.Windows.Forms.Label();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.txttyperoom = new System.Windows.Forms.TextBox();
+            this.label16 = new System.Windows.Forms.Label();
             this.txtpriceroom = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
             this.txtstateroom = new System.Windows.Forms.TextBox();
@@ -49,6 +53,8 @@
             this.txtidroom = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
+            this.txtidcustomer = new System.Windows.Forms.TextBox();
+            this.label9 = new System.Windows.Forms.Label();
             this.txtnationcustomer = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
             this.txtcardidcustomer = new System.Windows.Forms.TextBox();
@@ -61,14 +67,7 @@
             this.label14 = new System.Windows.Forms.Label();
             this.btnclose = new Guna.UI2.WinForms.Guna2Button();
             this.groupBox5 = new System.Windows.Forms.GroupBox();
-            this.btndeleteroom = new Guna.UI2.WinForms.Guna2Button();
-            this.btnaddcustomer = new Guna.UI2.WinForms.Guna2Button();
-            this.txttyperoom = new System.Windows.Forms.TextBox();
-            this.label16 = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.hotelDataDataSet6 = new Hotel_Management.HotelDataDataSet6();
-            this.bookRoomViewBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.bookRoomViewTableAdapter = new Hotel_Management.HotelDataDataSet6TableAdapters.BookRoomViewTableAdapter();
             this.iDRoomDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.customerNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.iDcardDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -79,18 +78,19 @@
             this.roomNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.roomStateDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.iDBookRoomDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.txtidbookroom = new System.Windows.Forms.TextBox();
-            this.label17 = new System.Windows.Forms.Label();
-            this.txtidcustomer = new System.Windows.Forms.TextBox();
-            this.label9 = new System.Windows.Forms.Label();
+            this.bookRoomViewBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.hotelDataDataSet6 = new Hotel_Management.HotelDataDataSet6();
+            this.btndeleteroom = new Guna.UI2.WinForms.Guna2Button();
+            this.btnaddcustomer = new Guna.UI2.WinForms.Guna2Button();
+            this.bookRoomViewTableAdapter = new Hotel_Management.HotelDataDataSet6TableAdapters.BookRoomViewTableAdapter();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
             this.groupBox4.SuspendLayout();
             this.groupBox5.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.hotelDataDataSet6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bookRoomViewBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.hotelDataDataSet6)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBox1
@@ -160,6 +160,24 @@
             this.groupBox2.TabIndex = 37;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Room";
+            // 
+            // txtidbookroom
+            // 
+            this.txtidbookroom.Font = new System.Drawing.Font("Agency FB", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtidbookroom.Location = new System.Drawing.Point(40, 130);
+            this.txtidbookroom.Name = "txtidbookroom";
+            this.txtidbookroom.Size = new System.Drawing.Size(164, 27);
+            this.txtidbookroom.TabIndex = 65;
+            // 
+            // label17
+            // 
+            this.label17.AutoSize = true;
+            this.label17.Font = new System.Drawing.Font("Agency FB", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label17.Location = new System.Drawing.Point(47, 102);
+            this.label17.Name = "label17";
+            this.label17.Size = new System.Drawing.Size(99, 24);
+            this.label17.TabIndex = 66;
+            this.label17.Text = "ID Book Room :";
             // 
             // dobpicker1
             // 
@@ -263,6 +281,24 @@
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Room Info";
             // 
+            // txttyperoom
+            // 
+            this.txttyperoom.Font = new System.Drawing.Font("Agency FB", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txttyperoom.Location = new System.Drawing.Point(45, 210);
+            this.txttyperoom.Name = "txttyperoom";
+            this.txttyperoom.Size = new System.Drawing.Size(182, 27);
+            this.txttyperoom.TabIndex = 64;
+            // 
+            // label16
+            // 
+            this.label16.AutoSize = true;
+            this.label16.Font = new System.Drawing.Font("Agency FB", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label16.Location = new System.Drawing.Point(49, 183);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(93, 24);
+            this.label16.TabIndex = 63;
+            this.label16.Text = "Kind of Room :";
+            // 
             // txtpriceroom
             // 
             this.txtpriceroom.Font = new System.Drawing.Font("Agency FB", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -338,6 +374,24 @@
             this.groupBox4.TabIndex = 60;
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "Customer Info";
+            // 
+            // txtidcustomer
+            // 
+            this.txtidcustomer.Font = new System.Drawing.Font("Agency FB", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtidcustomer.Location = new System.Drawing.Point(34, 231);
+            this.txtidcustomer.Name = "txtidcustomer";
+            this.txtidcustomer.Size = new System.Drawing.Size(168, 27);
+            this.txtidcustomer.TabIndex = 46;
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Agency FB", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.Location = new System.Drawing.Point(44, 204);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(93, 24);
+            this.label9.TabIndex = 45;
+            this.label9.Text = " ID Customer :";
             // 
             // txtnationcustomer
             // 
@@ -446,7 +500,7 @@
             this.btnclose.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.btnclose.Font = new System.Drawing.Font("Agency FB", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnclose.ForeColor = System.Drawing.Color.Black;
-            this.btnclose.Location = new System.Drawing.Point(596, 685);
+            this.btnclose.Location = new System.Drawing.Point(596, 680);
             this.btnclose.Name = "btnclose";
             this.btnclose.Size = new System.Drawing.Size(162, 36);
             this.btnclose.TabIndex = 63;
@@ -463,60 +517,6 @@
             this.groupBox5.TabIndex = 64;
             this.groupBox5.TabStop = false;
             this.groupBox5.Text = "Booking List";
-            // 
-            // btndeleteroom
-            // 
-            this.btndeleteroom.BorderRadius = 15;
-            this.btndeleteroom.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btndeleteroom.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btndeleteroom.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btndeleteroom.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btndeleteroom.FillColor = System.Drawing.Color.OrangeRed;
-            this.btndeleteroom.Font = new System.Drawing.Font("Agency FB", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btndeleteroom.ForeColor = System.Drawing.Color.Black;
-            this.btndeleteroom.Image = global::Hotel_Management.Properties.Resources.bin_484611;
-            this.btndeleteroom.Location = new System.Drawing.Point(596, 598);
-            this.btndeleteroom.Name = "btndeleteroom";
-            this.btndeleteroom.Size = new System.Drawing.Size(162, 36);
-            this.btndeleteroom.TabIndex = 62;
-            this.btndeleteroom.Text = "Delete";
-            this.btndeleteroom.Click += new System.EventHandler(this.btndeleteroom_Click);
-            // 
-            // btnaddcustomer
-            // 
-            this.btnaddcustomer.BorderRadius = 15;
-            this.btnaddcustomer.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnaddcustomer.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnaddcustomer.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnaddcustomer.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnaddcustomer.FillColor = System.Drawing.Color.LightGreen;
-            this.btnaddcustomer.Font = new System.Drawing.Font("Agency FB", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnaddcustomer.ForeColor = System.Drawing.Color.Black;
-            this.btnaddcustomer.Image = global::Hotel_Management.Properties.Resources.add_5372888;
-            this.btnaddcustomer.Location = new System.Drawing.Point(596, 508);
-            this.btnaddcustomer.Name = "btnaddcustomer";
-            this.btnaddcustomer.Size = new System.Drawing.Size(162, 36);
-            this.btnaddcustomer.TabIndex = 61;
-            this.btnaddcustomer.Text = "Check In";
-            this.btnaddcustomer.Click += new System.EventHandler(this.btnaddcustomer_Click);
-            // 
-            // txttyperoom
-            // 
-            this.txttyperoom.Font = new System.Drawing.Font("Agency FB", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txttyperoom.Location = new System.Drawing.Point(45, 210);
-            this.txttyperoom.Name = "txttyperoom";
-            this.txttyperoom.Size = new System.Drawing.Size(182, 27);
-            this.txttyperoom.TabIndex = 64;
-            // 
-            // label16
-            // 
-            this.label16.AutoSize = true;
-            this.label16.Font = new System.Drawing.Font("Agency FB", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label16.Location = new System.Drawing.Point(49, 183);
-            this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(93, 24);
-            this.label16.TabIndex = 63;
-            this.label16.Text = "Kind of Room :";
             // 
             // dataGridView1
             // 
@@ -539,22 +539,9 @@
             this.dataGridView1.Location = new System.Drawing.Point(9, 29);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 55;
+            this.dataGridView1.RowTemplate.Height = 35;
             this.dataGridView1.Size = new System.Drawing.Size(897, 694);
             this.dataGridView1.TabIndex = 0;
-            // 
-            // hotelDataDataSet6
-            // 
-            this.hotelDataDataSet6.DataSetName = "HotelDataDataSet6";
-            this.hotelDataDataSet6.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // bookRoomViewBindingSource
-            // 
-            this.bookRoomViewBindingSource.DataMember = "BookRoomView";
-            this.bookRoomViewBindingSource.DataSource = this.hotelDataDataSet6;
-            // 
-            // bookRoomViewTableAdapter
-            // 
-            this.bookRoomViewTableAdapter.ClearBeforeFill = true;
             // 
             // iDRoomDataGridViewTextBoxColumn
             // 
@@ -616,41 +603,55 @@
             this.iDBookRoomDataGridViewTextBoxColumn.HeaderText = "IDBookRoom";
             this.iDBookRoomDataGridViewTextBoxColumn.Name = "iDBookRoomDataGridViewTextBoxColumn";
             // 
-            // txtidbookroom
+            // bookRoomViewBindingSource
             // 
-            this.txtidbookroom.Font = new System.Drawing.Font("Agency FB", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtidbookroom.Location = new System.Drawing.Point(40, 130);
-            this.txtidbookroom.Name = "txtidbookroom";
-            this.txtidbookroom.Size = new System.Drawing.Size(164, 27);
-            this.txtidbookroom.TabIndex = 65;
+            this.bookRoomViewBindingSource.DataMember = "BookRoomView";
+            this.bookRoomViewBindingSource.DataSource = this.hotelDataDataSet6;
             // 
-            // label17
+            // hotelDataDataSet6
             // 
-            this.label17.AutoSize = true;
-            this.label17.Font = new System.Drawing.Font("Agency FB", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label17.Location = new System.Drawing.Point(47, 102);
-            this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(99, 24);
-            this.label17.TabIndex = 66;
-            this.label17.Text = "ID Book Room :";
+            this.hotelDataDataSet6.DataSetName = "HotelDataDataSet6";
+            this.hotelDataDataSet6.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
-            // txtidcustomer
+            // btndeleteroom
             // 
-            this.txtidcustomer.Font = new System.Drawing.Font("Agency FB", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtidcustomer.Location = new System.Drawing.Point(34, 231);
-            this.txtidcustomer.Name = "txtidcustomer";
-            this.txtidcustomer.Size = new System.Drawing.Size(168, 27);
-            this.txtidcustomer.TabIndex = 46;
+            this.btndeleteroom.BorderRadius = 15;
+            this.btndeleteroom.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btndeleteroom.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btndeleteroom.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btndeleteroom.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btndeleteroom.FillColor = System.Drawing.Color.OrangeRed;
+            this.btndeleteroom.Font = new System.Drawing.Font("Agency FB", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btndeleteroom.ForeColor = System.Drawing.Color.Black;
+            this.btndeleteroom.Image = global::Hotel_Management.Properties.Resources.bin_484611;
+            this.btndeleteroom.Location = new System.Drawing.Point(596, 598);
+            this.btndeleteroom.Name = "btndeleteroom";
+            this.btndeleteroom.Size = new System.Drawing.Size(162, 36);
+            this.btndeleteroom.TabIndex = 62;
+            this.btndeleteroom.Text = "Delete";
+            this.btndeleteroom.Click += new System.EventHandler(this.btndeleteroom_Click);
             // 
-            // label9
+            // btnaddcustomer
             // 
-            this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Agency FB", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(44, 204);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(93, 24);
-            this.label9.TabIndex = 45;
-            this.label9.Text = " ID Customer :";
+            this.btnaddcustomer.BorderRadius = 15;
+            this.btnaddcustomer.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnaddcustomer.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnaddcustomer.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnaddcustomer.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnaddcustomer.FillColor = System.Drawing.Color.LightGreen;
+            this.btnaddcustomer.Font = new System.Drawing.Font("Agency FB", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnaddcustomer.ForeColor = System.Drawing.Color.Black;
+            this.btnaddcustomer.Image = global::Hotel_Management.Properties.Resources.add_5372888;
+            this.btnaddcustomer.Location = new System.Drawing.Point(596, 508);
+            this.btnaddcustomer.Name = "btnaddcustomer";
+            this.btnaddcustomer.Size = new System.Drawing.Size(162, 36);
+            this.btnaddcustomer.TabIndex = 61;
+            this.btnaddcustomer.Text = "Check In";
+            this.btnaddcustomer.Click += new System.EventHandler(this.btnaddcustomer_Click);
+            // 
+            // bookRoomViewTableAdapter
+            // 
+            this.bookRoomViewTableAdapter.ClearBeforeFill = true;
             // 
             // Bookroom
             // 
@@ -679,8 +680,8 @@
             this.groupBox4.PerformLayout();
             this.groupBox5.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.hotelDataDataSet6)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bookRoomViewBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.hotelDataDataSet6)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

@@ -30,42 +30,7 @@
         {
             this.components = new System.ComponentModel.Container();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.txtsearch = new System.Windows.Forms.TextBox();
-            this.guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
-            this.label5 = new System.Windows.Forms.Label();
-            this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.txtaddressemployee = new System.Windows.Forms.TextBox();
-            this.label10 = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
-            this.combogenderemployee = new System.Windows.Forms.ComboBox();
-            this.txtnameEmployee = new System.Windows.Forms.TextBox();
-            this.txtphoneemployee = new System.Windows.Forms.TextBox();
-            this.label4 = new System.Windows.Forms.Label();
-            this.dobpicker = new Guna.UI2.WinForms.Guna2DateTimePicker();
-            this.label7 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.groupBox4 = new System.Windows.Forms.GroupBox();
-            this.label8 = new System.Windows.Forms.Label();
-            this.txtpasswordemployee = new System.Windows.Forms.TextBox();
-            this.comboroleemployee = new System.Windows.Forms.ComboBox();
-            this.label3 = new System.Windows.Forms.Label();
-            this.txtusernameemployee = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.btnclose = new Guna.UI2.WinForms.Guna2Button();
-            this.btndeletecustomer = new Guna.UI2.WinForms.Guna2Button();
-            this.btnupdatecustomer = new Guna.UI2.WinForms.Guna2Button();
-            this.btnaddcustomer = new Guna.UI2.WinForms.Guna2Button();
             this.datagridviewlistemployee = new System.Windows.Forms.DataGridView();
-            this.hotelDataDataSet4 = new Hotel_Management.HotelDataDataSet4();
-            this.employeeBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.employeeTableAdapter = new Hotel_Management.HotelDataDataSet4TableAdapters.EmployeeTableAdapter();
-            this.txtidemployee = new System.Windows.Forms.TextBox();
-            this.label11 = new System.Windows.Forms.Label();
-            this.hotelDataDataSet5 = new Hotel_Management.HotelDataDataSet5();
-            this.employeeBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
-            this.employeeTableAdapter1 = new Hotel_Management.HotelDataDataSet5TableAdapters.EmployeeTableAdapter();
             this.iDEmployeeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.genderDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -75,15 +40,50 @@
             this.roleDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Username = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Password = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.employeeBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.hotelDataDataSet5 = new Hotel_Management.HotelDataDataSet5();
+            this.label2 = new System.Windows.Forms.Label();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.txtsearch = new System.Windows.Forms.TextBox();
+            this.guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
+            this.label5 = new System.Windows.Forms.Label();
+            this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.label8 = new System.Windows.Forms.Label();
+            this.txtaddressemployee = new System.Windows.Forms.TextBox();
+            this.label10 = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
+            this.comboroleemployee = new System.Windows.Forms.ComboBox();
+            this.combogenderemployee = new System.Windows.Forms.ComboBox();
+            this.txtnameEmployee = new System.Windows.Forms.TextBox();
+            this.txtphoneemployee = new System.Windows.Forms.TextBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.dobpicker = new Guna.UI2.WinForms.Guna2DateTimePicker();
+            this.label7 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.groupBox4 = new System.Windows.Forms.GroupBox();
+            this.txtidemployee = new System.Windows.Forms.TextBox();
+            this.label11 = new System.Windows.Forms.Label();
+            this.txtpasswordemployee = new System.Windows.Forms.TextBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.txtusernameemployee = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.btnclose = new Guna.UI2.WinForms.Guna2Button();
+            this.btndeletecustomer = new Guna.UI2.WinForms.Guna2Button();
+            this.btnupdatecustomer = new Guna.UI2.WinForms.Guna2Button();
+            this.btnaddcustomer = new Guna.UI2.WinForms.Guna2Button();
+            this.hotelDataDataSet4 = new Hotel_Management.HotelDataDataSet4();
+            this.employeeBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.employeeTableAdapter = new Hotel_Management.HotelDataDataSet4TableAdapters.EmployeeTableAdapter();
+            this.employeeTableAdapter1 = new Hotel_Management.HotelDataDataSet5TableAdapters.EmployeeTableAdapter();
             this.groupBox2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.datagridviewlistemployee)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.employeeBindingSource1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.hotelDataDataSet5)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.groupBox3.SuspendLayout();
             this.groupBox4.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.datagridviewlistemployee)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.hotelDataDataSet4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.employeeBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.hotelDataDataSet5)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.employeeBindingSource1)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBox2
@@ -96,6 +96,93 @@
             this.groupBox2.TabIndex = 2;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "List Employee";
+            // 
+            // datagridviewlistemployee
+            // 
+            this.datagridviewlistemployee.AutoGenerateColumns = false;
+            this.datagridviewlistemployee.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.datagridviewlistemployee.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.datagridviewlistemployee.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.iDEmployeeDataGridViewTextBoxColumn,
+            this.nameDataGridViewTextBoxColumn,
+            this.genderDataGridViewTextBoxColumn,
+            this.dOBDataGridViewTextBoxColumn,
+            this.phoneNumberDataGridViewTextBoxColumn,
+            this.addressDataGridViewTextBoxColumn,
+            this.roleDataGridViewTextBoxColumn,
+            this.Username,
+            this.Password});
+            this.datagridviewlistemployee.DataSource = this.employeeBindingSource1;
+            this.datagridviewlistemployee.Location = new System.Drawing.Point(4, 29);
+            this.datagridviewlistemployee.Name = "datagridviewlistemployee";
+            this.datagridviewlistemployee.RowTemplate.Height = 35;
+            this.datagridviewlistemployee.Size = new System.Drawing.Size(966, 667);
+            this.datagridviewlistemployee.TabIndex = 0;
+            this.datagridviewlistemployee.RowHeaderMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.datagridviewlistemployee_RowHeaderMouseClick_1);
+            // 
+            // iDEmployeeDataGridViewTextBoxColumn
+            // 
+            this.iDEmployeeDataGridViewTextBoxColumn.DataPropertyName = "ID_Employee";
+            this.iDEmployeeDataGridViewTextBoxColumn.HeaderText = "ID Employee";
+            this.iDEmployeeDataGridViewTextBoxColumn.Name = "iDEmployeeDataGridViewTextBoxColumn";
+            // 
+            // nameDataGridViewTextBoxColumn
+            // 
+            this.nameDataGridViewTextBoxColumn.DataPropertyName = "Name";
+            this.nameDataGridViewTextBoxColumn.HeaderText = "Name";
+            this.nameDataGridViewTextBoxColumn.Name = "nameDataGridViewTextBoxColumn";
+            // 
+            // genderDataGridViewTextBoxColumn
+            // 
+            this.genderDataGridViewTextBoxColumn.DataPropertyName = "Gender";
+            this.genderDataGridViewTextBoxColumn.HeaderText = "Gender";
+            this.genderDataGridViewTextBoxColumn.Name = "genderDataGridViewTextBoxColumn";
+            // 
+            // dOBDataGridViewTextBoxColumn
+            // 
+            this.dOBDataGridViewTextBoxColumn.DataPropertyName = "DOB";
+            this.dOBDataGridViewTextBoxColumn.HeaderText = "DOB";
+            this.dOBDataGridViewTextBoxColumn.Name = "dOBDataGridViewTextBoxColumn";
+            // 
+            // phoneNumberDataGridViewTextBoxColumn
+            // 
+            this.phoneNumberDataGridViewTextBoxColumn.DataPropertyName = "PhoneNumber";
+            this.phoneNumberDataGridViewTextBoxColumn.HeaderText = "PhoneNumber";
+            this.phoneNumberDataGridViewTextBoxColumn.Name = "phoneNumberDataGridViewTextBoxColumn";
+            // 
+            // addressDataGridViewTextBoxColumn
+            // 
+            this.addressDataGridViewTextBoxColumn.DataPropertyName = "Address";
+            this.addressDataGridViewTextBoxColumn.HeaderText = "Address";
+            this.addressDataGridViewTextBoxColumn.Name = "addressDataGridViewTextBoxColumn";
+            // 
+            // roleDataGridViewTextBoxColumn
+            // 
+            this.roleDataGridViewTextBoxColumn.DataPropertyName = "Role";
+            this.roleDataGridViewTextBoxColumn.HeaderText = "Role";
+            this.roleDataGridViewTextBoxColumn.Name = "roleDataGridViewTextBoxColumn";
+            // 
+            // Username
+            // 
+            this.Username.DataPropertyName = "Username";
+            this.Username.HeaderText = "Username";
+            this.Username.Name = "Username";
+            // 
+            // Password
+            // 
+            this.Password.DataPropertyName = "Password";
+            this.Password.HeaderText = "Password";
+            this.Password.Name = "Password";
+            // 
+            // employeeBindingSource1
+            // 
+            this.employeeBindingSource1.DataMember = "Employee";
+            this.employeeBindingSource1.DataSource = this.hotelDataDataSet5;
+            // 
+            // hotelDataDataSet5
+            // 
+            this.hotelDataDataSet5.DataSetName = "HotelDataDataSet5";
+            this.hotelDataDataSet5.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // label2
             // 
@@ -181,6 +268,16 @@
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Employee Info";
             // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Agency FB", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.Location = new System.Drawing.Point(43, 308);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(43, 24);
+            this.label8.TabIndex = 54;
+            this.label8.Text = "Role :";
+            // 
             // txtaddressemployee
             // 
             this.txtaddressemployee.Font = new System.Drawing.Font("Agency FB", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -209,6 +306,19 @@
             this.label9.Size = new System.Drawing.Size(60, 24);
             this.label9.TabIndex = 46;
             this.label9.Text = "Gender :";
+            // 
+            // comboroleemployee
+            // 
+            this.comboroleemployee.Font = new System.Drawing.Font("Agency FB", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboroleemployee.FormattingEnabled = true;
+            this.comboroleemployee.Items.AddRange(new object[] {
+            "Manager",
+            "Receipter",
+            "Labor"});
+            this.comboroleemployee.Location = new System.Drawing.Point(39, 336);
+            this.comboroleemployee.Name = "comboroleemployee";
+            this.comboroleemployee.Size = new System.Drawing.Size(204, 28);
+            this.comboroleemployee.TabIndex = 53;
             // 
             // combogenderemployee
             // 
@@ -300,15 +410,23 @@
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "Account Employee";
             // 
-            // label8
+            // txtidemployee
             // 
-            this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Agency FB", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(43, 308);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(43, 24);
-            this.label8.TabIndex = 54;
-            this.label8.Text = "Role :";
+            this.txtidemployee.Font = new System.Drawing.Font("Agency FB", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtidemployee.Location = new System.Drawing.Point(42, 96);
+            this.txtidemployee.Name = "txtidemployee";
+            this.txtidemployee.Size = new System.Drawing.Size(162, 27);
+            this.txtidemployee.TabIndex = 56;
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Font = new System.Drawing.Font("Agency FB", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.Location = new System.Drawing.Point(46, 68);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(29, 24);
+            this.label11.TabIndex = 55;
+            this.label11.Text = "ID :";
             // 
             // txtpasswordemployee
             // 
@@ -317,19 +435,6 @@
             this.txtpasswordemployee.Name = "txtpasswordemployee";
             this.txtpasswordemployee.Size = new System.Drawing.Size(162, 27);
             this.txtpasswordemployee.TabIndex = 56;
-            // 
-            // comboroleemployee
-            // 
-            this.comboroleemployee.Font = new System.Drawing.Font("Agency FB", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboroleemployee.FormattingEnabled = true;
-            this.comboroleemployee.Items.AddRange(new object[] {
-            "Manager",
-            "Receipter",
-            "Labor"});
-            this.comboroleemployee.Location = new System.Drawing.Point(39, 336);
-            this.comboroleemployee.Name = "comboroleemployee";
-            this.comboroleemployee.Size = new System.Drawing.Size(204, 28);
-            this.comboroleemployee.TabIndex = 53;
             // 
             // label3
             // 
@@ -430,28 +535,6 @@
             this.btnaddcustomer.Text = "Add";
             this.btnaddcustomer.Click += new System.EventHandler(this.btnaddcustomer_Click);
             // 
-            // datagridviewlistemployee
-            // 
-            this.datagridviewlistemployee.AutoGenerateColumns = false;
-            this.datagridviewlistemployee.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.datagridviewlistemployee.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.datagridviewlistemployee.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.iDEmployeeDataGridViewTextBoxColumn,
-            this.nameDataGridViewTextBoxColumn,
-            this.genderDataGridViewTextBoxColumn,
-            this.dOBDataGridViewTextBoxColumn,
-            this.phoneNumberDataGridViewTextBoxColumn,
-            this.addressDataGridViewTextBoxColumn,
-            this.roleDataGridViewTextBoxColumn,
-            this.Username,
-            this.Password});
-            this.datagridviewlistemployee.DataSource = this.employeeBindingSource1;
-            this.datagridviewlistemployee.Location = new System.Drawing.Point(4, 29);
-            this.datagridviewlistemployee.Name = "datagridviewlistemployee";
-            this.datagridviewlistemployee.Size = new System.Drawing.Size(966, 667);
-            this.datagridviewlistemployee.TabIndex = 0;
-            this.datagridviewlistemployee.RowHeaderMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.datagridviewlistemployee_RowHeaderMouseClick_1);
-            // 
             // hotelDataDataSet4
             // 
             this.hotelDataDataSet4.DataSetName = "HotelDataDataSet4";
@@ -466,91 +549,9 @@
             // 
             this.employeeTableAdapter.ClearBeforeFill = true;
             // 
-            // txtidemployee
-            // 
-            this.txtidemployee.Font = new System.Drawing.Font("Agency FB", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtidemployee.Location = new System.Drawing.Point(42, 96);
-            this.txtidemployee.Name = "txtidemployee";
-            this.txtidemployee.Size = new System.Drawing.Size(162, 27);
-            this.txtidemployee.TabIndex = 56;
-            // 
-            // label11
-            // 
-            this.label11.AutoSize = true;
-            this.label11.Font = new System.Drawing.Font("Agency FB", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.Location = new System.Drawing.Point(46, 68);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(29, 24);
-            this.label11.TabIndex = 55;
-            this.label11.Text = "ID :";
-            // 
-            // hotelDataDataSet5
-            // 
-            this.hotelDataDataSet5.DataSetName = "HotelDataDataSet5";
-            this.hotelDataDataSet5.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // employeeBindingSource1
-            // 
-            this.employeeBindingSource1.DataMember = "Employee";
-            this.employeeBindingSource1.DataSource = this.hotelDataDataSet5;
-            // 
             // employeeTableAdapter1
             // 
             this.employeeTableAdapter1.ClearBeforeFill = true;
-            // 
-            // iDEmployeeDataGridViewTextBoxColumn
-            // 
-            this.iDEmployeeDataGridViewTextBoxColumn.DataPropertyName = "ID_Employee";
-            this.iDEmployeeDataGridViewTextBoxColumn.HeaderText = "ID Employee";
-            this.iDEmployeeDataGridViewTextBoxColumn.Name = "iDEmployeeDataGridViewTextBoxColumn";
-            // 
-            // nameDataGridViewTextBoxColumn
-            // 
-            this.nameDataGridViewTextBoxColumn.DataPropertyName = "Name";
-            this.nameDataGridViewTextBoxColumn.HeaderText = "Name";
-            this.nameDataGridViewTextBoxColumn.Name = "nameDataGridViewTextBoxColumn";
-            // 
-            // genderDataGridViewTextBoxColumn
-            // 
-            this.genderDataGridViewTextBoxColumn.DataPropertyName = "Gender";
-            this.genderDataGridViewTextBoxColumn.HeaderText = "Gender";
-            this.genderDataGridViewTextBoxColumn.Name = "genderDataGridViewTextBoxColumn";
-            // 
-            // dOBDataGridViewTextBoxColumn
-            // 
-            this.dOBDataGridViewTextBoxColumn.DataPropertyName = "DOB";
-            this.dOBDataGridViewTextBoxColumn.HeaderText = "DOB";
-            this.dOBDataGridViewTextBoxColumn.Name = "dOBDataGridViewTextBoxColumn";
-            // 
-            // phoneNumberDataGridViewTextBoxColumn
-            // 
-            this.phoneNumberDataGridViewTextBoxColumn.DataPropertyName = "PhoneNumber";
-            this.phoneNumberDataGridViewTextBoxColumn.HeaderText = "PhoneNumber";
-            this.phoneNumberDataGridViewTextBoxColumn.Name = "phoneNumberDataGridViewTextBoxColumn";
-            // 
-            // addressDataGridViewTextBoxColumn
-            // 
-            this.addressDataGridViewTextBoxColumn.DataPropertyName = "Address";
-            this.addressDataGridViewTextBoxColumn.HeaderText = "Address";
-            this.addressDataGridViewTextBoxColumn.Name = "addressDataGridViewTextBoxColumn";
-            // 
-            // roleDataGridViewTextBoxColumn
-            // 
-            this.roleDataGridViewTextBoxColumn.DataPropertyName = "Role";
-            this.roleDataGridViewTextBoxColumn.HeaderText = "Role";
-            this.roleDataGridViewTextBoxColumn.Name = "roleDataGridViewTextBoxColumn";
-            // 
-            // Username
-            // 
-            this.Username.DataPropertyName = "Username";
-            this.Username.HeaderText = "Username";
-            this.Username.Name = "Username";
-            // 
-            // Password
-            // 
-            this.Password.DataPropertyName = "Password";
-            this.Password.HeaderText = "Password";
-            this.Password.Name = "Password";
             // 
             // EmployeeManagement
             // 
@@ -570,17 +571,17 @@
             this.Text = "EmployeeManagement";
             this.Load += new System.EventHandler(this.EmployeeManagement_Load);
             this.groupBox2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.datagridviewlistemployee)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.employeeBindingSource1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.hotelDataDataSet5)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.groupBox3.ResumeLayout(false);
             this.groupBox3.PerformLayout();
             this.groupBox4.ResumeLayout(false);
             this.groupBox4.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.datagridviewlistemployee)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.hotelDataDataSet4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.employeeBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.hotelDataDataSet5)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.employeeBindingSource1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

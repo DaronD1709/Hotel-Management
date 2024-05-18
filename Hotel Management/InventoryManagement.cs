@@ -63,28 +63,35 @@ namespace Hotel_Management
 
         private void btnaddcustomer_Click(object sender, EventArgs e)
         {
-
-            if (!VerifyFields())
+            try
             {
-                MessageBox.Show("Please fill in all fields.", "Incomplete Information", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                return;
-            }
+                if (!VerifyFields())
+                {
+                    MessageBox.Show("Please fill in all fields.", "Incomplete Information", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    return;
+                }
 
-            int id = Convert.ToInt32(txtiditems.Text);
-            string nameitem = txtnameitems.Text;
-            int amount = Convert.ToInt32(numberofitems.Value);
-            string price = txtpriceitems.Text;
-           
+                int id = Convert.ToInt32(txtiditems.Text);
+                string nameitem = txtnameitems.Text;
+                int amount = Convert.ToInt32(numberofitems.Value);
+                string price = txtpriceitems.Text;
 
-            if (inventory.insertInventory(id, nameitem, amount, price))
-            {
-                MessageBox.Show("New Item Add", "Add Item", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                LoadData();
+
+                if (inventory.insertInventory(id, nameitem, amount, price))
+                {
+                    MessageBox.Show("New Item Add", "Add Item", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    LoadData();
+                }
+                else
+                {
+                    MessageBox.Show("Failed to add Item.", "Add Item", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
             }
-            else
+            catch (Exception ex)
             {
-                MessageBox.Show("Failed to add Item.", "Add Item", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show(ex.Message);
             }
+            
         }
 
         //Check
@@ -131,17 +138,25 @@ namespace Hotel_Management
 
         private void guna2Button1_Click(object sender, EventArgs e)
         {
-            if (string.IsNullOrWhiteSpace(txtsearch.Text))
+            try
             {
-                MessageBox.Show("Please enter the search query.", "Missing Information", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                return;
+                if (string.IsNullOrWhiteSpace(txtsearch.Text))
+                {
+                    MessageBox.Show("Please enter the search query.", "Missing Information", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    return;
+                }
+
+                // Tạo câu lệnh SQL để tìm kiếm thông tin khách hàng
+                SqlCommand command = new SqlCommand("SELECT * FROM dbo.Inventory WHERE CONCAT(ID_Inventory, Name) LIKE '%" + txtsearch.Text + "%'");
+
+                // Gọi hàm fillGrid để hiển thị kết quả
+                fillGrid(command);
             }
-
-            // Tạo câu lệnh SQL để tìm kiếm thông tin khách hàng
-            SqlCommand command = new SqlCommand("SELECT * FROM dbo.Inventory WHERE CONCAT(ID_Inventory, Name) LIKE '%" + txtsearch.Text + "%'");
-
-            // Gọi hàm fillGrid để hiển thị kết quả
-            fillGrid(command);
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+            
         }
 
         private void LoadData()
@@ -167,31 +182,39 @@ namespace Hotel_Management
 
         private void btndeleteitems_Click(object sender, EventArgs e)
         {
+            try
+            {
+                if (string.IsNullOrWhiteSpace(txtiditems.Text))
+                {
+                    MessageBox.Show("Please enter the Item ID.", "Missing Information", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    return;
+                }
+
+                // Lấy ID khách hàng từ trường nhập liệu
+                int id = Convert.ToInt32(txtiditems.Text);
+
+                // Hiển thị hộp thoại xác nhận xóa
+                DialogResult result = MessageBox.Show("Are you sure you want to delete this Item?", "Delete Item", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+                if (result == DialogResult.Yes)
+                {
+                    // Gọi hàm DeleteCustomer để xóa khách hàng
+                    if (inventory.deleteItem(id))
+                    {
+                        MessageBox.Show("Customer Item", "Delete Item", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        LoadData();
+                    }
+                    else
+                    {
+                        MessageBox.Show("Failed to delete Item.", "Delete Item", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
             // Kiểm tra xem trường ID có được điền hay không
-            if (string.IsNullOrWhiteSpace(txtiditems.Text))
-            {
-                MessageBox.Show("Please enter the Item ID.", "Missing Information", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                return;
-            }
-
-            // Lấy ID khách hàng từ trường nhập liệu
-            int id = Convert.ToInt32(txtiditems.Text);
-
-            // Hiển thị hộp thoại xác nhận xóa
-            DialogResult result = MessageBox.Show("Are you sure you want to delete this Item?", "Delete Item", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
-            if (result == DialogResult.Yes)
-            {
-                // Gọi hàm DeleteCustomer để xóa khách hàng
-                if (inventory.deleteItem(id))
-                {
-                    MessageBox.Show("Customer Item", "Delete Item", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    LoadData();
-                }
-                else
-                {
-                    MessageBox.Show("Failed to delete Item.", "Delete Item", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                }
-            }
+            
         }
 
         private void datagridviewitemlist_RowHeaderMouseClick_1(object sender, DataGridViewCellMouseEventArgs e)

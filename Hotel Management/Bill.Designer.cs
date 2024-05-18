@@ -61,6 +61,7 @@
             this.lblIDCard = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.groupBox6 = new System.Windows.Forms.GroupBox();
+            this.lblFinalPrice = new System.Windows.Forms.Label();
             this.lblCustomerName = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.lblDateCreate = new System.Windows.Forms.Label();
@@ -74,11 +75,10 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.lblFinalPrice = new System.Windows.Forms.Label();
             this.btnclose = new Guna.UI2.WinForms.Guna2Button();
             this.btnprint = new Guna.UI2.WinForms.Guna2Button();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.groupBox6.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
@@ -440,6 +440,17 @@
             this.groupBox6.TabIndex = 38;
             this.groupBox6.TabStop = false;
             // 
+            // lblFinalPrice
+            // 
+            this.lblFinalPrice.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.lblFinalPrice.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblFinalPrice.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.lblFinalPrice.Location = new System.Drawing.Point(476, 635);
+            this.lblFinalPrice.Name = "lblFinalPrice";
+            this.lblFinalPrice.Size = new System.Drawing.Size(131, 17);
+            this.lblFinalPrice.TabIndex = 113;
+            this.lblFinalPrice.Text = "Mã hóa đơn";
+            // 
             // lblCustomerName
             // 
             this.lblCustomerName.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -577,6 +588,17 @@
             this.label1.TabIndex = 34;
             this.label1.Text = "HOTEL 999";
             // 
+            // pictureBox2
+            // 
+            this.pictureBox2.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
+            this.pictureBox2.Location = new System.Drawing.Point(18, 18);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(162, 106);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox2.TabIndex = 15;
+            this.pictureBox2.TabStop = false;
+            // 
             // label2
             // 
             this.label2.AutoSize = true;
@@ -588,17 +610,6 @@
             this.label2.TabIndex = 37;
             this.label2.Text = "Print Bill";
             // 
-            // lblFinalPrice
-            // 
-            this.lblFinalPrice.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            this.lblFinalPrice.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblFinalPrice.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.lblFinalPrice.Location = new System.Drawing.Point(476, 635);
-            this.lblFinalPrice.Name = "lblFinalPrice";
-            this.lblFinalPrice.Size = new System.Drawing.Size(131, 17);
-            this.lblFinalPrice.TabIndex = 113;
-            this.lblFinalPrice.Text = "Mã hóa đơn";
-            // 
             // btnclose
             // 
             this.btnclose.BorderRadius = 15;
@@ -609,7 +620,7 @@
             this.btnclose.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.btnclose.Font = new System.Drawing.Font("Agency FB", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnclose.ForeColor = System.Drawing.Color.Black;
-            this.btnclose.Location = new System.Drawing.Point(470, 767);
+            this.btnclose.Location = new System.Drawing.Point(551, 767);
             this.btnclose.Name = "btnclose";
             this.btnclose.Size = new System.Drawing.Size(162, 36);
             this.btnclose.TabIndex = 42;
@@ -626,23 +637,12 @@
             this.btnprint.Font = new System.Drawing.Font("Agency FB", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnprint.ForeColor = System.Drawing.Color.Black;
             this.btnprint.Image = global::Hotel_Management.Properties.Resources._7830829_print_text_icon;
-            this.btnprint.Location = new System.Drawing.Point(237, 767);
+            this.btnprint.Location = new System.Drawing.Point(175, 767);
             this.btnprint.Name = "btnprint";
             this.btnprint.Size = new System.Drawing.Size(162, 36);
             this.btnprint.TabIndex = 41;
             this.btnprint.Text = "Print";
             this.btnprint.Click += new System.EventHandler(this.btnprint_Click);
-            // 
-            // pictureBox2
-            // 
-            this.pictureBox2.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(18, 18);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(162, 106);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox2.TabIndex = 15;
-            this.pictureBox2.TabStop = false;
             // 
             // Bill
             // 
