@@ -42,8 +42,6 @@
             this.comboroomname = new System.Windows.Forms.ComboBox();
             this.label2 = new System.Windows.Forms.Label();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.txtnumberguest = new System.Windows.Forms.TextBox();
-            this.label15 = new System.Windows.Forms.Label();
             this.txtpriceroom = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
             this.txtstateroom = new System.Windows.Forms.TextBox();
@@ -53,8 +51,6 @@
             this.groupBox4 = new System.Windows.Forms.GroupBox();
             this.txtnationcustomer = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
-            this.combogendercustomer = new System.Windows.Forms.ComboBox();
             this.txtcardidcustomer = new System.Windows.Forms.TextBox();
             this.txtphonecustomer = new System.Windows.Forms.TextBox();
             this.txtcustomername = new System.Windows.Forms.TextBox();
@@ -85,6 +81,8 @@
             this.iDBookRoomDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.txtidbookroom = new System.Windows.Forms.TextBox();
             this.label17 = new System.Windows.Forms.Label();
+            this.txtidcustomer = new System.Windows.Forms.TextBox();
+            this.label9 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -251,8 +249,6 @@
             // 
             this.groupBox3.Controls.Add(this.txttyperoom);
             this.groupBox3.Controls.Add(this.label16);
-            this.groupBox3.Controls.Add(this.txtnumberguest);
-            this.groupBox3.Controls.Add(this.label15);
             this.groupBox3.Controls.Add(this.txtpriceroom);
             this.groupBox3.Controls.Add(this.label8);
             this.groupBox3.Controls.Add(this.txtstateroom);
@@ -262,28 +258,10 @@
             this.groupBox3.Font = new System.Drawing.Font("Agency FB", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox3.Location = new System.Drawing.Point(531, 92);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(273, 421);
+            this.groupBox3.Size = new System.Drawing.Size(273, 346);
             this.groupBox3.TabIndex = 59;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Room Info";
-            // 
-            // txtnumberguest
-            // 
-            this.txtnumberguest.Font = new System.Drawing.Font("Agency FB", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtnumberguest.Location = new System.Drawing.Point(45, 354);
-            this.txtnumberguest.Name = "txtnumberguest";
-            this.txtnumberguest.Size = new System.Drawing.Size(182, 27);
-            this.txtnumberguest.TabIndex = 62;
-            // 
-            // label15
-            // 
-            this.label15.AutoSize = true;
-            this.label15.Font = new System.Drawing.Font("Agency FB", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label15.Location = new System.Drawing.Point(49, 327);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(106, 24);
-            this.label15.TabIndex = 61;
-            this.label15.Text = "Number of Guest";
             // 
             // txtpriceroom
             // 
@@ -341,10 +319,10 @@
             // 
             // groupBox4
             // 
+            this.groupBox4.Controls.Add(this.txtidcustomer);
+            this.groupBox4.Controls.Add(this.label9);
             this.groupBox4.Controls.Add(this.txtnationcustomer);
             this.groupBox4.Controls.Add(this.label10);
-            this.groupBox4.Controls.Add(this.label9);
-            this.groupBox4.Controls.Add(this.combogendercustomer);
             this.groupBox4.Controls.Add(this.txtcardidcustomer);
             this.groupBox4.Controls.Add(this.txtphonecustomer);
             this.groupBox4.Controls.Add(this.txtcustomername);
@@ -378,25 +356,6 @@
             this.label10.Size = new System.Drawing.Size(76, 24);
             this.label10.TabIndex = 43;
             this.label10.Text = "Nationality :";
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Agency FB", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(38, 202);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(60, 24);
-            this.label9.TabIndex = 42;
-            this.label9.Text = "Gender :";
-            // 
-            // combogendercustomer
-            // 
-            this.combogendercustomer.Font = new System.Drawing.Font("Agency FB", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.combogendercustomer.FormattingEnabled = true;
-            this.combogendercustomer.Location = new System.Drawing.Point(34, 229);
-            this.combogendercustomer.Name = "combogendercustomer";
-            this.combogendercustomer.Size = new System.Drawing.Size(164, 28);
-            this.combogendercustomer.TabIndex = 41;
             // 
             // txtcardidcustomer
             // 
@@ -487,7 +446,7 @@
             this.btnclose.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.btnclose.Font = new System.Drawing.Font("Agency FB", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnclose.ForeColor = System.Drawing.Color.Black;
-            this.btnclose.Location = new System.Drawing.Point(596, 690);
+            this.btnclose.Location = new System.Drawing.Point(596, 685);
             this.btnclose.Name = "btnclose";
             this.btnclose.Size = new System.Drawing.Size(162, 36);
             this.btnclose.TabIndex = 63;
@@ -516,11 +475,12 @@
             this.btndeleteroom.Font = new System.Drawing.Font("Agency FB", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btndeleteroom.ForeColor = System.Drawing.Color.Black;
             this.btndeleteroom.Image = global::Hotel_Management.Properties.Resources.bin_484611;
-            this.btndeleteroom.Location = new System.Drawing.Point(596, 613);
+            this.btndeleteroom.Location = new System.Drawing.Point(596, 598);
             this.btndeleteroom.Name = "btndeleteroom";
             this.btndeleteroom.Size = new System.Drawing.Size(162, 36);
             this.btndeleteroom.TabIndex = 62;
             this.btndeleteroom.Text = "Delete";
+            this.btndeleteroom.Click += new System.EventHandler(this.btndeleteroom_Click);
             // 
             // btnaddcustomer
             // 
@@ -533,7 +493,7 @@
             this.btnaddcustomer.Font = new System.Drawing.Font("Agency FB", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnaddcustomer.ForeColor = System.Drawing.Color.Black;
             this.btnaddcustomer.Image = global::Hotel_Management.Properties.Resources.add_5372888;
-            this.btnaddcustomer.Location = new System.Drawing.Point(596, 546);
+            this.btnaddcustomer.Location = new System.Drawing.Point(596, 508);
             this.btnaddcustomer.Name = "btnaddcustomer";
             this.btnaddcustomer.Size = new System.Drawing.Size(162, 36);
             this.btnaddcustomer.TabIndex = 61;
@@ -674,6 +634,24 @@
             this.label17.TabIndex = 66;
             this.label17.Text = "ID Book Room :";
             // 
+            // txtidcustomer
+            // 
+            this.txtidcustomer.Font = new System.Drawing.Font("Agency FB", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtidcustomer.Location = new System.Drawing.Point(34, 231);
+            this.txtidcustomer.Name = "txtidcustomer";
+            this.txtidcustomer.Size = new System.Drawing.Size(168, 27);
+            this.txtidcustomer.TabIndex = 46;
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Agency FB", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.Location = new System.Drawing.Point(44, 204);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(93, 24);
+            this.label9.TabIndex = 45;
+            this.label9.Text = " ID Customer :";
+            // 
             // Bookroom
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -732,8 +710,6 @@
         private System.Windows.Forms.GroupBox groupBox4;
         private System.Windows.Forms.TextBox txtnationcustomer;
         private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.ComboBox combogendercustomer;
         private System.Windows.Forms.TextBox txtcardidcustomer;
         private System.Windows.Forms.TextBox txtphonecustomer;
         private System.Windows.Forms.TextBox txtcustomername;
@@ -746,8 +722,6 @@
         private Guna.UI2.WinForms.Guna2Button btndeleteroom;
         private Guna.UI2.WinForms.Guna2Button btnaddcustomer;
         private System.Windows.Forms.GroupBox groupBox5;
-        private System.Windows.Forms.TextBox txtnumberguest;
-        private System.Windows.Forms.Label label15;
         private System.Windows.Forms.TextBox txttyperoom;
         private System.Windows.Forms.Label label16;
         private System.Windows.Forms.DataGridView dataGridView1;
@@ -766,5 +740,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn roomNameDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn roomStateDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn iDBookRoomDataGridViewTextBoxColumn;
+        private System.Windows.Forms.TextBox txtidcustomer;
+        private System.Windows.Forms.Label label9;
     }
 }

@@ -33,18 +33,15 @@ namespace Hotel_Management
             }
             //string state = combogendercustomer.SelectedItem.ToString();
 
+            int idbookroom = Convert.ToInt32(txtidbookroom.Text);
+            int idcustomer = Convert.ToInt32(txtidcustomer.Text);
             int idroom = Convert.ToInt32(txtidroom.Text);
-            string namecustomer = txtcustomername.Text;
-            string card = txtcardidcustomer.Text;
-            string kind = txttyperoom.Text;
             DateTime timecheckin = dobpicker.Value;
             DateTime timecheckout = dobpicker1.Value;
-            string nameroom = comboroomname.SelectedItem.ToString();
-            string state = txtstateroom.Text;
-            int idbookroom = Convert.ToInt32(txtidbookroom.Text);
+
            
 
-            if (bookRoom.insertBookroom(idroom,namecustomer,card,kind,timecheckin,timecheckout,nameroom,state,idbookroom))
+            if (bookRoom.insertBookroom(idbookroom, idcustomer, idroom, timecheckin,timecheckout))
             {
                 MessageBox.Show("New Customer Add", "Add Customer", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 LoadData();
@@ -53,6 +50,8 @@ namespace Hotel_Management
             {
                 MessageBox.Show("Failed to add customer.", "Add Customer", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+
+
         }
 
         private void LoadData()
@@ -223,14 +222,14 @@ namespace Hotel_Management
                         // Lấy dữ liệu từ cột trong kết quả truy vấn
                         string customerName = reader["Name"].ToString();
                         string idcardcustomer = reader["IDcard"].ToString();
-                        string gender = reader["Gender"].ToString();
+                        string idcustomer = reader["ID_Customer"].ToString();
                         string phone = reader["PhoneNumber"].ToString();
                         string nation = reader["Nationality"].ToString();
                         DateTime dob = Convert.ToDateTime(reader["DOB"]);
 
                         // Populate dữ liệu vào các điều khiển
                         txtcustomername.Text = customerName;
-                        combogendercustomer.SelectedItem = gender; // Giả sử các giá trị trong combobox đã được đặt trước
+                        txtidcustomer.Text = idcustomer; // Giả sử các giá trị trong combobox đã được đặt trước
                         dobpicker.Value = dob;
                         txtcardidcustomer.Text = idcardcustomer;
                         txtphonecustomer.Text = phone;
@@ -248,9 +247,38 @@ namespace Hotel_Management
 
         }
 
+        private void btndeleteroom_Click(object sender, EventArgs e)
+        {
+            // Kiểm tra xem trường ID có được điền hay không
+            if (string.IsNullOrWhiteSpace(txtidbookroom.Text))
+            {
+                MessageBox.Show("Please enter the ID Book Room.", "Missing Information", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
+            // Lấy ID khách hàng từ trường nhập liệu
+            int id = Convert.ToInt32(txtidbookroom.Text);
+
+            // Hiển thị hộp thoại xác nhận xóa
+            DialogResult result = MessageBox.Show("Are you sure you want to delete this Room?", "Delete Room", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+            if (result == DialogResult.Yes)
+            {
+                // Gọi hàm DeleteCustomer để xóa khách hàng
+                if (bookRoom.DeleteCustomer(id))
+                {
+                    MessageBox.Show("Room Deleted", "Delete Room", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    LoadData();
+                }
+                else
+                {
+                    MessageBox.Show("Failed to delete Room.", "Delete Room", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+        }
+
         //fillData
 
-      
+
 
 
     }
