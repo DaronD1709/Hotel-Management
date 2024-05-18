@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -13,6 +14,7 @@ namespace Hotel_Management
     public partial class InventoryManagement : Form
     {
         public static int Id = -1;
+        Inventory inventory = new Inventory();
         public InventoryManagement()
         {
             InitializeComponent();
@@ -60,10 +62,27 @@ namespace Hotel_Management
 
         private void btnaddcustomer_Click(object sender, EventArgs e)
         {
+
             if (!VerifyFields())
             {
                 MessageBox.Show("Please fill in all fields.", "Incomplete Information", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
+            }
+
+            int id = Convert.ToInt32(txtiditems.Text);
+            string nameitem = txtnameitems.Text;
+            int amount = Convert.ToInt32(numberofitems.Value);
+            string price = txtpriceitems.Text;
+           
+
+            if (inventory.insertInventory(id, nameitem, amount, price))
+            {
+                MessageBox.Show("New Item Add", "Add Item", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                LoadData();
+            }
+            else
+            {
+                MessageBox.Show("Failed to add Item.", "Add Item", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
@@ -115,6 +134,71 @@ namespace Hotel_Management
                 numberofitems.Value = numberofitems.Minimum; // Hoặc giá trị mặc định khác
             }
             txtpriceitems.Text = datagridviewitemlist.Rows[e.RowIndex].Cells[6].Value == DBNull.Value ? "" : datagridviewitemlist.Rows[e.RowIndex].Cells[6].Value.ToString();
+        }
+
+        private void guna2Button1_Click(object sender, EventArgs e)
+        {
+            if (string.IsNullOrWhiteSpace(txtsearch.Text))
+            {
+                MessageBox.Show("Please enter the search query.", "Missing Information", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
+            // Tạo câu lệnh SQL để tìm kiếm thông tin khách hàng
+            SqlCommand command = new SqlCommand("SELECT * FROM std WHERE CONCAT(id, fname, lname, address) LIKE '%" + txtsearch.Text + "%'");
+
+            // Gọi hàm fillGrid để hiển thị kết quả
+            fillGrid(command);
+        }
+
+        private void LoadData()
+        {
+            // Tạo và thiết lập lệnh SQL
+            string query = "SELECT * FROM std";
+            SqlCommand command = new SqlCommand(query);
+
+            // Lấy dữ liệu từ cơ sở dữ liệu
+            DataTable table = inventory.getInventory(command);
+
+            // Gán dữ liệu vào datagridview
+            datagridviewitemlist.DataSource = table;
+        }
+
+
+        //FILL
+        private void fillGrid(SqlCommand command)
+        {
+            datagridviewitemlist.ReadOnly = true;
+            datagridviewitemlist.DataSource = inventory.getInventory(command);
+        }
+
+        private void btndeleteitems_Click(object sender, EventArgs e)
+        {
+            // Kiểm tra xem trường ID có được điền hay không
+            if (string.IsNullOrWhiteSpace(txtiditems.Text))
+            {
+                MessageBox.Show("Please enter the Item ID.", "Missing Information", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
+            // Lấy ID khách hàng từ trường nhập liệu
+            int id = Convert.ToInt32(txtiditems.Text);
+
+            // Hiển thị hộp thoại xác nhận xóa
+            DialogResult result = MessageBox.Show("Are you sure you want to delete this Item?", "Delete Item", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+            if (result == DialogResult.Yes)
+            {
+                // Gọi hàm DeleteCustomer để xóa khách hàng
+                if (inventory.deleteItem(id))
+                {
+                    MessageBox.Show("Customer Item", "Delete Item", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    LoadData();
+                }
+                else
+                {
+                    MessageBox.Show("Failed to delete Item.", "Delete Item", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
         }
     }
 }

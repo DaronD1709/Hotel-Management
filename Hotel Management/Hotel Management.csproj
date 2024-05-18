@@ -101,12 +101,13 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
-    <Compile Include="Global.cs" />
+    <Compile Include="Customer0.cs" />
     <Compile Include="HotelDataDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>HotelDataDataSet.xsd</DependentUpon>
     </Compile>
+    <Compile Include="Inventory.cs" />
     <Compile Include="InventoryManagement.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -128,6 +129,7 @@
     <Compile Include="Resources\ScheduleManagement.Designer.cs">
       <DependentUpon>ScheduleManagement.cs</DependentUpon>
     </Compile>
+    <Compile Include="Room0.cs" />
     <Compile Include="RoomManagement.cs">
       <SubType>Form</SubType>
     </Compile>

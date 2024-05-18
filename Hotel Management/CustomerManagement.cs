@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Hotel_Management;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -14,6 +15,8 @@ namespace Hotel_Management
     public partial class CustomerManagement : Form
     {
         public static int Id = -1;
+        Customer0 customer = new Customer0();
+        MY_DB mydb = new MY_DB();
         public CustomerManagement()
         {
             InitializeComponent();
@@ -85,26 +88,52 @@ namespace Hotel_Management
 
         private void btnaddcustomer_Click(object sender, EventArgs e)
         {
+
+
             if (!VerifyFields())
             {
                 MessageBox.Show("Please fill in all fields.", "Incomplete Information", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
+            }
+
+            int id = Convert.ToInt32(txtidcustomer.Text);
+            string namecustomer = txtnamecustomer.Text;
+            string card = txtcardidcustomer.Text;
+            int gender = Convert.ToInt32(combogendercustomer.SelectedValue);
+            DateTime bdate = dobpicker.Value;
+            string phone = txtphonecustomer.Text;
+            string nation = txtnationcustomer.Text;
+            int born_year = dobpicker.Value.Year;
+            int this_year = DateTime.Now.Year;
+            //  sv tu 10-100,  co the thay doi
+            if (((this_year - born_year) < 10) || ((this_year - born_year) > 100))
+            {
+                MessageBox.Show("The Student Age Must Be Between 10 and 100 year", "Invalid Birth Date", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+
+            else if (customer.insertCustomer(id, namecustomer, card, gender, bdate, phone, nation))
+            {
+                MessageBox.Show("New Customer Add", "Add Customer", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                LoadData();
+            }
+            else
+            {
+                MessageBox.Show("Failed to add customer.", "Add Customer", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
         // Check Info 
         private bool VerifyFields()
         {
-            int born_year = dobpicker.Value.Year;
-            int this_year = DateTime.Now.Year;
+
 
             if (string.IsNullOrWhiteSpace(txtphonecustomer.Text) ||
+                string.IsNullOrWhiteSpace(txtidcustomer.Text) ||
                 string.IsNullOrWhiteSpace(txtnationcustomer.Text) ||
                 string.IsNullOrWhiteSpace(txtnamecustomer.Text) ||
                 string.IsNullOrWhiteSpace(txtcardidcustomer.Text) ||
-                combogendercustomer.SelectedIndex == -1 || // Kiểm tra ComboBox đã được chọn
-                dobpicker.Value == null || // Kiểm tra DateTimePicker có giá trị
-                (this_year - born_year) < 10 || (this_year - born_year) > 100) // Kiểm tra tuổi hợp lệ
+                combogendercustomer.SelectedIndex == -1)// Kiểm tra ComboBox đã được chọn
+
             {
                 return false;
             }
@@ -117,11 +146,11 @@ namespace Hotel_Management
 
 
 
-        Global global = new Global();
+
         private void CustomerManagement_Load(object sender, EventArgs e)
         {
             // TODO: This line of code loads data into the 'hotelDataDataSet.Customer' table. You can move, or remove it, as needed.
-            this.customerTableAdapter.Fill(this.hotelDataDataSet.Customer);
+
 
         }
 
@@ -152,5 +181,115 @@ namespace Hotel_Management
             txtphonecustomer.Text = datagridviewlistcustomer.Rows[e.RowIndex].Cells[5].Value == DBNull.Value ? "" : datagridviewlistcustomer.Rows[e.RowIndex].Cells[5].Value.ToString();
             txtnationcustomer.Text = datagridviewlistcustomer.Rows[e.RowIndex].Cells[6].Value == DBNull.Value ? "" : datagridviewlistcustomer.Rows[e.RowIndex].Cells[6].Value.ToString();
         }
+
+        private void btnupdatecustomer_Click(object sender, EventArgs e)
+        {
+            if (!VerifyFields())
+            {
+                MessageBox.Show("Please fill in all fields.", "Incomplete Information", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
+            int id = Convert.ToInt32(txtidcustomer.Text);
+            string namecustomer = txtnamecustomer.Text;
+            string card = txtcardidcustomer.Text;
+            int gender = Convert.ToInt32(combogendercustomer.SelectedValue);
+            DateTime bdate = dobpicker.Value;
+            string phone = txtphonecustomer.Text;
+            string nation = txtnationcustomer.Text;
+            int born_year = dobpicker.Value.Year;
+            int this_year = DateTime.Now.Year;
+
+            // Kiểm tra tuổi hợp lệ
+            if ((this_year - born_year) < 10 || (this_year - born_year) > 100)
+            {
+                MessageBox.Show("The Customer Age Must Be Between 10 and 100 years", "Invalid Birth Date", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
+            // Gọi hàm UpdateCustomer để cập nhật thông tin khách hàng
+            if (customer.UpdateCustomer(id, namecustomer, card, gender, bdate, phone, nation))
+            {
+                MessageBox.Show("Customer Information Updated", "Update Customer", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                LoadData();
+            }
+            else
+            {
+                MessageBox.Show("Failed to update customer information.", "Update Customer", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void btndeletecustomer_Click(object sender, EventArgs e)
+        {
+            // Kiểm tra xem trường ID có được điền hay không
+            if (string.IsNullOrWhiteSpace(txtidcustomer.Text))
+            {
+                MessageBox.Show("Please enter the Customer ID.", "Missing Information", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
+            // Lấy ID khách hàng từ trường nhập liệu
+            int id = Convert.ToInt32(txtidcustomer.Text);
+
+            // Hiển thị hộp thoại xác nhận xóa
+            DialogResult result = MessageBox.Show("Are you sure you want to delete this customer?", "Delete Customer", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+            if (result == DialogResult.Yes)
+            {
+                // Gọi hàm DeleteCustomer để xóa khách hàng
+                if (customer.DeleteCustomer(id))
+                {
+                    MessageBox.Show("Customer Deleted", "Delete Customer", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    LoadData();
+                }
+                else
+                {
+                    MessageBox.Show("Failed to delete customer.", "Delete Customer", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+        }
+
+        private void guna2Button1_Click(object sender, EventArgs e)
+        {
+            if (string.IsNullOrWhiteSpace(txtsearch.Text))
+            {
+                MessageBox.Show("Please enter the search query.", "Missing Information", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
+            // Tạo câu lệnh SQL để tìm kiếm thông tin khách hàng
+            SqlCommand command = new SqlCommand("SELECT * FROM std WHERE CONCAT(id, fname, lname, address) LIKE '%" + txtsearch.Text + "%'");
+
+            // Gọi hàm fillGrid để hiển thị kết quả
+            fillGrid(command);
+
+        }
+
+        // Phương thức hiển thị kết quả tìm kiếm
+      
+
+        //Load Data :
+
+        private void LoadData()
+        {
+            // Tạo và thiết lập lệnh SQL
+            string query = "SELECT * FROM std";
+            SqlCommand command = new SqlCommand(query);
+
+            // Lấy dữ liệu từ cơ sở dữ liệu
+            DataTable table = customer.getCustomer(command);
+
+            // Gán dữ liệu vào datagridview
+            datagridviewlistcustomer.DataSource = table;
+        }
+
+
+        //FILL
+        private void fillGrid(SqlCommand command)
+        {
+            datagridviewlistcustomer.ReadOnly = true;
+            datagridviewlistcustomer.DataSource = customer.getCustomer(command);
+        } 
     }
 }
+
+

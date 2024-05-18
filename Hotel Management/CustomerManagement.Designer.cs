@@ -34,6 +34,16 @@
             this.guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
             this.label5 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.datagridviewlistcustomer = new System.Windows.Forms.DataGridView();
+            this.iDCustomerDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.iDCardDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.genderDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dOBDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.phoneNumberDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nationalityDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.customerBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.hotelDataDataSet = new Hotel_Management.HotelDataDataSet();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.txtidcustomer = new System.Windows.Forms.TextBox();
             this.txtnationcustomer = new System.Windows.Forms.TextBox();
@@ -54,23 +64,13 @@
             this.btndeletecustomer = new Guna.UI2.WinForms.Guna2Button();
             this.btnupdatecustomer = new Guna.UI2.WinForms.Guna2Button();
             this.btnaddcustomer = new Guna.UI2.WinForms.Guna2Button();
-            this.hotelDataDataSet = new Hotel_Management.HotelDataDataSet();
-            this.customerBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.customerTableAdapter = new Hotel_Management.HotelDataDataSetTableAdapters.CustomerTableAdapter();
-            this.datagridviewlistcustomer = new System.Windows.Forms.DataGridView();
-            this.iDCustomerDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.nameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.iDCardDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.genderDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dOBDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.phoneNumberDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.nationalityDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
-            this.groupBox3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.hotelDataDataSet)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.customerBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.datagridviewlistcustomer)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.customerBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.hotelDataDataSet)).BeginInit();
+            this.groupBox3.SuspendLayout();
             this.SuspendLayout();
             // 
             // groupBox1
@@ -109,6 +109,7 @@
             this.guna2Button1.Size = new System.Drawing.Size(162, 36);
             this.guna2Button1.TabIndex = 35;
             this.guna2Button1.Text = "Search";
+            this.guna2Button1.Click += new System.EventHandler(this.guna2Button1_Click);
             // 
             // label5
             // 
@@ -132,6 +133,78 @@
             this.groupBox2.TabIndex = 1;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "List Customer";
+            // 
+            // datagridviewlistcustomer
+            // 
+            this.datagridviewlistcustomer.AutoGenerateColumns = false;
+            this.datagridviewlistcustomer.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.datagridviewlistcustomer.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.datagridviewlistcustomer.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.iDCustomerDataGridViewTextBoxColumn,
+            this.nameDataGridViewTextBoxColumn,
+            this.iDCardDataGridViewTextBoxColumn,
+            this.genderDataGridViewTextBoxColumn,
+            this.dOBDataGridViewTextBoxColumn,
+            this.phoneNumberDataGridViewTextBoxColumn,
+            this.nationalityDataGridViewTextBoxColumn});
+            this.datagridviewlistcustomer.DataSource = this.customerBindingSource;
+            this.datagridviewlistcustomer.Location = new System.Drawing.Point(8, 29);
+            this.datagridviewlistcustomer.Name = "datagridviewlistcustomer";
+            this.datagridviewlistcustomer.Size = new System.Drawing.Size(917, 659);
+            this.datagridviewlistcustomer.TabIndex = 0;
+            this.datagridviewlistcustomer.RowHeaderMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.datagridviewlistcustomer_RowHeaderMouseClick_1);
+            // 
+            // iDCustomerDataGridViewTextBoxColumn
+            // 
+            this.iDCustomerDataGridViewTextBoxColumn.DataPropertyName = "ID_Customer";
+            this.iDCustomerDataGridViewTextBoxColumn.HeaderText = "ID Customer";
+            this.iDCustomerDataGridViewTextBoxColumn.Name = "iDCustomerDataGridViewTextBoxColumn";
+            // 
+            // nameDataGridViewTextBoxColumn
+            // 
+            this.nameDataGridViewTextBoxColumn.DataPropertyName = "Name";
+            this.nameDataGridViewTextBoxColumn.HeaderText = "Name";
+            this.nameDataGridViewTextBoxColumn.Name = "nameDataGridViewTextBoxColumn";
+            // 
+            // iDCardDataGridViewTextBoxColumn
+            // 
+            this.iDCardDataGridViewTextBoxColumn.DataPropertyName = "ID_Card";
+            this.iDCardDataGridViewTextBoxColumn.HeaderText = "ID Card";
+            this.iDCardDataGridViewTextBoxColumn.Name = "iDCardDataGridViewTextBoxColumn";
+            // 
+            // genderDataGridViewTextBoxColumn
+            // 
+            this.genderDataGridViewTextBoxColumn.DataPropertyName = "Gender";
+            this.genderDataGridViewTextBoxColumn.HeaderText = "Gender";
+            this.genderDataGridViewTextBoxColumn.Name = "genderDataGridViewTextBoxColumn";
+            // 
+            // dOBDataGridViewTextBoxColumn
+            // 
+            this.dOBDataGridViewTextBoxColumn.DataPropertyName = "DOB";
+            this.dOBDataGridViewTextBoxColumn.HeaderText = "BirthDate";
+            this.dOBDataGridViewTextBoxColumn.Name = "dOBDataGridViewTextBoxColumn";
+            // 
+            // phoneNumberDataGridViewTextBoxColumn
+            // 
+            this.phoneNumberDataGridViewTextBoxColumn.DataPropertyName = "PhoneNumber";
+            this.phoneNumberDataGridViewTextBoxColumn.HeaderText = "Phone Number";
+            this.phoneNumberDataGridViewTextBoxColumn.Name = "phoneNumberDataGridViewTextBoxColumn";
+            // 
+            // nationalityDataGridViewTextBoxColumn
+            // 
+            this.nationalityDataGridViewTextBoxColumn.DataPropertyName = "Nationality";
+            this.nationalityDataGridViewTextBoxColumn.HeaderText = "Nationality";
+            this.nationalityDataGridViewTextBoxColumn.Name = "nationalityDataGridViewTextBoxColumn";
+            // 
+            // customerBindingSource
+            // 
+            this.customerBindingSource.DataMember = "Customer";
+            this.customerBindingSource.DataSource = this.hotelDataDataSet;
+            // 
+            // hotelDataDataSet
+            // 
+            this.hotelDataDataSet.DataSetName = "HotelDataDataSet";
+            this.hotelDataDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // groupBox3
             // 
@@ -342,6 +415,7 @@
             this.btndeletecustomer.Size = new System.Drawing.Size(162, 36);
             this.btndeletecustomer.TabIndex = 39;
             this.btndeletecustomer.Text = "Delete";
+            this.btndeletecustomer.Click += new System.EventHandler(this.btndeletecustomer_Click);
             // 
             // btnupdatecustomer
             // 
@@ -359,6 +433,7 @@
             this.btnupdatecustomer.Size = new System.Drawing.Size(162, 36);
             this.btnupdatecustomer.TabIndex = 38;
             this.btnupdatecustomer.Text = "Update";
+            this.btnupdatecustomer.Click += new System.EventHandler(this.btnupdatecustomer_Click);
             // 
             // btnaddcustomer
             // 
@@ -378,81 +453,9 @@
             this.btnaddcustomer.Text = "Add";
             this.btnaddcustomer.Click += new System.EventHandler(this.btnaddcustomer_Click);
             // 
-            // hotelDataDataSet
-            // 
-            this.hotelDataDataSet.DataSetName = "HotelDataDataSet";
-            this.hotelDataDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // customerBindingSource
-            // 
-            this.customerBindingSource.DataMember = "Customer";
-            this.customerBindingSource.DataSource = this.hotelDataDataSet;
-            // 
             // customerTableAdapter
             // 
             this.customerTableAdapter.ClearBeforeFill = true;
-            // 
-            // datagridviewlistcustomer
-            // 
-            this.datagridviewlistcustomer.AutoGenerateColumns = false;
-            this.datagridviewlistcustomer.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.datagridviewlistcustomer.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.datagridviewlistcustomer.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.iDCustomerDataGridViewTextBoxColumn,
-            this.nameDataGridViewTextBoxColumn,
-            this.iDCardDataGridViewTextBoxColumn,
-            this.genderDataGridViewTextBoxColumn,
-            this.dOBDataGridViewTextBoxColumn,
-            this.phoneNumberDataGridViewTextBoxColumn,
-            this.nationalityDataGridViewTextBoxColumn});
-            this.datagridviewlistcustomer.DataSource = this.customerBindingSource;
-            this.datagridviewlistcustomer.Location = new System.Drawing.Point(8, 29);
-            this.datagridviewlistcustomer.Name = "datagridviewlistcustomer";
-            this.datagridviewlistcustomer.Size = new System.Drawing.Size(917, 659);
-            this.datagridviewlistcustomer.TabIndex = 0;
-            this.datagridviewlistcustomer.RowHeaderMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.datagridviewlistcustomer_RowHeaderMouseClick_1);
-            // 
-            // iDCustomerDataGridViewTextBoxColumn
-            // 
-            this.iDCustomerDataGridViewTextBoxColumn.DataPropertyName = "ID_Customer";
-            this.iDCustomerDataGridViewTextBoxColumn.HeaderText = "ID Customer";
-            this.iDCustomerDataGridViewTextBoxColumn.Name = "iDCustomerDataGridViewTextBoxColumn";
-            // 
-            // nameDataGridViewTextBoxColumn
-            // 
-            this.nameDataGridViewTextBoxColumn.DataPropertyName = "Name";
-            this.nameDataGridViewTextBoxColumn.HeaderText = "Name";
-            this.nameDataGridViewTextBoxColumn.Name = "nameDataGridViewTextBoxColumn";
-            // 
-            // iDCardDataGridViewTextBoxColumn
-            // 
-            this.iDCardDataGridViewTextBoxColumn.DataPropertyName = "ID_Card";
-            this.iDCardDataGridViewTextBoxColumn.HeaderText = "ID Card";
-            this.iDCardDataGridViewTextBoxColumn.Name = "iDCardDataGridViewTextBoxColumn";
-            // 
-            // genderDataGridViewTextBoxColumn
-            // 
-            this.genderDataGridViewTextBoxColumn.DataPropertyName = "Gender";
-            this.genderDataGridViewTextBoxColumn.HeaderText = "Gender";
-            this.genderDataGridViewTextBoxColumn.Name = "genderDataGridViewTextBoxColumn";
-            // 
-            // dOBDataGridViewTextBoxColumn
-            // 
-            this.dOBDataGridViewTextBoxColumn.DataPropertyName = "DOB";
-            this.dOBDataGridViewTextBoxColumn.HeaderText = "BirthDate";
-            this.dOBDataGridViewTextBoxColumn.Name = "dOBDataGridViewTextBoxColumn";
-            // 
-            // phoneNumberDataGridViewTextBoxColumn
-            // 
-            this.phoneNumberDataGridViewTextBoxColumn.DataPropertyName = "PhoneNumber";
-            this.phoneNumberDataGridViewTextBoxColumn.HeaderText = "Phone Number";
-            this.phoneNumberDataGridViewTextBoxColumn.Name = "phoneNumberDataGridViewTextBoxColumn";
-            // 
-            // nationalityDataGridViewTextBoxColumn
-            // 
-            this.nationalityDataGridViewTextBoxColumn.DataPropertyName = "Nationality";
-            this.nationalityDataGridViewTextBoxColumn.HeaderText = "Nationality";
-            this.nationalityDataGridViewTextBoxColumn.Name = "nationalityDataGridViewTextBoxColumn";
             // 
             // CustomerManagement
             // 
@@ -473,11 +476,11 @@
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.groupBox2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.datagridviewlistcustomer)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.customerBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.hotelDataDataSet)).EndInit();
             this.groupBox3.ResumeLayout(false);
             this.groupBox3.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.hotelDataDataSet)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.customerBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.datagridviewlistcustomer)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
