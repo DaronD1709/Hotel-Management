@@ -28,10 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
+            this.components = new System.ComponentModel.Container();
             this.label2 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.txtsearch = new System.Windows.Forms.TextBox();
@@ -49,15 +46,25 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.datagridviewroomlist = new Guna.UI2.WinForms.Guna2DataGridView();
             this.btnclose = new Guna.UI2.WinForms.Guna2Button();
             this.btndeleteroom = new Guna.UI2.WinForms.Guna2Button();
             this.btnupdateroom = new Guna.UI2.WinForms.Guna2Button();
             this.btnaddroom = new Guna.UI2.WinForms.Guna2Button();
+            this.datagridviewroomlist = new System.Windows.Forms.DataGridView();
+            this.hotelDataDataSet3 = new Hotel_Management.HotelDataDataSet3();
+            this.roomBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.roomTableAdapter = new Hotel_Management.HotelDataDataSet3TableAdapters.RoomTableAdapter();
+            this.iDRoomDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.stateDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.kindDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.priceDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.datagridviewroomlist)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.hotelDataDataSet3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.roomBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // label2
@@ -254,69 +261,6 @@
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "List Room";
             // 
-            // datagridviewroomlist
-            // 
-            this.datagridviewroomlist.AllowUserToAddRows = false;
-            this.datagridviewroomlist.AllowUserToDeleteRows = false;
-            this.datagridviewroomlist.AllowUserToResizeRows = false;
-            dataGridViewCellStyle9.BackColor = System.Drawing.Color.White;
-            this.datagridviewroomlist.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle9;
-            this.datagridviewroomlist.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Raised;
-            dataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle10.Font = new System.Drawing.Font("Agency FB", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle10.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle10.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle10.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle10.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.datagridviewroomlist.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle10;
-            this.datagridviewroomlist.ColumnHeadersHeight = 20;
-            dataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle11.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle11.Font = new System.Drawing.Font("Agency FB", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle11.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle11.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle11.SelectionForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle11.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.datagridviewroomlist.DefaultCellStyle = dataGridViewCellStyle11;
-            this.datagridviewroomlist.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            this.datagridviewroomlist.Location = new System.Drawing.Point(6, 32);
-            this.datagridviewroomlist.Name = "datagridviewroomlist";
-            this.datagridviewroomlist.ReadOnly = true;
-            dataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle12.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle12.Font = new System.Drawing.Font("Agency FB", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle12.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle12.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle12.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle12.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.datagridviewroomlist.RowHeadersDefaultCellStyle = dataGridViewCellStyle12;
-            this.datagridviewroomlist.RowHeadersVisible = false;
-            this.datagridviewroomlist.Size = new System.Drawing.Size(643, 608);
-            this.datagridviewroomlist.TabIndex = 3;
-            this.datagridviewroomlist.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
-            this.datagridviewroomlist.ThemeStyle.AlternatingRowsStyle.Font = null;
-            this.datagridviewroomlist.ThemeStyle.AlternatingRowsStyle.ForeColor = System.Drawing.Color.Empty;
-            this.datagridviewroomlist.ThemeStyle.AlternatingRowsStyle.SelectionBackColor = System.Drawing.Color.Empty;
-            this.datagridviewroomlist.ThemeStyle.AlternatingRowsStyle.SelectionForeColor = System.Drawing.Color.Empty;
-            this.datagridviewroomlist.ThemeStyle.BackColor = System.Drawing.Color.White;
-            this.datagridviewroomlist.ThemeStyle.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            this.datagridviewroomlist.ThemeStyle.HeaderStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            this.datagridviewroomlist.ThemeStyle.HeaderStyle.BorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Raised;
-            this.datagridviewroomlist.ThemeStyle.HeaderStyle.Font = new System.Drawing.Font("Agency FB", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.datagridviewroomlist.ThemeStyle.HeaderStyle.ForeColor = System.Drawing.Color.White;
-            this.datagridviewroomlist.ThemeStyle.HeaderStyle.HeaightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
-            this.datagridviewroomlist.ThemeStyle.HeaderStyle.Height = 20;
-            this.datagridviewroomlist.ThemeStyle.ReadOnly = true;
-            this.datagridviewroomlist.ThemeStyle.RowsStyle.BackColor = System.Drawing.Color.White;
-            this.datagridviewroomlist.ThemeStyle.RowsStyle.BorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
-            this.datagridviewroomlist.ThemeStyle.RowsStyle.Font = new System.Drawing.Font("Agency FB", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.datagridviewroomlist.ThemeStyle.RowsStyle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            this.datagridviewroomlist.ThemeStyle.RowsStyle.Height = 22;
-            this.datagridviewroomlist.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            this.datagridviewroomlist.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            this.datagridviewroomlist.RowHeaderMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.datagridviewroomlist_RowHeaderMouseClick);
-            // 
             // btnclose
             // 
             this.btnclose.BorderRadius = 15;
@@ -388,6 +332,68 @@
             this.btnaddroom.Text = "Add";
             this.btnaddroom.Click += new System.EventHandler(this.btnaddcustomer_Click);
             // 
+            // datagridviewroomlist
+            // 
+            this.datagridviewroomlist.AutoGenerateColumns = false;
+            this.datagridviewroomlist.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.datagridviewroomlist.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.datagridviewroomlist.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.iDRoomDataGridViewTextBoxColumn,
+            this.nameDataGridViewTextBoxColumn,
+            this.stateDataGridViewTextBoxColumn,
+            this.kindDataGridViewTextBoxColumn,
+            this.priceDataGridViewTextBoxColumn});
+            this.datagridviewroomlist.DataSource = this.roomBindingSource;
+            this.datagridviewroomlist.Location = new System.Drawing.Point(0, 32);
+            this.datagridviewroomlist.Name = "datagridviewroomlist";
+            this.datagridviewroomlist.Size = new System.Drawing.Size(654, 615);
+            this.datagridviewroomlist.TabIndex = 0;
+            this.datagridviewroomlist.RowHeaderMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.datagridviewroomlist_RowHeaderMouseClick_1);
+            // 
+            // hotelDataDataSet3
+            // 
+            this.hotelDataDataSet3.DataSetName = "HotelDataDataSet3";
+            this.hotelDataDataSet3.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // roomBindingSource
+            // 
+            this.roomBindingSource.DataMember = "Room";
+            this.roomBindingSource.DataSource = this.hotelDataDataSet3;
+            // 
+            // roomTableAdapter
+            // 
+            this.roomTableAdapter.ClearBeforeFill = true;
+            // 
+            // iDRoomDataGridViewTextBoxColumn
+            // 
+            this.iDRoomDataGridViewTextBoxColumn.DataPropertyName = "ID_Room";
+            this.iDRoomDataGridViewTextBoxColumn.HeaderText = "ID Room";
+            this.iDRoomDataGridViewTextBoxColumn.Name = "iDRoomDataGridViewTextBoxColumn";
+            // 
+            // nameDataGridViewTextBoxColumn
+            // 
+            this.nameDataGridViewTextBoxColumn.DataPropertyName = "Name";
+            this.nameDataGridViewTextBoxColumn.HeaderText = "Name";
+            this.nameDataGridViewTextBoxColumn.Name = "nameDataGridViewTextBoxColumn";
+            // 
+            // stateDataGridViewTextBoxColumn
+            // 
+            this.stateDataGridViewTextBoxColumn.DataPropertyName = "State";
+            this.stateDataGridViewTextBoxColumn.HeaderText = "State";
+            this.stateDataGridViewTextBoxColumn.Name = "stateDataGridViewTextBoxColumn";
+            // 
+            // kindDataGridViewTextBoxColumn
+            // 
+            this.kindDataGridViewTextBoxColumn.DataPropertyName = "Kind";
+            this.kindDataGridViewTextBoxColumn.HeaderText = "Kind";
+            this.kindDataGridViewTextBoxColumn.Name = "kindDataGridViewTextBoxColumn";
+            // 
+            // priceDataGridViewTextBoxColumn
+            // 
+            this.priceDataGridViewTextBoxColumn.DataPropertyName = "Price";
+            this.priceDataGridViewTextBoxColumn.HeaderText = "Price";
+            this.priceDataGridViewTextBoxColumn.Name = "priceDataGridViewTextBoxColumn";
+            // 
             // RoomManagement
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -410,6 +416,8 @@
             this.groupBox2.PerformLayout();
             this.groupBox3.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.datagridviewroomlist)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.hotelDataDataSet3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.roomBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -433,11 +441,19 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.ComboBox combotyperoom;
         private System.Windows.Forms.GroupBox groupBox3;
-        private Guna.UI2.WinForms.Guna2DataGridView datagridviewroomlist;
         private Guna.UI2.WinForms.Guna2Button btnclose;
         private Guna.UI2.WinForms.Guna2Button btndeleteroom;
         private Guna.UI2.WinForms.Guna2Button btnupdateroom;
         private Guna.UI2.WinForms.Guna2Button btnaddroom;
         private System.Windows.Forms.TextBox txtidroom;
+        private System.Windows.Forms.DataGridView datagridviewroomlist;
+        private HotelDataDataSet3 hotelDataDataSet3;
+        private System.Windows.Forms.BindingSource roomBindingSource;
+        private HotelDataDataSet3TableAdapters.RoomTableAdapter roomTableAdapter;
+        private System.Windows.Forms.DataGridViewTextBoxColumn iDRoomDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn nameDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn stateDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn kindDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn priceDataGridViewTextBoxColumn;
     }
 }

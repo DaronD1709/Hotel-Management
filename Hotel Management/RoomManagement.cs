@@ -22,6 +22,8 @@ namespace Hotel_Management
 
         private void RoomManagement_Load(object sender, EventArgs e)
         {
+            // TODO: This line of code loads data into the 'hotelDataDataSet3.Room' table. You can move, or remove it, as needed.
+            this.roomTableAdapter.Fill(this.hotelDataDataSet3.Room);
 
         }
 
@@ -30,9 +32,10 @@ namespace Hotel_Management
             TextBox textBox = sender as TextBox;
             if (!string.IsNullOrEmpty(textBox.Text))
             {
-                if (!int.TryParse(textBox.Text, out _))
+                // Kiểm tra xem chuỗi có thể chuyển đổi thành số thực không
+                if (!double.TryParse(textBox.Text.Replace(",", "."), out _))
                 {
-                    MessageBox.Show("Invalid, please enter only number.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    MessageBox.Show("Invalid, please enter only numbers.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     textBox.Text = string.Empty;
                 }
             }
@@ -49,9 +52,9 @@ namespace Hotel_Management
 
             int id = Convert.ToInt32(txtidroom.Text);
             string nameroom = txtnameroom.Text;
+            string state = combostateroom.SelectedItem.ToString();
+            string type = combotyperoom.SelectedItem.ToString();
             string price = txtpriceroom.Text;
-            int state = Convert.ToInt32(combostateroom.SelectedValue);
-            int type = Convert.ToInt32(combotyperoom.SelectedValue);
 
             if (room.inserRoom(id, nameroom, state, type, price))
             {
@@ -95,33 +98,7 @@ namespace Hotel_Management
 
         private void datagridviewroomlist_RowHeaderMouseClick(object sender, DataGridViewCellMouseEventArgs e)
         {
-            txtidroom.Text = datagridviewroomlist.Rows[e.RowIndex].Cells[0].Value == DBNull.Value ? "" : datagridviewroomlist.Rows[e.RowIndex].Cells[0].Value.ToString();
-            txtnameroom.Text = datagridviewroomlist.Rows[e.RowIndex].Cells[1].Value == DBNull.Value ? "" : datagridviewroomlist.Rows[e.RowIndex].Cells[1].Value.ToString();
-
-            if (datagridviewroomlist.Rows[e.RowIndex].Cells[2].Value.ToString() == "Male")
-            {
-                combostateroom.SelectedIndex = 1; // Sets the selected item to the first item
-            }
-            else
-            {
-                combostateroom.SelectedIndex = 0; // Sets the selected item to the second item
-            }
-
-            if (datagridviewroomlist.Rows[e.RowIndex].Cells[3].Value.ToString() == "Single Room")
-
-
-            {
-                combotyperoom.SelectedIndex = 1; // Sets the selected item to the first item
-            }
-            else if (datagridviewroomlist.Rows[e.RowIndex].Cells[3].Value.ToString() == "Double Room")
-            {
-                combotyperoom.SelectedIndex = 2; // Sets the selected item to the first item
-            }
-            else
-            {
-                combotyperoom.SelectedIndex = 0; // Sets the selected item to the second item
-            }
-            txtpriceroom.Text = datagridviewroomlist.Rows[e.RowIndex].Cells[4].Value == DBNull.Value ? "" : datagridviewroomlist.Rows[e.RowIndex].Cells[4].Value.ToString();
+           
 
         }
 
@@ -134,7 +111,7 @@ namespace Hotel_Management
             }
 
             // Tạo câu lệnh SQL để tìm kiếm thông tin khách hàng
-            SqlCommand command = new SqlCommand("SELECT * FROM std WHERE CONCAT(id, fname, lname, address) LIKE '%" + txtsearch.Text + "%'");
+            SqlCommand command = new SqlCommand("SELECT * FROM dbo.Room  WHERE CONCAT(ID_Room,Name,State) LIKE '%" + txtsearch.Text + "%'");
 
             // Gọi hàm fillGrid để hiển thị kết quả
             fillGrid(command);
@@ -144,7 +121,7 @@ namespace Hotel_Management
         private void LoadData()
         {
             // Tạo và thiết lập lệnh SQL
-            string query = "SELECT * FROM std";
+            string query = "SELECT * FROM dbo.Room ";
             SqlCommand command = new SqlCommand(query);
 
             // Lấy dữ liệu từ cơ sở dữ liệu
@@ -175,10 +152,10 @@ namespace Hotel_Management
             int id = Convert.ToInt32(txtidroom.Text);
             string nameroom = txtnameroom.Text;
             string price = txtpriceroom.Text;
-            int state = Convert.ToInt32(combostateroom.SelectedValue);
-            int type = Convert.ToInt32(combotyperoom.SelectedValue);
+            string state = combostateroom.SelectedItem.ToString();
+            string type = combotyperoom.SelectedItem.ToString();
 
-           
+
 
             // Gọi hàm UpdateCustomer để cập nhật thông tin khách hàng
             if (room.updateRoom(id, nameroom, state, type, price))
@@ -218,6 +195,37 @@ namespace Hotel_Management
                     MessageBox.Show("Failed to delete Room.", "Delete Room", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
+        }
+
+        private void datagridviewroomlist_RowHeaderMouseClick_1(object sender, DataGridViewCellMouseEventArgs e)
+        {
+            txtidroom.Text = datagridviewroomlist.Rows[e.RowIndex].Cells[0].Value == DBNull.Value ? "" : datagridviewroomlist.Rows[e.RowIndex].Cells[0].Value.ToString();
+            txtnameroom.Text = datagridviewroomlist.Rows[e.RowIndex].Cells[1].Value == DBNull.Value ? "" : datagridviewroomlist.Rows[e.RowIndex].Cells[1].Value.ToString();
+
+            if (datagridviewroomlist.Rows[e.RowIndex].Cells[2].Value.ToString() == "Busy")
+            {
+                combostateroom.SelectedIndex = 0; // Sets the selected item to the first item
+            }
+            else
+            {
+                combostateroom.SelectedIndex = 1; // Sets the selected item to the second item
+            }
+
+            if (datagridviewroomlist.Rows[e.RowIndex].Cells[3].Value.ToString() == "Single Room")
+
+
+            {
+                combotyperoom.SelectedIndex = 1; // Sets the selected item to the first item
+            }
+            else if (datagridviewroomlist.Rows[e.RowIndex].Cells[3].Value.ToString() == "Double Room")
+            {
+                combotyperoom.SelectedIndex = 2; // Sets the selected item to the first item
+            }
+            else
+            {
+                combotyperoom.SelectedIndex = 0; // Sets the selected item to the second item
+            }
+            txtpriceroom.Text = datagridviewroomlist.Rows[e.RowIndex].Cells[4].Value == DBNull.Value ? "" : datagridviewroomlist.Rows[e.RowIndex].Cells[4].Value.ToString();
         }
     }
 }

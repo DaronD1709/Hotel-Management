@@ -24,12 +24,12 @@ namespace Hotel_Management
         public bool insertInventory(int iditem, string nameitem, int amountitem, string price)
         {
 
-            SqlCommand command = new SqlCommand("INSERT INTO std ()" +
-             "VALUES (@id, @name, @amount)", mydb.getConnection);
+            SqlCommand command = new SqlCommand("INSERT INTO dbo.Inventory (ID_Inventory, Name, Number, Price)" +
+             "VALUES (@id, @name, @amount, @price)", mydb.getConnection);
             command.Parameters.Add("@id", SqlDbType.Int).Value = iditem;
             command.Parameters.Add("@name", SqlDbType.VarChar).Value = nameitem;
             command.Parameters.Add("@amount", SqlDbType.Int).Value = amountitem;
-            command.Parameters.Add("@name", SqlDbType.VarChar).Value = price;
+            command.Parameters.Add("@price", SqlDbType.VarChar).Value = price;
 
 
             mydb.openConnection();
@@ -47,7 +47,7 @@ namespace Hotel_Management
 
         public bool updateItem(int iditem, string nameitem, int amountitem, string price)
         {
-            SqlCommand command = new SqlCommand("UPDATE std SET name = @name, amount = @amount, price = @price WHERE id = @id", mydb.getConnection);
+            SqlCommand command = new SqlCommand("UPDATE dbo.Inventory SET Name = @name, Number = @amount, Price = @price WHERE ID_Inventory = @id", mydb.getConnection);
 
             command.Parameters.Add("@id", SqlDbType.Int).Value = iditem;
             command.Parameters.Add("@name", SqlDbType.VarChar).Value = nameitem;
@@ -70,7 +70,7 @@ namespace Hotel_Management
 
         public bool deleteItem(int iditem)
         {
-            SqlCommand command = new SqlCommand("DELETE FROM std WHERE id = @id", mydb.getConnection);
+            SqlCommand command = new SqlCommand("DELETE FROM dbo.Inventory WHERE ID_Inventory = @id", mydb.getConnection);
 
             command.Parameters.Add("@id", SqlDbType.Int).Value = iditem;
 

@@ -10,7 +10,7 @@ namespace Hotel_Management
 {
     internal class MY_DB
     {
-        SqlConnection con = new SqlConnection(@"Data Source=(localdb)\MSSQLLocalDB;Initial Catalog=HotelData;Integrated Security=True;Connect Timeout=30;Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False");
+        SqlConnection con = new SqlConnection(@"Data Source=DAROND\SQLEXPRESS;Initial Catalog=HotelData;Integrated Security=True");
         public SqlConnection getConnection
         {
             get

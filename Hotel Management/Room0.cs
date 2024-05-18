@@ -21,16 +21,15 @@ namespace Hotel_Management
             return table;
         }
 
-        public bool inserRoom(int idroom, string nameroom, int roomstate, int typeroom, string roomprice)
+        public bool inserRoom(int idroom, string nameroom, string roomstate, string typeroom, string roomprice)
         {
 
-            SqlCommand command = new SqlCommand("INSERT INTO std ()" +
+            SqlCommand command = new SqlCommand("INSERT INTO dbo.Room (ID_Room, Name, State, Kind, Price)" +
              "VALUES (@id, @name, @state, @type, @price)", mydb.getConnection);
             command.Parameters.Add("@id", SqlDbType.Int).Value = idroom;
             command.Parameters.Add("@name", SqlDbType.VarChar).Value = nameroom;
-            command.Parameters.Add("@state", SqlDbType.Int).Value = roomstate;
-            command.Parameters.Add("@state", SqlDbType.Int).Value = roomstate;
-            command.Parameters.Add("@type", SqlDbType.DateTime).Value = typeroom;
+            command.Parameters.Add("@state", SqlDbType.VarChar).Value = roomstate;
+            command.Parameters.Add("@type", SqlDbType.VarChar).Value = typeroom;
             command.Parameters.Add("@price", SqlDbType.VarChar).Value = roomprice;
 
             mydb.openConnection();
@@ -46,14 +45,14 @@ namespace Hotel_Management
             }
         }
 
-        public bool updateRoom(int idroom, string nameroom, int roomstate, int typeroom, string roomprice)
+        public bool updateRoom(int idroom, string nameroom, string roomstate, string typeroom, string roomprice)
         {
-            SqlCommand command = new SqlCommand("UPDATE std SET name = @name, state = @state, type = @type, price = @price WHERE id = @id", mydb.getConnection);
+            SqlCommand command = new SqlCommand("UPDATE dbo.Room  SET Name = @name, State = @state, Kind = @type, Price = @price WHERE ID_Room = @id", mydb.getConnection);
 
             command.Parameters.Add("@id", SqlDbType.Int).Value = idroom;
             command.Parameters.Add("@name", SqlDbType.VarChar).Value = nameroom;
-            command.Parameters.Add("@state", SqlDbType.Int).Value = roomstate;
-            command.Parameters.Add("@type", SqlDbType.Int).Value = typeroom;
+            command.Parameters.Add("@state", SqlDbType.VarChar).Value = roomstate;
+            command.Parameters.Add("@type", SqlDbType.VarChar).Value = typeroom;
             command.Parameters.Add("@price", SqlDbType.VarChar).Value = roomprice;
 
             mydb.openConnection();
@@ -72,7 +71,7 @@ namespace Hotel_Management
 
         public bool deleteRoom(int idroom)
         {
-            SqlCommand command = new SqlCommand("DELETE FROM std WHERE id = @id", mydb.getConnection);
+            SqlCommand command = new SqlCommand("DELETE FROM dbo.Room  WHERE ID_Room = @id", mydb.getConnection);
 
             command.Parameters.Add("@id", SqlDbType.Int).Value = idroom;
 

@@ -99,7 +99,7 @@ namespace Hotel_Management
             int id = Convert.ToInt32(txtidcustomer.Text);
             string namecustomer = txtnamecustomer.Text;
             string card = txtcardidcustomer.Text;
-            int gender = Convert.ToInt32(combogendercustomer.SelectedValue);
+            string gender = combogendercustomer.SelectedItem.ToString();
             DateTime bdate = dobpicker.Value;
             string phone = txtphonecustomer.Text;
             string nation = txtnationcustomer.Text;
@@ -149,6 +149,8 @@ namespace Hotel_Management
 
         private void CustomerManagement_Load(object sender, EventArgs e)
         {
+            // TODO: This line of code loads data into the 'hotelDataDataSet1.Customer' table. You can move, or remove it, as needed.
+            this.customerTableAdapter1.Fill(this.hotelDataDataSet1.Customer);
             // TODO: This line of code loads data into the 'hotelDataDataSet.Customer' table. You can move, or remove it, as needed.
 
 
@@ -193,7 +195,7 @@ namespace Hotel_Management
             int id = Convert.ToInt32(txtidcustomer.Text);
             string namecustomer = txtnamecustomer.Text;
             string card = txtcardidcustomer.Text;
-            int gender = Convert.ToInt32(combogendercustomer.SelectedValue);
+            string gender = combogendercustomer.SelectedItem.ToString();
             DateTime bdate = dobpicker.Value;
             string phone = txtphonecustomer.Text;
             string nation = txtnationcustomer.Text;
@@ -257,7 +259,7 @@ namespace Hotel_Management
             }
 
             // Tạo câu lệnh SQL để tìm kiếm thông tin khách hàng
-            SqlCommand command = new SqlCommand("SELECT * FROM std WHERE CONCAT(id, fname, lname, address) LIKE '%" + txtsearch.Text + "%'");
+            SqlCommand command = new SqlCommand("SELECT * FROM dbo.Customer WHERE CONCAT(ID_Customer, Name, IDcard) LIKE '%" + txtsearch.Text + "%'");
 
             // Gọi hàm fillGrid để hiển thị kết quả
             fillGrid(command);
@@ -272,7 +274,7 @@ namespace Hotel_Management
         private void LoadData()
         {
             // Tạo và thiết lập lệnh SQL
-            string query = "SELECT * FROM std";
+            string query = "SELECT * FROM dbo.Customer";
             SqlCommand command = new SqlCommand(query);
 
             // Lấy dữ liệu từ cơ sở dữ liệu

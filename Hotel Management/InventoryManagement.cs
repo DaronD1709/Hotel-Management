@@ -38,9 +38,10 @@ namespace Hotel_Management
             TextBox textBox = sender as TextBox;
             if (!string.IsNullOrEmpty(textBox.Text))
             {
-                if (!int.TryParse(textBox.Text, out _))
+                // Kiểm tra xem chuỗi có thể chuyển đổi thành số thực không
+                if (!double.TryParse(textBox.Text.Replace(",", "."), out _))
                 {
-                    MessageBox.Show("Invalid, please enter only number.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    MessageBox.Show("Invalid, please enter only numbers.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     textBox.Text = string.Empty;
                 }
             }
@@ -101,6 +102,8 @@ namespace Hotel_Management
 
         private void InventoryManagement_Load(object sender, EventArgs e)
         {
+            // TODO: This line of code loads data into the 'hotelDataDataSet2.Inventory' table. You can move, or remove it, as needed.
+            this.inventoryTableAdapter.Fill(this.hotelDataDataSet2.Inventory);
 
         }
 
@@ -122,18 +125,8 @@ namespace Hotel_Management
 
         private void datagridviewitemlist_RowHeaderMouseClick(object sender, DataGridViewCellMouseEventArgs e)
         {
-            Id = Convert.ToInt32(datagridviewitemlist.Rows[e.RowIndex].Cells[0].Value.ToString());
-            txtiditems.Text = datagridviewitemlist.Rows[e.RowIndex].Cells[1].Value == DBNull.Value ? "" : datagridviewitemlist.Rows[e.RowIndex].Cells[1].Value.ToString();
-            txtnameitems.Text = datagridviewitemlist.Rows[e.RowIndex].Cells[2].Value == DBNull.Value ? "" : datagridviewitemlist.Rows[e.RowIndex].Cells[2].Value.ToString();
-            if (datagridviewitemlist.Rows[e.RowIndex].Cells[3].Value != DBNull.Value)
-            {
-                numberofitems.Value = Convert.ToDecimal(datagridviewitemlist.Rows[e.RowIndex].Cells[3].Value);
-            }
-            else
-            {
-                numberofitems.Value = numberofitems.Minimum; // Hoặc giá trị mặc định khác
-            }
-            txtpriceitems.Text = datagridviewitemlist.Rows[e.RowIndex].Cells[6].Value == DBNull.Value ? "" : datagridviewitemlist.Rows[e.RowIndex].Cells[6].Value.ToString();
+   
+          
         }
 
         private void guna2Button1_Click(object sender, EventArgs e)
@@ -145,7 +138,7 @@ namespace Hotel_Management
             }
 
             // Tạo câu lệnh SQL để tìm kiếm thông tin khách hàng
-            SqlCommand command = new SqlCommand("SELECT * FROM std WHERE CONCAT(id, fname, lname, address) LIKE '%" + txtsearch.Text + "%'");
+            SqlCommand command = new SqlCommand("SELECT * FROM dbo.Inventory WHERE CONCAT(ID_Inventory, Name) LIKE '%" + txtsearch.Text + "%'");
 
             // Gọi hàm fillGrid để hiển thị kết quả
             fillGrid(command);
@@ -154,7 +147,7 @@ namespace Hotel_Management
         private void LoadData()
         {
             // Tạo và thiết lập lệnh SQL
-            string query = "SELECT * FROM std";
+            string query = "SELECT * FROM dbo.Inventory";
             SqlCommand command = new SqlCommand(query);
 
             // Lấy dữ liệu từ cơ sở dữ liệu
@@ -199,6 +192,26 @@ namespace Hotel_Management
                     MessageBox.Show("Failed to delete Item.", "Delete Item", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
+        }
+
+        private void datagridviewitemlist_RowHeaderMouseClick_1(object sender, DataGridViewCellMouseEventArgs e)
+        {
+           
+        }
+
+        private void dataGridView1_RowHeaderMouseClick(object sender, DataGridViewCellMouseEventArgs e)
+        {
+            txtiditems.Text = datagridviewitemlist.Rows[e.RowIndex].Cells[0].Value == DBNull.Value ? "" : datagridviewitemlist.Rows[e.RowIndex].Cells[0].Value.ToString();
+            txtnameitems.Text = datagridviewitemlist.Rows[e.RowIndex].Cells[1].Value == DBNull.Value ? "" : datagridviewitemlist.Rows[e.RowIndex].Cells[1].Value.ToString();
+            if (datagridviewitemlist.Rows[e.RowIndex].Cells[2].Value != DBNull.Value)
+            {
+                numberofitems.Value = Convert.ToDecimal(datagridviewitemlist.Rows[e.RowIndex].Cells[2].Value);
+            }
+            else
+            {
+                numberofitems.Value = numberofitems.Minimum; // Hoặc giá trị mặc định khác
+            }
+            txtpriceitems.Text = datagridviewitemlist.Rows[e.RowIndex].Cells[3].Value == DBNull.Value ? "" : datagridviewitemlist.Rows[e.RowIndex].Cells[3].Value.ToString();
         }
     }
 }
