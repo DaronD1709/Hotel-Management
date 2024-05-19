@@ -16,5 +16,12 @@ namespace Hotel_Management.Resources
         {
             InitializeComponent();
         }
+
+        private void ScheduleManagement_Load(object sender, EventArgs e)
+        {
+            // TODO: This line of code loads data into the 'hotelDataDataSet10.Calendar' table. You can move, or remove it, as needed.
+            this.calendarTableAdapter.Fill(this.hotelDataDataSet10.Calendar);
+
+        }
     }
 }

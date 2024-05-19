@@ -35,10 +35,9 @@
             this.label1 = new System.Windows.Forms.Label();
             this.iconPictureBox2 = new FontAwesome.Sharp.IconPictureBox();
             this.iconPictureBox1 = new FontAwesome.Sharp.IconPictureBox();
-            this.btlabor = new System.Windows.Forms.RadioButton();
             this.btnmanager = new System.Windows.Forms.RadioButton();
-            this.btemployee = new System.Windows.Forms.RadioButton();
             this.btnadmin = new System.Windows.Forms.RadioButton();
+            this.btnemployee = new System.Windows.Forms.RadioButton();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox1)).BeginInit();
@@ -96,7 +95,7 @@
             this.txtpassword.Location = new System.Drawing.Point(110, 245);
             this.txtpassword.Margin = new System.Windows.Forms.Padding(2, 4, 2, 4);
             this.txtpassword.Name = "txtpassword";
-            this.txtpassword.PasswordChar = '\0';
+            this.txtpassword.PasswordChar = '*';
             this.txtpassword.PlaceholderText = "Password";
             this.txtpassword.SelectedText = "";
             this.txtpassword.Size = new System.Drawing.Size(247, 37);
@@ -163,28 +162,13 @@
             this.iconPictureBox1.TabIndex = 21;
             this.iconPictureBox1.TabStop = false;
             // 
-            // btlabor
-            // 
-            this.btlabor.AutoSize = true;
-            this.btlabor.BackColor = System.Drawing.Color.Transparent;
-            this.btlabor.Font = new System.Drawing.Font("Agency FB", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btlabor.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btlabor.Location = new System.Drawing.Point(248, 343);
-            this.btlabor.Margin = new System.Windows.Forms.Padding(2);
-            this.btlabor.Name = "btlabor";
-            this.btlabor.Size = new System.Drawing.Size(61, 28);
-            this.btlabor.TabIndex = 31;
-            this.btlabor.TabStop = true;
-            this.btlabor.Text = "Labor";
-            this.btlabor.UseVisualStyleBackColor = false;
-            // 
             // btnmanager
             // 
             this.btnmanager.AutoSize = true;
             this.btnmanager.BackColor = System.Drawing.Color.Transparent;
             this.btnmanager.Font = new System.Drawing.Font("Agency FB", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnmanager.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnmanager.Location = new System.Drawing.Point(137, 343);
+            this.btnmanager.Location = new System.Drawing.Point(183, 325);
             this.btnmanager.Margin = new System.Windows.Forms.Padding(2);
             this.btnmanager.Name = "btnmanager";
             this.btnmanager.Size = new System.Drawing.Size(79, 28);
@@ -193,28 +177,13 @@
             this.btnmanager.Text = "Manager";
             this.btnmanager.UseVisualStyleBackColor = false;
             // 
-            // btemployee
-            // 
-            this.btemployee.AutoSize = true;
-            this.btemployee.BackColor = System.Drawing.Color.Transparent;
-            this.btemployee.Font = new System.Drawing.Font("Agency FB", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btemployee.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btemployee.Location = new System.Drawing.Point(248, 307);
-            this.btemployee.Margin = new System.Windows.Forms.Padding(2);
-            this.btemployee.Name = "btemployee";
-            this.btemployee.Size = new System.Drawing.Size(80, 28);
-            this.btemployee.TabIndex = 29;
-            this.btemployee.TabStop = true;
-            this.btemployee.Text = "Recepter";
-            this.btemployee.UseVisualStyleBackColor = false;
-            // 
             // btnadmin
             // 
             this.btnadmin.AutoSize = true;
             this.btnadmin.BackColor = System.Drawing.Color.Transparent;
             this.btnadmin.Font = new System.Drawing.Font("Agency FB", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnadmin.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnadmin.Location = new System.Drawing.Point(137, 307);
+            this.btnadmin.Location = new System.Drawing.Point(85, 325);
             this.btnadmin.Margin = new System.Windows.Forms.Padding(2);
             this.btnadmin.Name = "btnadmin";
             this.btnadmin.Size = new System.Drawing.Size(65, 28);
@@ -223,15 +192,29 @@
             this.btnadmin.Text = "Admin";
             this.btnadmin.UseVisualStyleBackColor = false;
             // 
+            // btnemployee
+            // 
+            this.btnemployee.AutoSize = true;
+            this.btnemployee.BackColor = System.Drawing.Color.Transparent;
+            this.btnemployee.Font = new System.Drawing.Font("Agency FB", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnemployee.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btnemployee.Location = new System.Drawing.Point(294, 325);
+            this.btnemployee.Margin = new System.Windows.Forms.Padding(2);
+            this.btnemployee.Name = "btnemployee";
+            this.btnemployee.Size = new System.Drawing.Size(83, 28);
+            this.btnemployee.TabIndex = 31;
+            this.btnemployee.TabStop = true;
+            this.btnemployee.Text = "Employee";
+            this.btnemployee.UseVisualStyleBackColor = false;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.ClientSize = new System.Drawing.Size(866, 527);
-            this.Controls.Add(this.btlabor);
+            this.Controls.Add(this.btnemployee);
             this.Controls.Add(this.btnmanager);
-            this.Controls.Add(this.btemployee);
             this.Controls.Add(this.btnadmin);
             this.Controls.Add(this.iconPictureBox2);
             this.Controls.Add(this.iconPictureBox1);
@@ -259,10 +242,9 @@
         private System.Windows.Forms.Label label1;
         private FontAwesome.Sharp.IconPictureBox iconPictureBox2;
         private FontAwesome.Sharp.IconPictureBox iconPictureBox1;
-        private System.Windows.Forms.RadioButton btlabor;
         private System.Windows.Forms.RadioButton btnmanager;
-        private System.Windows.Forms.RadioButton btemployee;
         private System.Windows.Forms.RadioButton btnadmin;
+        private System.Windows.Forms.RadioButton btnemployee;
     }
 }
 

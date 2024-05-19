@@ -620,7 +620,7 @@
             this.btnclose.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.btnclose.Font = new System.Drawing.Font("Agency FB", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnclose.ForeColor = System.Drawing.Color.Black;
-            this.btnclose.Location = new System.Drawing.Point(551, 767);
+            this.btnclose.Location = new System.Drawing.Point(501, 767);
             this.btnclose.Name = "btnclose";
             this.btnclose.Size = new System.Drawing.Size(162, 36);
             this.btnclose.TabIndex = 42;
@@ -637,7 +637,7 @@
             this.btnprint.Font = new System.Drawing.Font("Agency FB", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnprint.ForeColor = System.Drawing.Color.Black;
             this.btnprint.Image = global::Hotel_Management.Properties.Resources._7830829_print_text_icon;
-            this.btnprint.Location = new System.Drawing.Point(175, 767);
+            this.btnprint.Location = new System.Drawing.Point(217, 767);
             this.btnprint.Name = "btnprint";
             this.btnprint.Size = new System.Drawing.Size(162, 36);
             this.btnprint.TabIndex = 41;

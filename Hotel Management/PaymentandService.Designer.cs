@@ -29,9 +29,16 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.iDRoomDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.iDcardDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.timecheckinDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.iDCustomerDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.iDBookRoomDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.roomPriceDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.bookRoomViewBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.hotelDataDataSet8 = new Hotel_Management.HotelDataDataSet8();
             this.receiptBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.hotelDataDataSet7 = new Hotel_Management.HotelDataDataSet7();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
@@ -46,14 +53,16 @@
             this.comboservicelist = new System.Windows.Forms.ComboBox();
             this.groupBox5 = new System.Windows.Forms.GroupBox();
             this.listViewBillRoom = new System.Windows.Forms.DataGridView();
-            this.IDcard = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.iDReceiptDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.iDCustomerDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.iDRoomDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.iDBookRoomDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.timemakeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.servicefeeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dayintotalDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.totalpaymentDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.receiptBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.hotelDataDataSet9 = new Hotel_Management.HotelDataDataSet9();
             this.groupBox6 = new System.Windows.Forms.GroupBox();
             this.listViewUseService = new System.Windows.Forms.ListView();
             this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
@@ -77,33 +86,27 @@
             this.label4 = new System.Windows.Forms.Label();
             this.txtidcard = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.hotelDataDataSet8 = new Hotel_Management.HotelDataDataSet8();
-            this.bookRoomViewBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.bookRoomViewTableAdapter = new Hotel_Management.HotelDataDataSet8TableAdapters.BookRoomViewTableAdapter();
-            this.iDRoomDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.iDcardDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.timecheckinDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.iDCustomerDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.iDBookRoomDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.roomPriceDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dobpicker = new Guna.UI2.WinForms.Guna2DateTimePicker();
             this.txtroomprice = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.txtidbookroom = new System.Windows.Forms.TextBox();
             this.label13 = new System.Windows.Forms.Label();
             this.btnadd = new Guna.UI2.WinForms.Guna2Button();
+            this.receiptTableAdapter1 = new Hotel_Management.HotelDataDataSet9TableAdapters.ReceiptTableAdapter();
             this.groupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bookRoomViewBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.hotelDataDataSet8)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.receiptBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.hotelDataDataSet7)).BeginInit();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numberofitems)).BeginInit();
             this.groupBox5.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.listViewBillRoom)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.receiptBindingSource1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.hotelDataDataSet9)).BeginInit();
             this.groupBox6.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.hotelDataDataSet8)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bookRoomViewBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBox1
@@ -117,6 +120,71 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Searching Room Info";
             this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
+            // 
+            // dataGridView1
+            // 
+            this.dataGridView1.AutoGenerateColumns = false;
+            this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.iDRoomDataGridViewTextBoxColumn1,
+            this.iDcardDataGridViewTextBoxColumn,
+            this.timecheckinDataGridViewTextBoxColumn,
+            this.iDCustomerDataGridViewTextBoxColumn1,
+            this.iDBookRoomDataGridViewTextBoxColumn,
+            this.roomPriceDataGridViewTextBoxColumn});
+            this.dataGridView1.DataSource = this.bookRoomViewBindingSource;
+            this.dataGridView1.Location = new System.Drawing.Point(6, 34);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.Size = new System.Drawing.Size(849, 253);
+            this.dataGridView1.TabIndex = 0;
+            this.dataGridView1.RowHeaderMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dataGridView1_RowHeaderMouseClick);
+            // 
+            // iDRoomDataGridViewTextBoxColumn1
+            // 
+            this.iDRoomDataGridViewTextBoxColumn1.DataPropertyName = "ID_Room";
+            this.iDRoomDataGridViewTextBoxColumn1.HeaderText = "ID_Room";
+            this.iDRoomDataGridViewTextBoxColumn1.Name = "iDRoomDataGridViewTextBoxColumn1";
+            // 
+            // iDcardDataGridViewTextBoxColumn
+            // 
+            this.iDcardDataGridViewTextBoxColumn.DataPropertyName = "IDcard";
+            this.iDcardDataGridViewTextBoxColumn.HeaderText = "IDcard";
+            this.iDcardDataGridViewTextBoxColumn.Name = "iDcardDataGridViewTextBoxColumn";
+            // 
+            // timecheckinDataGridViewTextBoxColumn
+            // 
+            this.timecheckinDataGridViewTextBoxColumn.DataPropertyName = "Timecheckin";
+            this.timecheckinDataGridViewTextBoxColumn.HeaderText = "Timecheckin";
+            this.timecheckinDataGridViewTextBoxColumn.Name = "timecheckinDataGridViewTextBoxColumn";
+            // 
+            // iDCustomerDataGridViewTextBoxColumn1
+            // 
+            this.iDCustomerDataGridViewTextBoxColumn1.DataPropertyName = "ID_Customer";
+            this.iDCustomerDataGridViewTextBoxColumn1.HeaderText = "ID_Customer";
+            this.iDCustomerDataGridViewTextBoxColumn1.Name = "iDCustomerDataGridViewTextBoxColumn1";
+            // 
+            // iDBookRoomDataGridViewTextBoxColumn
+            // 
+            this.iDBookRoomDataGridViewTextBoxColumn.DataPropertyName = "ID_BookRoom";
+            this.iDBookRoomDataGridViewTextBoxColumn.HeaderText = "ID_BookRoom";
+            this.iDBookRoomDataGridViewTextBoxColumn.Name = "iDBookRoomDataGridViewTextBoxColumn";
+            // 
+            // roomPriceDataGridViewTextBoxColumn
+            // 
+            this.roomPriceDataGridViewTextBoxColumn.DataPropertyName = "RoomPrice";
+            this.roomPriceDataGridViewTextBoxColumn.HeaderText = "RoomPrice";
+            this.roomPriceDataGridViewTextBoxColumn.Name = "roomPriceDataGridViewTextBoxColumn";
+            // 
+            // bookRoomViewBindingSource
+            // 
+            this.bookRoomViewBindingSource.DataMember = "BookRoomView";
+            this.bookRoomViewBindingSource.DataSource = this.hotelDataDataSet8;
+            // 
+            // hotelDataDataSet8
+            // 
+            this.hotelDataDataSet8.DataSetName = "HotelDataDataSet8";
+            this.hotelDataDataSet8.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // receiptBindingSource
             // 
@@ -162,7 +230,7 @@
             this.btnprint.Name = "btnprint";
             this.btnprint.Size = new System.Drawing.Size(162, 36);
             this.btnprint.TabIndex = 68;
-            this.btnprint.Text = "Print";
+            this.btnprint.Text = "Total";
             this.btnprint.Click += new System.EventHandler(this.btnprint_Click);
             // 
             // btnpay
@@ -277,36 +345,21 @@
             // 
             this.listViewBillRoom.AutoGenerateColumns = false;
             this.listViewBillRoom.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Agency FB", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.listViewBillRoom.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.listViewBillRoom.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.listViewBillRoom.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.IDcard,
             this.iDReceiptDataGridViewTextBoxColumn,
             this.iDCustomerDataGridViewTextBoxColumn,
             this.iDRoomDataGridViewTextBoxColumn,
+            this.iDBookRoomDataGridViewTextBoxColumn1,
             this.timemakeDataGridViewTextBoxColumn,
             this.servicefeeDataGridViewTextBoxColumn,
             this.dayintotalDataGridViewTextBoxColumn,
             this.totalpaymentDataGridViewTextBoxColumn});
-            this.listViewBillRoom.DataSource = this.receiptBindingSource;
-            this.listViewBillRoom.Location = new System.Drawing.Point(9, 32);
+            this.listViewBillRoom.DataSource = this.receiptBindingSource1;
+            this.listViewBillRoom.Location = new System.Drawing.Point(6, 33);
             this.listViewBillRoom.Name = "listViewBillRoom";
-            this.listViewBillRoom.RowTemplate.Height = 35;
-            this.listViewBillRoom.Size = new System.Drawing.Size(887, 256);
-            this.listViewBillRoom.TabIndex = 69;
-            // 
-            // IDcard
-            // 
-            this.IDcard.DataPropertyName = "IDcard";
-            this.IDcard.HeaderText = "ID Card";
-            this.IDcard.Name = "IDcard";
+            this.listViewBillRoom.Size = new System.Drawing.Size(887, 253);
+            this.listViewBillRoom.TabIndex = 0;
             // 
             // iDReceiptDataGridViewTextBoxColumn
             // 
@@ -325,6 +378,12 @@
             this.iDRoomDataGridViewTextBoxColumn.DataPropertyName = "ID_Room";
             this.iDRoomDataGridViewTextBoxColumn.HeaderText = "ID Room";
             this.iDRoomDataGridViewTextBoxColumn.Name = "iDRoomDataGridViewTextBoxColumn";
+            // 
+            // iDBookRoomDataGridViewTextBoxColumn1
+            // 
+            this.iDBookRoomDataGridViewTextBoxColumn1.DataPropertyName = "ID_BookRoom";
+            this.iDBookRoomDataGridViewTextBoxColumn1.HeaderText = "ID BookRoom";
+            this.iDBookRoomDataGridViewTextBoxColumn1.Name = "iDBookRoomDataGridViewTextBoxColumn1";
             // 
             // timemakeDataGridViewTextBoxColumn
             // 
@@ -349,6 +408,16 @@
             this.totalpaymentDataGridViewTextBoxColumn.DataPropertyName = "Totalpayment";
             this.totalpaymentDataGridViewTextBoxColumn.HeaderText = "Totalpayment";
             this.totalpaymentDataGridViewTextBoxColumn.Name = "totalpaymentDataGridViewTextBoxColumn";
+            // 
+            // receiptBindingSource1
+            // 
+            this.receiptBindingSource1.DataMember = "Receipt";
+            this.receiptBindingSource1.DataSource = this.hotelDataDataSet9;
+            // 
+            // hotelDataDataSet9
+            // 
+            this.hotelDataDataSet9.DataSetName = "HotelDataDataSet9";
+            this.hotelDataDataSet9.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // groupBox6
             // 
@@ -548,82 +617,9 @@
             this.label3.TabIndex = 87;
             this.label3.Text = "ID Card :";
             // 
-            // dataGridView1
-            // 
-            this.dataGridView1.AutoGenerateColumns = false;
-            this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Agency FB", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.iDRoomDataGridViewTextBoxColumn1,
-            this.iDcardDataGridViewTextBoxColumn,
-            this.timecheckinDataGridViewTextBoxColumn,
-            this.iDCustomerDataGridViewTextBoxColumn1,
-            this.iDBookRoomDataGridViewTextBoxColumn,
-            this.roomPriceDataGridViewTextBoxColumn});
-            this.dataGridView1.DataSource = this.bookRoomViewBindingSource;
-            this.dataGridView1.Location = new System.Drawing.Point(6, 34);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(849, 253);
-            this.dataGridView1.TabIndex = 0;
-            this.dataGridView1.RowHeaderMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dataGridView1_RowHeaderMouseClick);
-            // 
-            // hotelDataDataSet8
-            // 
-            this.hotelDataDataSet8.DataSetName = "HotelDataDataSet8";
-            this.hotelDataDataSet8.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // bookRoomViewBindingSource
-            // 
-            this.bookRoomViewBindingSource.DataMember = "BookRoomView";
-            this.bookRoomViewBindingSource.DataSource = this.hotelDataDataSet8;
-            // 
             // bookRoomViewTableAdapter
             // 
             this.bookRoomViewTableAdapter.ClearBeforeFill = true;
-            // 
-            // iDRoomDataGridViewTextBoxColumn1
-            // 
-            this.iDRoomDataGridViewTextBoxColumn1.DataPropertyName = "ID_Room";
-            this.iDRoomDataGridViewTextBoxColumn1.HeaderText = "ID_Room";
-            this.iDRoomDataGridViewTextBoxColumn1.Name = "iDRoomDataGridViewTextBoxColumn1";
-            // 
-            // iDcardDataGridViewTextBoxColumn
-            // 
-            this.iDcardDataGridViewTextBoxColumn.DataPropertyName = "IDcard";
-            this.iDcardDataGridViewTextBoxColumn.HeaderText = "IDcard";
-            this.iDcardDataGridViewTextBoxColumn.Name = "iDcardDataGridViewTextBoxColumn";
-            // 
-            // timecheckinDataGridViewTextBoxColumn
-            // 
-            this.timecheckinDataGridViewTextBoxColumn.DataPropertyName = "Timecheckin";
-            this.timecheckinDataGridViewTextBoxColumn.HeaderText = "Timecheckin";
-            this.timecheckinDataGridViewTextBoxColumn.Name = "timecheckinDataGridViewTextBoxColumn";
-            // 
-            // iDCustomerDataGridViewTextBoxColumn1
-            // 
-            this.iDCustomerDataGridViewTextBoxColumn1.DataPropertyName = "ID_Customer";
-            this.iDCustomerDataGridViewTextBoxColumn1.HeaderText = "ID_Customer";
-            this.iDCustomerDataGridViewTextBoxColumn1.Name = "iDCustomerDataGridViewTextBoxColumn1";
-            // 
-            // iDBookRoomDataGridViewTextBoxColumn
-            // 
-            this.iDBookRoomDataGridViewTextBoxColumn.DataPropertyName = "ID_BookRoom";
-            this.iDBookRoomDataGridViewTextBoxColumn.HeaderText = "ID_BookRoom";
-            this.iDBookRoomDataGridViewTextBoxColumn.Name = "iDBookRoomDataGridViewTextBoxColumn";
-            // 
-            // roomPriceDataGridViewTextBoxColumn
-            // 
-            this.roomPriceDataGridViewTextBoxColumn.DataPropertyName = "RoomPrice";
-            this.roomPriceDataGridViewTextBoxColumn.HeaderText = "RoomPrice";
-            this.roomPriceDataGridViewTextBoxColumn.Name = "roomPriceDataGridViewTextBoxColumn";
             // 
             // dobpicker
             // 
@@ -693,6 +689,10 @@
             this.btnadd.Text = "Add ";
             this.btnadd.Click += new System.EventHandler(this.btnadd_Click);
             // 
+            // receiptTableAdapter1
+            // 
+            this.receiptTableAdapter1.ClearBeforeFill = true;
+            // 
             // PaymentandService
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -727,6 +727,9 @@
             this.Text = "PaymentandService";
             this.Load += new System.EventHandler(this.PaymentandService_Load);
             this.groupBox1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bookRoomViewBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.hotelDataDataSet8)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.receiptBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.hotelDataDataSet7)).EndInit();
             this.groupBox2.ResumeLayout(false);
@@ -734,10 +737,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.numberofitems)).EndInit();
             this.groupBox5.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.listViewBillRoom)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.receiptBindingSource1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.hotelDataDataSet9)).EndInit();
             this.groupBox6.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.hotelDataDataSet8)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bookRoomViewBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -761,18 +763,9 @@
         private System.Windows.Forms.ColumnHeader columnHeader3;
         private System.Windows.Forms.ColumnHeader columnHeader4;
         private System.Windows.Forms.ColumnHeader columnHeader5;
-        private System.Windows.Forms.DataGridView listViewBillRoom;
         private HotelDataDataSet7 hotelDataDataSet7;
         private System.Windows.Forms.BindingSource receiptBindingSource;
         private HotelDataDataSet7TableAdapters.ReceiptTableAdapter receiptTableAdapter;
-        private System.Windows.Forms.DataGridViewTextBoxColumn IDcard;
-        private System.Windows.Forms.DataGridViewTextBoxColumn iDReceiptDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn iDCustomerDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn iDRoomDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn timemakeDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn servicefeeDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dayintotalDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn totalpaymentDataGridViewTextBoxColumn;
         private Guna.UI2.WinForms.Guna2Button btnprint;
         private Guna.UI2.WinForms.Guna2Button btnpay;
         private System.Windows.Forms.TextBox txttotal;
@@ -806,5 +799,17 @@
         private System.Windows.Forms.TextBox txtidbookroom;
         private System.Windows.Forms.Label label13;
         private Guna.UI2.WinForms.Guna2Button btnadd;
+        private System.Windows.Forms.DataGridView listViewBillRoom;
+        private HotelDataDataSet9 hotelDataDataSet9;
+        private System.Windows.Forms.BindingSource receiptBindingSource1;
+        private HotelDataDataSet9TableAdapters.ReceiptTableAdapter receiptTableAdapter1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn iDReceiptDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn iDCustomerDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn iDRoomDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn iDBookRoomDataGridViewTextBoxColumn1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn timemakeDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn servicefeeDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dayintotalDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn totalpaymentDataGridViewTextBoxColumn;
     }
 }

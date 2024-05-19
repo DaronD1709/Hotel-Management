@@ -15,14 +15,13 @@ namespace Hotel_Management
     public partial class PaymentandService : Form
     {
         Payment payment = new Payment();
+        MY_DB db = new MY_DB();
         public PaymentandService()
         {
             InitializeComponent();
             //populate combobox
             PopulateComboBox();
             comboservicelist.SelectedIndexChanged += comboservicelist_SelectedIndexChanged;
-
-
             listViewUseService.View = View.Details;
 
 
@@ -92,6 +91,8 @@ namespace Hotel_Management
 
         private void PaymentandService_Load(object sender, EventArgs e)
         {
+            // TODO: This line of code loads data into the 'hotelDataDataSet9.Receipt' table. You can move, or remove it, as needed.
+            this.receiptTableAdapter1.Fill(this.hotelDataDataSet9.Receipt);
             // TODO: This line of code loads data into the 'hotelDataDataSet8.BookRoomView' table. You can move, or remove it, as needed.
             this.bookRoomViewTableAdapter.Fill(this.hotelDataDataSet8.BookRoomView);
             // TODO: This line of code loads data into the 'hotelDataDataSet7.Receipt' table. You can move, or remove it, as needed.
@@ -305,6 +306,23 @@ namespace Hotel_Management
            
         }
 
+
+        // Load Foods
+        private void LoadFoods()
+        {
+            db.openConnection();
+            using (SqlCommand cmd = new SqlCommand("SELECT [Name] FROM dbo.Inventory", db.getConnection))
+            {
+                using (SqlDataReader reader = cmd.ExecuteReader())
+                {
+                    while (reader.Read())
+                    {
+                        comboservicelist.Items.Add(reader["Name"].ToString());
+                    }
+                }
+            }
+            db.closeConnection();
+        }
         private void btnprint_Click(object sender, EventArgs e)
         {
             if (decimal.TryParse(txtfee.Text, out decimal serviceFee) &&
@@ -318,15 +336,49 @@ namespace Hotel_Management
                 // Hiển thị thông báo hoặc xử lý lỗi khi các giá trị không hợp lệ
                 MessageBox.Show("Vui lòng nhập các giá trị hợp lệ cho phí dịch vụ, số ngày và giá phòng.", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+            // trừ item 
+            string selectedFood = comboservicelist.SelectedItem?.ToString();
+            int amount = (int)numberofitems.Value;
+
+            if (string.IsNullOrEmpty(selectedFood) || amount <= 0)
+            {
+                MessageBox.Show("Please select a food and enter a valid amount.");
+                return;
+            }
+
+            db.openConnection();
+
+            using (SqlCommand cmd = new SqlCommand("SELECT [Number] FROM dbo.Inventory WHERE [Name] = @Name", db.getConnection))
+            {
+                cmd.Parameters.AddWithValue("@Name", selectedFood);
+                int currentNumber = (int)cmd.ExecuteScalar();
+
+                if (currentNumber < amount)
+                {
+                    MessageBox.Show("Món hàng này đã hết, hãy thêm hàng hóa!");
+                }
+                else
+                {
+                    using (SqlCommand updateCmd = new SqlCommand("UPDATE dbo.Inventory SET [Number] = [Number] - @Amount WHERE [Name] = @Name", db.getConnection))
+                    {
+                        updateCmd.Parameters.AddWithValue("@Amount", amount);
+                        updateCmd.Parameters.AddWithValue("@Name", selectedFood);
+                        updateCmd.ExecuteNonQuery();
+
+                        MessageBox.Show("Đã cập nhật số lượng thành công!");
+                    }
+                }
+            }
+
+            db.closeConnection();
+
         }
 
         private void btnadd_Click(object sender, EventArgs e)
         {
-            
-
-
-                int idcustomer = Convert.ToInt32(txtcustomer.Text);
-                int idrecep = Convert.ToInt32(txtidreceipt.Text);
+            int idrecep = Convert.ToInt32(txtidreceipt.Text);
+            int idcustomer = Convert.ToInt32(txtcustomer.Text);
+                
                 int idroom = Convert.ToInt32(txtidroom.Text);
                 int idbookroom = Convert.ToInt32(txtidbookroom.Text);
                 DateTime bdate = dobpicker.Value;
@@ -336,14 +388,13 @@ namespace Hotel_Management
 
                 if (payment.insertPayment(idrecep,idcustomer,idroom,idbookroom,bdate,fee,dayintotal,total))
                 {
-                    MessageBox.Show("New Info Add", "Add v", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    MessageBox.Show("New Info Add", "Add Info", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     LoadData();
                 }
                 else
                 {
                     MessageBox.Show("Failed to add Info.", "Add Info", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
-           
         }
 
         private void LoadData()

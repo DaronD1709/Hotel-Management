@@ -20,6 +20,79 @@ namespace Hotel_Management
         public AdminMenu()
         {
             InitializeComponent();
+            WelcomeUser();
+            ConfigureButtonAccess();
+        }
+
+        //Welcome 
+        private void WelcomeUser()
+        {
+            string welcomeMessage = $"{Globals.GlobalUserName}";
+            labelname.Text = welcomeMessage; // Assuming you have a label named lblWelcome
+        }
+
+
+        // Phân quyền cho button 
+        private void ConfigureButtonAccess()
+        {
+            string role = Globals.GlobalUserRole;
+
+            if (role == "Labor")
+            {
+                EnableButtonsForLabor();
+            }
+            else if (role == "Receiptor")
+            {
+                EnableButtonsForReceiptor();
+            }
+        }
+
+        private void EnableButtonsForLabor()
+        {
+            btnschedule.Enabled = true;
+            btncheckinout.Enabled = true;
+            btnstatistical.Enabled = true;
+            btnmanainventory.Enabled = true;
+
+            btncreateroom.Enabled = false;
+            btnbookroom.Enabled = false;
+            btnpayment.Enabled = false;
+            btnmanaemployee.Enabled = false;
+            btnmanacustomer.Enabled = false;
+
+            SetAccessDeniedHandlers();
+        }
+
+        private void EnableButtonsForReceiptor()
+        {
+            btnbookroom.Enabled = true;
+            btnschedule.Enabled = true;
+            btnmanacustomer.Enabled = true;
+            btncheckinout.Enabled = true;
+            btnpayment.Enabled = true;
+            btnstatistical.Enabled = true;
+
+            btncreateroom.Enabled = false;
+            btnmanainventory.Enabled = false;
+            btnmanaemployee.Enabled = false;
+
+            SetAccessDeniedHandlers();
+        }
+
+        private void SetAccessDeniedHandlers()
+        {
+            foreach (Control control in this.Controls)
+            {
+                if (control is Button button && !button.Enabled)
+                {
+                    button.Click += AccessDeniedHandler;
+                }
+            }
+        }
+
+        private void AccessDeniedHandler(object sender, EventArgs e)
+        {
+            MessageBox.Show("Bạn không có quyền truy cập chức năng này", "Access Denied", MessageBoxButtons.OK, MessageBoxIcon.Warning);
         }
 
         private void timer1_Tick(object sender, EventArgs e)
@@ -123,6 +196,11 @@ namespace Hotel_Management
             Form1 login = new Form1();
             login.Show();
             this.Close();
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }

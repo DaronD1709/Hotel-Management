@@ -236,5 +236,39 @@ namespace Hotel_Management
             }
             txtpriceitems.Text = datagridviewitemlist.Rows[e.RowIndex].Cells[3].Value == DBNull.Value ? "" : datagridviewitemlist.Rows[e.RowIndex].Cells[3].Value.ToString();
         }
+
+        private void btnupdatecustomer_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                if (!VerifyFields())
+                {
+                    MessageBox.Show("Please fill in all fields.", "Incomplete Information", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    return;
+                }
+
+                int id = Convert.ToInt32(txtiditems.Text);
+                string nameitem = txtnameitems.Text;
+                int amount = Convert.ToInt32(numberofitems.Value);
+                string price = txtpriceitems.Text;
+
+               
+
+                // Gọi hàm UpdateCustomer để cập nhật thông tin khách hàng
+                if (inventory.updateItem(id, nameitem, amount, price))
+                {
+                    MessageBox.Show("Update Item Update", "Update Item", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    LoadData();
+                }
+                else
+                {
+                    MessageBox.Show("Failed to Update Item.", "Update Item", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
     }
 }

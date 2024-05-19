@@ -43,12 +43,12 @@
             this.guna2PictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.guna2CirclePictureBox11 = new Guna.UI2.WinForms.Guna2CirclePictureBox();
             this.label11 = new System.Windows.Forms.Label();
-            this.guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
+            this.btncheckinout = new Guna.UI2.WinForms.Guna2Button();
             this.label3 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.btnstatistical = new Guna.UI2.WinForms.Guna2Button();
             this.label9 = new System.Windows.Forms.Label();
-            this.btnmanaitems = new Guna.UI2.WinForms.Guna2Button();
+            this.btnpayment = new Guna.UI2.WinForms.Guna2Button();
             this.label8 = new System.Windows.Forms.Label();
             this.btnschedule = new Guna.UI2.WinForms.Guna2Button();
             this.label7 = new System.Windows.Forms.Label();
@@ -201,12 +201,12 @@
             this.panel1.Controls.Add(this.guna2PictureBox1);
             this.panel1.Controls.Add(this.guna2CirclePictureBox11);
             this.panel1.Controls.Add(this.label11);
-            this.panel1.Controls.Add(this.guna2Button1);
+            this.panel1.Controls.Add(this.btncheckinout);
             this.panel1.Controls.Add(this.label3);
             this.panel1.Controls.Add(this.label10);
             this.panel1.Controls.Add(this.btnstatistical);
             this.panel1.Controls.Add(this.label9);
-            this.panel1.Controls.Add(this.btnmanaitems);
+            this.panel1.Controls.Add(this.btnpayment);
             this.panel1.Controls.Add(this.label8);
             this.panel1.Controls.Add(this.btnschedule);
             this.panel1.Controls.Add(this.label7);
@@ -229,6 +229,7 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1035, 554);
             this.panel1.TabIndex = 1;
+            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
             // guna2PictureBox4
             // 
@@ -311,21 +312,21 @@
             this.label11.TabIndex = 54;
             this.label11.Text = "Checkin/out";
             // 
-            // guna2Button1
+            // btncheckinout
             // 
-            this.guna2Button1.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button1.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button1.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.guna2Button1.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.guna2Button1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(147)))), ((int)(((byte)(255)))));
-            this.guna2Button1.Font = new System.Drawing.Font("Agency FB", 16.2F, System.Drawing.FontStyle.Bold);
-            this.guna2Button1.ForeColor = System.Drawing.Color.White;
-            this.guna2Button1.Location = new System.Drawing.Point(621, 360);
-            this.guna2Button1.Margin = new System.Windows.Forms.Padding(2);
-            this.guna2Button1.Name = "guna2Button1";
-            this.guna2Button1.Size = new System.Drawing.Size(190, 145);
-            this.guna2Button1.TabIndex = 52;
-            this.guna2Button1.Click += new System.EventHandler(this.guna2Button1_Click);
+            this.btncheckinout.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(147)))), ((int)(((byte)(255)))));
+            this.btncheckinout.DisabledState.CustomBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(147)))), ((int)(((byte)(255)))));
+            this.btncheckinout.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(147)))), ((int)(((byte)(255)))));
+            this.btncheckinout.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(147)))), ((int)(((byte)(255)))));
+            this.btncheckinout.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(147)))), ((int)(((byte)(255)))));
+            this.btncheckinout.Font = new System.Drawing.Font("Agency FB", 16.2F, System.Drawing.FontStyle.Bold);
+            this.btncheckinout.ForeColor = System.Drawing.Color.White;
+            this.btncheckinout.Location = new System.Drawing.Point(621, 360);
+            this.btncheckinout.Margin = new System.Windows.Forms.Padding(2);
+            this.btncheckinout.Name = "btncheckinout";
+            this.btncheckinout.Size = new System.Drawing.Size(190, 145);
+            this.btncheckinout.TabIndex = 52;
+            this.btncheckinout.Click += new System.EventHandler(this.guna2Button1_Click);
             // 
             // label3
             // 
@@ -353,10 +354,10 @@
             // 
             // btnstatistical
             // 
-            this.btnstatistical.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnstatistical.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnstatistical.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnstatistical.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnstatistical.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(147)))), ((int)(((byte)(255)))));
+            this.btnstatistical.DisabledState.CustomBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(147)))), ((int)(((byte)(255)))));
+            this.btnstatistical.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(147)))), ((int)(((byte)(255)))));
+            this.btnstatistical.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(147)))), ((int)(((byte)(255)))));
             this.btnstatistical.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(147)))), ((int)(((byte)(255)))));
             this.btnstatistical.Font = new System.Drawing.Font("Agency FB", 16.2F, System.Drawing.FontStyle.Bold);
             this.btnstatistical.ForeColor = System.Drawing.Color.White;
@@ -379,21 +380,21 @@
             this.label9.TabIndex = 47;
             this.label9.Text = "Services and Payment";
             // 
-            // btnmanaitems
+            // btnpayment
             // 
-            this.btnmanaitems.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnmanaitems.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnmanaitems.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnmanaitems.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnmanaitems.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(147)))), ((int)(((byte)(255)))));
-            this.btnmanaitems.Font = new System.Drawing.Font("Agency FB", 16.2F, System.Drawing.FontStyle.Bold);
-            this.btnmanaitems.ForeColor = System.Drawing.Color.White;
-            this.btnmanaitems.Location = new System.Drawing.Point(621, 107);
-            this.btnmanaitems.Margin = new System.Windows.Forms.Padding(2);
-            this.btnmanaitems.Name = "btnmanaitems";
-            this.btnmanaitems.Size = new System.Drawing.Size(190, 236);
-            this.btnmanaitems.TabIndex = 46;
-            this.btnmanaitems.Click += new System.EventHandler(this.btnmanaitems_Click);
+            this.btnpayment.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(147)))), ((int)(((byte)(255)))));
+            this.btnpayment.DisabledState.CustomBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(147)))), ((int)(((byte)(255)))));
+            this.btnpayment.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(147)))), ((int)(((byte)(255)))));
+            this.btnpayment.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(147)))), ((int)(((byte)(255)))));
+            this.btnpayment.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(147)))), ((int)(((byte)(255)))));
+            this.btnpayment.Font = new System.Drawing.Font("Agency FB", 16.2F, System.Drawing.FontStyle.Bold);
+            this.btnpayment.ForeColor = System.Drawing.Color.White;
+            this.btnpayment.Location = new System.Drawing.Point(621, 107);
+            this.btnpayment.Margin = new System.Windows.Forms.Padding(2);
+            this.btnpayment.Name = "btnpayment";
+            this.btnpayment.Size = new System.Drawing.Size(190, 236);
+            this.btnpayment.TabIndex = 46;
+            this.btnpayment.Click += new System.EventHandler(this.btnmanaitems_Click);
             // 
             // label8
             // 
@@ -409,10 +410,10 @@
             // 
             // btnschedule
             // 
-            this.btnschedule.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnschedule.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnschedule.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnschedule.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnschedule.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(147)))), ((int)(((byte)(255)))));
+            this.btnschedule.DisabledState.CustomBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(147)))), ((int)(((byte)(255)))));
+            this.btnschedule.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(147)))), ((int)(((byte)(255)))));
+            this.btnschedule.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(147)))), ((int)(((byte)(255)))));
             this.btnschedule.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(147)))), ((int)(((byte)(255)))));
             this.btnschedule.Font = new System.Drawing.Font("Agency FB", 16.2F, System.Drawing.FontStyle.Bold);
             this.btnschedule.ForeColor = System.Drawing.Color.White;
@@ -437,10 +438,10 @@
             // 
             // btnmanainventory
             // 
-            this.btnmanainventory.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnmanainventory.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnmanainventory.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnmanainventory.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnmanainventory.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(147)))), ((int)(((byte)(255)))));
+            this.btnmanainventory.DisabledState.CustomBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(147)))), ((int)(((byte)(255)))));
+            this.btnmanainventory.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(147)))), ((int)(((byte)(255)))));
+            this.btnmanainventory.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(147)))), ((int)(((byte)(255)))));
             this.btnmanainventory.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(147)))), ((int)(((byte)(255)))));
             this.btnmanainventory.Font = new System.Drawing.Font("Agency FB", 16.2F, System.Drawing.FontStyle.Bold);
             this.btnmanainventory.ForeColor = System.Drawing.Color.White;
@@ -512,10 +513,10 @@
             // 
             // btnbookroom
             // 
-            this.btnbookroom.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnbookroom.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnbookroom.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnbookroom.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnbookroom.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(147)))), ((int)(((byte)(255)))));
+            this.btnbookroom.DisabledState.CustomBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(147)))), ((int)(((byte)(255)))));
+            this.btnbookroom.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(147)))), ((int)(((byte)(255)))));
+            this.btnbookroom.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(147)))), ((int)(((byte)(255)))));
             this.btnbookroom.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(147)))), ((int)(((byte)(255)))));
             this.btnbookroom.Font = new System.Drawing.Font("Agency FB", 16.2F, System.Drawing.FontStyle.Bold);
             this.btnbookroom.ForeColor = System.Drawing.Color.White;
@@ -540,10 +541,10 @@
             // 
             // btncreateroom
             // 
-            this.btncreateroom.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btncreateroom.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btncreateroom.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btncreateroom.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btncreateroom.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(147)))), ((int)(((byte)(255)))));
+            this.btncreateroom.DisabledState.CustomBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(147)))), ((int)(((byte)(255)))));
+            this.btncreateroom.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(147)))), ((int)(((byte)(255)))));
+            this.btncreateroom.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(147)))), ((int)(((byte)(255)))));
             this.btncreateroom.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(147)))), ((int)(((byte)(255)))));
             this.btncreateroom.Font = new System.Drawing.Font("Agency FB", 16.2F, System.Drawing.FontStyle.Bold);
             this.btncreateroom.ForeColor = System.Drawing.Color.White;
@@ -583,10 +584,10 @@
             // 
             // btnmanaemployee
             // 
-            this.btnmanaemployee.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnmanaemployee.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnmanaemployee.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnmanaemployee.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnmanaemployee.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(147)))), ((int)(((byte)(255)))));
+            this.btnmanaemployee.DisabledState.CustomBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(147)))), ((int)(((byte)(255)))));
+            this.btnmanaemployee.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(147)))), ((int)(((byte)(255)))));
+            this.btnmanaemployee.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(147)))), ((int)(((byte)(255)))));
             this.btnmanaemployee.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(147)))), ((int)(((byte)(255)))));
             this.btnmanaemployee.Font = new System.Drawing.Font("Agency FB", 16.2F, System.Drawing.FontStyle.Bold);
             this.btnmanaemployee.ForeColor = System.Drawing.Color.White;
@@ -599,10 +600,10 @@
             // 
             // btnmanacustomer
             // 
-            this.btnmanacustomer.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnmanacustomer.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnmanacustomer.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnmanacustomer.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnmanacustomer.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(147)))), ((int)(((byte)(255)))));
+            this.btnmanacustomer.DisabledState.CustomBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(147)))), ((int)(((byte)(255)))));
+            this.btnmanacustomer.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(147)))), ((int)(((byte)(255)))));
+            this.btnmanacustomer.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(147)))), ((int)(((byte)(255)))));
             this.btnmanacustomer.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(147)))), ((int)(((byte)(255)))));
             this.btnmanacustomer.Font = new System.Drawing.Font("Agency FB", 16.2F, System.Drawing.FontStyle.Bold);
             this.btnmanacustomer.ForeColor = System.Drawing.Color.White;
@@ -685,7 +686,7 @@
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label8;
         private Guna.UI2.WinForms.Guna2Button btnschedule;
-        private Guna.UI2.WinForms.Guna2Button btnmanaitems;
+        private Guna.UI2.WinForms.Guna2Button btnpayment;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label10;
         private Guna.UI2.WinForms.Guna2Button btnstatistical;
@@ -693,7 +694,7 @@
         private Guna.UI2.WinForms.Guna2CirclePictureBox guna2CirclePictureBox10;
         private Guna.UI2.WinForms.Guna2CirclePictureBox guna2CirclePictureBox11;
         private System.Windows.Forms.Label label11;
-        private Guna.UI2.WinForms.Guna2Button guna2Button1;
+        private Guna.UI2.WinForms.Guna2Button btncheckinout;
         private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox2;
         private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox1;
         private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox4;

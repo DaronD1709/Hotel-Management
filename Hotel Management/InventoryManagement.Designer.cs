@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.label2 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.txtsearch = new System.Windows.Forms.TextBox();
@@ -56,6 +56,7 @@
             this.btndeleteitems = new Guna.UI2.WinForms.Guna2Button();
             this.btnadditems = new Guna.UI2.WinForms.Guna2Button();
             this.inventoryTableAdapter = new Hotel_Management.HotelDataDataSet2TableAdapters.InventoryTableAdapter();
+            this.btnupdatecustomer = new Guna.UI2.WinForms.Guna2Button();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numberofitems)).BeginInit();
@@ -240,9 +241,9 @@
             this.btnclose.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.btnclose.Font = new System.Drawing.Font("Agency FB", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnclose.ForeColor = System.Drawing.Color.Black;
-            this.btnclose.Location = new System.Drawing.Point(370, 470);
+            this.btnclose.Location = new System.Drawing.Point(305, 522);
             this.btnclose.Name = "btnclose";
-            this.btnclose.Size = new System.Drawing.Size(131, 36);
+            this.btnclose.Size = new System.Drawing.Size(173, 36);
             this.btnclose.TabIndex = 48;
             this.btnclose.Text = "Close";
             this.btnclose.Click += new System.EventHandler(this.btnclose_Click);
@@ -253,7 +254,7 @@
             this.groupBox3.Font = new System.Drawing.Font("Agency FB", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox3.Location = new System.Drawing.Point(535, 35);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(655, 489);
+            this.groupBox3.Size = new System.Drawing.Size(655, 556);
             this.groupBox3.TabIndex = 49;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "List Items";
@@ -262,14 +263,14 @@
             // 
             this.datagridviewitemlist.AutoGenerateColumns = false;
             this.datagridviewitemlist.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Agency FB", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.datagridviewitemlist.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Agency FB", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.datagridviewitemlist.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle3;
             this.datagridviewitemlist.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.datagridviewitemlist.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.iDInventoryDataGridViewTextBoxColumn,
@@ -281,7 +282,7 @@
             this.datagridviewitemlist.Name = "datagridviewitemlist";
             this.datagridviewitemlist.RowHeadersWidth = 30;
             this.datagridviewitemlist.RowTemplate.Height = 35;
-            this.datagridviewitemlist.Size = new System.Drawing.Size(650, 455);
+            this.datagridviewitemlist.Size = new System.Drawing.Size(650, 516);
             this.datagridviewitemlist.TabIndex = 0;
             this.datagridviewitemlist.RowHeaderMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dataGridView1_RowHeaderMouseClick);
             // 
@@ -330,9 +331,9 @@
             this.btndeleteitems.Font = new System.Drawing.Font("Agency FB", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btndeleteitems.ForeColor = System.Drawing.Color.Black;
             this.btndeleteitems.Image = global::Hotel_Management.Properties.Resources.bin_484611;
-            this.btndeleteitems.Location = new System.Drawing.Point(219, 470);
+            this.btndeleteitems.Location = new System.Drawing.Point(67, 522);
             this.btndeleteitems.Name = "btndeleteitems";
-            this.btndeleteitems.Size = new System.Drawing.Size(131, 36);
+            this.btndeleteitems.Size = new System.Drawing.Size(173, 36);
             this.btndeleteitems.TabIndex = 47;
             this.btndeleteitems.Text = "Delete";
             this.btndeleteitems.Click += new System.EventHandler(this.btndeleteitems_Click);
@@ -350,7 +351,7 @@
             this.btnadditems.Image = global::Hotel_Management.Properties.Resources.add_5372888;
             this.btnadditems.Location = new System.Drawing.Point(67, 470);
             this.btnadditems.Name = "btnadditems";
-            this.btnadditems.Size = new System.Drawing.Size(131, 36);
+            this.btnadditems.Size = new System.Drawing.Size(173, 36);
             this.btnadditems.TabIndex = 45;
             this.btnadditems.Text = "Add Items";
             this.btnadditems.Click += new System.EventHandler(this.btnaddcustomer_Click);
@@ -359,11 +360,30 @@
             // 
             this.inventoryTableAdapter.ClearBeforeFill = true;
             // 
+            // btnupdatecustomer
+            // 
+            this.btnupdatecustomer.BorderRadius = 15;
+            this.btnupdatecustomer.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnupdatecustomer.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnupdatecustomer.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnupdatecustomer.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnupdatecustomer.FillColor = System.Drawing.Color.PaleGoldenrod;
+            this.btnupdatecustomer.Font = new System.Drawing.Font("Agency FB", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnupdatecustomer.ForeColor = System.Drawing.Color.Black;
+            this.btnupdatecustomer.Image = global::Hotel_Management.Properties.Resources.save_4223793;
+            this.btnupdatecustomer.Location = new System.Drawing.Point(305, 470);
+            this.btnupdatecustomer.Name = "btnupdatecustomer";
+            this.btnupdatecustomer.Size = new System.Drawing.Size(173, 36);
+            this.btnupdatecustomer.TabIndex = 50;
+            this.btnupdatecustomer.Text = "Update";
+            this.btnupdatecustomer.Click += new System.EventHandler(this.btnupdatecustomer_Click);
+            // 
             // InventoryManagement
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1235, 536);
+            this.ClientSize = new System.Drawing.Size(1235, 596);
+            this.Controls.Add(this.btnupdatecustomer);
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.btnclose);
             this.Controls.Add(this.btndeleteitems);
@@ -416,5 +436,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn nameDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn numberDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn priceDataGridViewTextBoxColumn;
+        private Guna.UI2.WinForms.Guna2Button btnupdatecustomer;
     }
 }
